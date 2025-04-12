@@ -33,7 +33,6 @@ title: Knowledge Base
   - Trajectory Planning
 
 ### [[Hardware]]
-
 - [[Electronics]]
   - Circuit Design
   - PCB Layout
