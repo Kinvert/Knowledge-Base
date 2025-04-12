@@ -85,9 +85,10 @@ title: Knowledge Base
 
 ### [[Software]]
 - [[Programming Languages]]
-  - Python
   - C++
+  - Python
   - ROS
+  - Spin (Parallax)
 - [[Software Architecture]]
   - Design Patterns
   - State Machines
