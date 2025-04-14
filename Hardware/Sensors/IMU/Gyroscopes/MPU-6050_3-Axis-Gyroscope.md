@@ -9,4 +9,7 @@ Potential Drivers:
 
 Related - MPU-9150
 
+MPU9250 https://github.com/DominikN/ESP32-MPU9250-web-view
+
+
 
