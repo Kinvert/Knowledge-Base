@@ -1,0 +1,8 @@
+[[Bayesian Coherent Point Drift]]
+[[Coherent Point Drift]]
+[[Iterative Closest Point]]
+[[Kabsch Algorithm]]
+[[Kernel Correlation]]
+[[Normal Distributions Transform]]
+[[Robust Point Matching]]
+[[Sorting the Correspondence Space]]

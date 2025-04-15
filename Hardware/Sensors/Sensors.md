@@ -1,5 +1,5 @@
 Distance
-IMU
+[[IMU]]
 Light
 Temperature
 Gas
