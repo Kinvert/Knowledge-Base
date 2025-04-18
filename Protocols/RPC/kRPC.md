@@ -76,4 +76,5 @@ vessel.control.activate_next_stage()
 - [kRPC Docs](https://krpc.github.io/krpc/index.html)
 - [Protocol Buffers](https://protobuf.dev
 - [KRPC.MechJeb](https://github.com/Genhis/KRPC.MechJeb)
+- https://github.com/marcnesium-iv/SuicideBurnAutopilot
 - 
