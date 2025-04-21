@@ -113,6 +113,8 @@ eCALShutdown()
 - [Official GitHub Repo](https://github.com/eclipse-ecal/ecal)
     
 - [Documentation](https://ecal.io/)
+
+- [Official eCAL Eclipse](https://eclipse-ecal.github.io/ecal/stable/index.html)
     
 - [[kRPC]]
     
