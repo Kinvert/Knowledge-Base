@@ -141,5 +141,7 @@ To achieve high accuracy (sub-microsecond), **hardware timestamping** is require
 - [IEEE 1588 Official](https://ieee1588.nist.gov)
 - [Linux PTP Project](https://linuxptp.sourceforge.net/)
 - [PTP vs NTP Comparison – Meinberg](https://www.meinbergglobal.com/english/info/ntp-vs-ptp.htm)
+- [Wikipedia](https://en.wikipedia.org/wiki/Precision_Time_Protocol)
+- [Wikipedia List of PTP Implementations](https://en.wikipedia.org/wiki/List_of_PTP_implementations)
 
 ---

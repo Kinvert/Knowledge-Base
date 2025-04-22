@@ -8,7 +8,7 @@ aliases: [XTSS, eXtended Time Synchronization Services]
 
 ## Overview
 
-**XTSS (eXtended Time Synchronization Services)** is a time synchronization solution developed by **b-plus technologies GmbH**. Designed for advanced driver-assistance systems (ADAS) and autonomous driving applications, XTSS ensures precise time alignment across distributed systems, facilitating accurate data correlation and system coordination.
+**XTSS (eXtended Time Synchronization Services)** is a time synchronization solution developed by **[[B-Plus]] technologies GmbH**. Designed for advanced driver-assistance systems (ADAS) and autonomous driving applications, XTSS ensures precise time alignment across distributed systems, facilitating accurate data correlation and system coordination.
 
 ---
 
@@ -26,8 +26,8 @@ XTSS comprises two main services:
 
 - **Function**: Synchronizes time across multiple devices in a network.
 - **Standards**:
-  - **IEEE 1588v2**: Precision Time Protocol (PTP)
-  - **IEEE 802.1AS-2020**: Generalized Precision Time Protocol (gPTP)
+  - **IEEE 1588v2**: Precision Time Protocol ([[PTP]])
+  - **IEEE 802.1AS-2020**: Generalized Precision Time Protocol ([[gPTP]])
 - **Use Case**: Ensures all devices in a cluster operate on a unified time base, crucial for synchronized data acquisition and processing.
 
 ### 2. **PTSS – Platform Time Synchronization Service**

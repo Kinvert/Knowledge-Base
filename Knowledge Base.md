@@ -32,6 +32,9 @@ title: Knowledge Base
   - Inverse Kinematics
   - Trajectory Planning
 
+## [[Companies]]
+- [[B-Plus]]
+
 ### [[Hardware]]
 - [[Electronics]]
   - Circuit Design
@@ -41,7 +44,7 @@ title: Knowledge Base
   - Microcontrollers
   - Motor Drivers
   - Power Supplies
-- [[Sensors]]
+- Sensors
   - IMU
   - Distance Sensors
   - Force/Torque Sensors
@@ -71,7 +74,7 @@ title: Knowledge Base
 
 ### [[Protocols]]
 - [[Digital Protocols]]
-  - [[I2C]]
+  - I2C
   - SPI
   - UART
 - [[Network Protocols]]
@@ -98,6 +101,9 @@ title: Knowledge Base
   - Trees
   - Graphs
 
+### [[Systems]]
+- [[ADAS]]
+
 ### [[Tools and Equipment]]
 - [[Software Tools]]
   - Build Systems
@@ -114,5 +120,3 @@ title: Knowledge Base
   - Oscilloscopes
   - Power Supplies
   - 3D Printers
-
----
