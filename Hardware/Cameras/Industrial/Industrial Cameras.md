@@ -1,0 +1,18 @@
+Suppliers:
+- https://www.keyence.com/products/vision/vision-sys/
+- https://www.cognex.com/products/machine-vision
+- Matrox Imaging
+- Allied Vision
+- Baumer Electric
+- Teledyne FLIR
+- IDS Imaging
+- Imperx
+- Photron
+- VisionTIR
+- AOS Technologies
+- Advantech
+- Vzense
+- Getac
+- Hamamatus
+- XIMEA
+- Pixelink
