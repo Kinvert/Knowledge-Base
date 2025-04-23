@@ -1,4 +1,4 @@
-[[CBOR]]
-[[JSON]]
-[[MessagePack]]
-[[Protobuf]]
+- [[CBOR]]
+- [[JSON]]
+- [[MessagePack]]
+- [[Protobuf]]
