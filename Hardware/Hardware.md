@@ -1,3 +1,10 @@
-[[Microcontrollers]]
-[[Motors]]
-[[Sensors]]
+- [[Actuators]]
+- [[Dev Boards]]
+- [[Displays]]
+- [[FPGAs]]
+- [[Memory and Storage Devices]]
+- [[Microcontrollers]]
+- [[Motors]]
+- [[Power Supplies]]
+- [[SBCs]] Single Board Computers
+- [[Sensors]]
