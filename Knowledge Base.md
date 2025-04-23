@@ -60,11 +60,11 @@ title: Knowledge Base
   - Dynamics
 
 ### [[Manufacturing]]
-- [[3D Printing]]
+- 3D Printing
   - FDM
   - SLA
   - Material Selection
-- [[CNC]]
+- CNC
   - Milling
   - Turning
   - G-code
