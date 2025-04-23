@@ -11,36 +11,36 @@ title: Knowledge Base
 ---
 
 ### [[Algorithms]]
-- [[Control Theory]]
+- Control Theory
   - PID Control
   - State Estimation
   - System Modeling
-- [[Path Planning]]
+- Path Planning
   - A* Algorithm
   - RRT
   - SLAM
-- [[Computer Vision]]
+- Computer Vision
   - Image Processing
   - Object Detection
   - Feature Extraction
-- [[Machine Learning]]
+- Machine Learning
   - Neural Networks
   - Reinforcement Learning
   - Classification
-- [[Kinematics]]
+- Kinematics
   - Forward Kinematics
   - Inverse Kinematics
   - Trajectory Planning
 
 ## [[Companies]]
-- [[B-Plus]]
+- B-Plus
 
 ### [[Hardware]]
-- [[Electronics]]
+- Electronics
   - Circuit Design
   - PCB Layout
   - Power Systems
-- [[Components]]
+- Components
   - Microcontrollers
   - Motor Drivers
   - Power Supplies
@@ -49,11 +49,11 @@ title: Knowledge Base
   - Distance Sensors
   - Force/Torque Sensors
   - Vision Sensors
-- [[Actuators]]
+- Actuators
   - Motors (DC, Stepper, Servo)
   - Pneumatics
   - Hydraulics
-- [[Mechanical]]
+- Mechanical
   - Mechanisms
   - Structural Design
   - Materials
@@ -68,9 +68,9 @@ title: Knowledge Base
   - Milling
   - Turning
   - G-code
-- [[Manual Machining]]
-- [[Sheet Metal]]
-- [[Assembly]]
+- Manual Machining
+- Sheet Metal
+- Assembly
 
 ### [[Protocols]]
 - [[Digital Protocols]]
@@ -92,11 +92,11 @@ title: Knowledge Base
   - Python
   - ROS
   - Spin (Parallax)
-- [[Software Architecture]]
+- Software Architecture
   - Design Patterns
   - State Machines
   - Real-time Systems
-- [[Data Structures]]
+- Data Structures
   - Arrays
   - Trees
   - Graphs
@@ -112,11 +112,11 @@ title: Knowledge Base
   - Simulation
   - Version Control
   - IDEs
-- [[Physical Tools]]
+- Physical Tools
   - Hand Tools
   - Power Tools
   - Measurement Equipment
-- [[Lab Equipment]]
+- Lab Equipment
   - Oscilloscopes
   - Power Supplies
   - 3D Printers
