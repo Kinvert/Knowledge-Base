@@ -4,7 +4,7 @@ tags: [automotive, protocols, networking, diagnostics, embedded-systems]
 aliases: [Automotive Communication Protocols, Vehicle Protocols]
 ---
 
-# 🚗 Overview of Automotive Communication Protocols
+# 🚗 Overview of Automotive Communication [[Protocols]]
 
 Modern vehicles rely on a complex network of communication protocols to connect electronic control units (ECUs), sensors, actuators, and infotainment systems. These protocols ensure reliable, real-time data exchange for safety, diagnostics, and advanced features.
 
