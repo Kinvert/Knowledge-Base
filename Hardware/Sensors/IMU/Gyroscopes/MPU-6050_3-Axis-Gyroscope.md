@@ -1,3 +1,4 @@
+The MPU-6050 is an [[IMU]]
 
 Parallax Store - https://www.parallax.com/product/mpu-9dof-click/
 
