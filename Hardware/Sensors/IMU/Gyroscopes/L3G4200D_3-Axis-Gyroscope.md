@@ -1,3 +1,4 @@
+The L3G4200D is an [[IMU]]
 
 Parallax Store - https://www.parallax.com/product/gyroscope-module-3-axis-l3g4200d/
 
