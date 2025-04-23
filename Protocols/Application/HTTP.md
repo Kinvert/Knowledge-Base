@@ -26,7 +26,7 @@ HTTP is **stateless**, meaning each request is independent, though mechanisms li
 
 3. **Transport Layer**:
    - HTTP typically runs over **TCP** (port 80) or **TLS/SSL** (port 443 for HTTPS).
-   - HTTP/3 uses **QUIC**, a transport protocol built on UDP.
+   - HTTP/3 uses **[[QUIC]]**, a transport protocol built on UDP.
 
 4. **Statelessness**:
    - Each request is independent, meaning the server does not retain information about previous requests.
@@ -132,5 +132,5 @@ Use tools like Wireshark or browser developer tools to inspect HTTP traffic.
 - [[WebSockets]]
 - [[REST]]
 - [[gRPC]]
-- [[SSE (Server-Sent Events)]]
+- [[SSE]] (Server-Sent Events)
 - [[MQTT]]
