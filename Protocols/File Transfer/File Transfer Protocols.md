@@ -1,3 +1,3 @@
-[[FTP]]
-[[SFTP]]
-[[TFTP]]
+- [[FTP]]
+- [[SFTP]]
+- [[TFTP]]
