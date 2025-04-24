@@ -1,6 +1,8 @@
 # 🧠 Knowledge Base
 ---
 
+This is mostly written with LLMs. This isn't really so much meant to be the best way to learn about, for example, TCP. The purpose of this is to look up TCP in the Graph View, hover over it, and follow the links to find interesting but related topics. In that interesting thing you found, it should summarize it, compare it with similar things, give maybe a hello world code snippet, and that's it. You go learn in depth elsewhere. This is to find those interesting connections. Again, mostly written with LLMs.
+
 ### [Algorithms](https://github.com/Kinvert/Knowledge-Base/tree/master/Algorithms)
 - [Control Theory](https://github.com/Kinvert/Knowledge-Base/tree/master/Algorithms/Control-Theory)
   - PID Control
