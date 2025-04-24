@@ -1,10 +1,3 @@
-[[DDS]]
-[[eCAL]]
-[[EtherCAT]]
-[[Modbus]]
-[[OPC-UA]]
-[[ROS Topics]]
-[[Serial Protocols]]
 ---
 title: Robotics and Industrial Protocols
 tags: [protocols, robotics, industrial, automation, communication]
