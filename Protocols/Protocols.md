@@ -9,3 +9,66 @@
 - [[Time Synchronization Protocols]]
 - [[Transport Protocols]]
 - [[Wireless Protocols]]
+
+Another potential list to use:
+
+Wireless Communication Protocols
+
+Examples: Wi-Fi, Bluetooth, Zigbee, LoRa, Z-Wave, 5G, LTE, NFC
+Industrial Communication Protocols
+
+Examples: Modbus, EtherCAT, PROFINET, OPC UA, BACnet
+Transport Layer Protocols
+
+Examples: TCP, UDP, QUIC, SCTP
+Application Layer Protocols
+
+Examples: DNS, FTP, SMTP, SNMP, MQTT, CoAP
+Security Protocols
+
+Examples: TLS/SSL, IPsec, Kerberos, OAuth, OpenID Connect
+Time Synchronization Protocols
+
+Examples: NTP, gPTP (802.1AS), IEEE 1588 PTP
+Media Streaming Protocols
+
+Examples: RTP, RTSP, HLS, DASH, WebRTC
+File Transfer Protocols
+
+Examples: SFTP, SCP, TFTP, SMB, NFS
+Embedded Systems Protocols
+
+Examples: SPI, I²C, UART, JTAG, SWD
+Cloud and Web Protocols
+
+Examples: REST, GraphQL, SOAP, WebSockets, gRPC
+Routing Protocols
+
+Examples: OSPF, BGP, RIP, EIGRP
+Data Serialization Protocols
+
+Examples: JSON, XML, Protobuf, Avro, Thrift
+IoT Protocols
+
+Examples: Zigbee, MQTT, CoAP, LwM2M
+Automotive Protocols
+
+Examples: CAN, LIN, FlexRay, MOST, Automotive Ethernet
+Storage and Data Access Protocols
+
+Examples: iSCSI, Fibre Channel, NVMe-oF
+Real-Time Communication Protocols
+
+Examples: SIP, XMPP, WebRTC
+Distributed Systems Protocols
+
+Examples: Raft, Paxos, Gossip Protocol
+Blockchain and Cryptocurrency Protocols
+
+Examples: Bitcoin, Ethereum, Lightning Network
+Satellite Communication Protocols
+
+Examples: DVB-S, CCSDS, Iridium Protocols
+Email and Messaging Protocols
+
+Examples: IMAP, POP3, XMPP, AMQP
