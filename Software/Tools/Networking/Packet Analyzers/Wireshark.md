@@ -130,10 +130,13 @@ Wireshark supports a vast array of protocols, making it one of the most versatil
 ## 🔗 Related Topics
 
 - [[tcpdump]]
+- [[tcptrace]]
 - [[Fiddler]]
 - [[Zeek (Bro)]]
+- [[netsniff-ng]]
 - [[Network Protocols]]
 - [[Packet Analysis]]
+- [[Packet Analyzer]]
 
 ---
 
@@ -143,6 +146,8 @@ Wireshark supports a vast array of protocols, making it one of the most versatil
 - [Wireshark User Guide](https://www.wireshark.org/docs/wsug_html_chunked/)
 - [Wireshark Wiki](https://wiki.wireshark.org/)
 - [Packet Analysis with Wireshark (Book)](https://www.amazon.com/Packet-Analysis-Wireshark-Practical-Guide/dp/1786461676)
+- [Repo](https://gitlab.com/wireshark/wireshark)
+- 
 
 ---
 

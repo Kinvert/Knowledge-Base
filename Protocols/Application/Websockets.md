@@ -183,6 +183,53 @@ server.on('connection', socket => {
 console.log("WebSocket server running on ws://localhost:8765");
 
 ```
+
+```cpp
+#include <websocketpp/config/asio_no_tls.hpp>
+#include <websocketpp/server.hpp>
+
+typedef websocketpp::server<websocketpp::config::asio> server;
+
+void on_message(server* s, websocketpp::connection_hdl hdl, server::message_ptr msg) {
+    // Echo the received message back to the client
+    s->send(hdl, msg->get_payload(), msg->get_opcode());
+}
+
+int main() {
+    server echo_server;
+
+    echo_server.set_message_handler(
+        std::bind(&on_message, &echo_server, std::placeholders::_1, std::placeholders::_2)
+    );
+
+    echo_server.init_asio();
+    echo_server.listen(9002); // Listen on port 9002
+    echo_server.start_accept();
+
+    echo_server.run();
+}
+```
+
+```cpp
+#include "easywsclient.hpp"
+#include <iostream>
+
+using easywsclient::WebSocket;
+
+int main() {
+    WebSocket::pointer ws = WebSocket::from_url("ws://echo.websocket.org");
+    if (ws) {
+        ws->send("Hello, WebSocket!");
+        ws->poll();
+        ws->dispatch([](const std::string & message) {
+            std::cout << "Got message: " << message << std::endl;
+        });
+        ws->close();
+        delete ws;
+    }
+    return 0;
+}
+```
 ## Related Topics
 
 - [[MQTT]]
@@ -191,7 +238,7 @@ console.log("WebSocket server running on ws://localhost:8765");
 - [[ZeroMQ]]
 - [[WebRTC]]
 - [[SSE]]
-- [[TPC]]
+- [[TCP]]
 - [[Networking]]
 - [[Protocols/Transport]]
 - [[Protocols/Application]]
