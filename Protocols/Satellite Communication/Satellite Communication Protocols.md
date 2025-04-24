@@ -199,7 +199,6 @@ Satellite communication protocols are essential for applications like global int
 
 - [[Protocols]]
 - [[Networking Basics]]
-- [[IoT Protocols]]
 - [[Real-Time Communication Protocols]]
 
 ---
