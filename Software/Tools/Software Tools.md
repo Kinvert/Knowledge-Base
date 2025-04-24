@@ -1,2 +1,4 @@
+- [[3D Modeling]]
+- [[Game Development]]
 - [[Media Software Tools]]
 - [[Networking Software Tools]]
