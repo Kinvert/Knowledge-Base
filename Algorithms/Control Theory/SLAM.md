@@ -67,6 +67,46 @@ SLAM fuses data from various sensors (e.g., LiDAR, cameras, IMUs, wheel encoders
 
 ---
 
+## 🧰 Common SLAM Packages, Libraries, and Frameworks
+
+### Python
+
+- **RTAB-Map** (via ROS): Real-Time Appearance-Based Mapping, accessible through ROS Python bindings.
+- **Open3D**: Provides SLAM examples and point cloud processing tools.
+- **PySLAM**: Lightweight Python library for monocular visual SLAM.
+- **ORB-SLAM2/3 (Python Bindings)**: Community projects provide Python wrappers for ORB-SLAM.
+
+### C++
+
+- **ORB-SLAM2 / ORB-SLAM3**: Widely used open-source visual SLAM systems for monocular, stereo, and RGB-D cameras.
+- **RTAB-Map**: Real-time 3D SLAM library with LiDAR and visual support, ROS integration.
+- **Google Cartographer**: 2D and 3D SLAM for LiDAR and other sensors, ROS compatible.
+- **GTSAM**: Factor graph optimization library often used in SLAM backends.
+- **LSD-SLAM**: Large-Scale Direct Monocular SLAM.
+
+### ROS (Robot Operating System)
+
+- **slam_gmapping**: 2D laser-based SLAM.
+- **hector_slam**: 2D SLAM for systems without odometry.
+- **cartographer_ros**: ROS integration for Google Cartographer.
+- **rtabmap_ros**: ROS wrapper for RTAB-Map.
+
+### MATLAB
+
+- **MATLAB Robotics System Toolbox**: Built-in SLAM algorithms for simulation and prototyping.
+- **VINS-Mono**: Visual-inertial SLAM, with MATLAB support for research.
+
+### Other Languages/Frameworks
+
+- **SLAM Toolbox (C++)**: Advanced 2D SLAM for ROS2.
+- **Karto SLAM (C++)**: Efficient 2D laser-based SLAM.
+- **MRPT (C++)**: Mobile Robot Programming Toolkit, includes SLAM modules.
+- **Cartographer (Go)**: Experimental Go bindings for Google Cartographer.
+
+**Note:** Most state-of-the-art SLAM libraries are written in C++ for performance, with Python or ROS bindings for ease of use and integration.
+
+---
+
 ## 🔗 Related Topics
 
 - [[State Estimation]]
