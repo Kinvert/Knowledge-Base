@@ -115,6 +115,7 @@ yt-dlp is widely used for personal media archiving, offline viewing, and extract
 ## 🔗 Related Topics
 
 - [[FFmpeg]]
+- [[M3U8]]
 - [[youtube-dl]]
 - [[Video Processing Tools]]
 - [[Media Streaming Protocols]]
