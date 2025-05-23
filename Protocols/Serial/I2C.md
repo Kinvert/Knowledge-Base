@@ -300,4 +300,4 @@ dat
 ## References
 - [I²C Specification](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
 - [[Digital Protocols]]
-- [[Hardware]]
+- [[Serial Protocols]]
