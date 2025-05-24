@@ -8,7 +8,7 @@ aliases: [LC29H, LC29H GPS, LC29H GNSS, LC29H Module]
 
 ## 🧭 Overview
 
-The **LC29H** is a high-performance, low-power GNSS (Global Navigation Satellite System) module designed for precise positioning and navigation applications. Manufactured by **Quectel**, the LC29H supports multiple satellite constellations, including GPS, GLONASS, Galileo, and BeiDou, enabling robust and accurate global positioning even in challenging environments.
+The **LC29H** is a high-performance, low-power GNSS (Global Navigation Satellite System) [[GPS Sensor]] module designed for precise positioning and navigation applications. Manufactured by **Quectel**, the LC29H supports multiple satellite constellations, including GPS, GLONASS, Galileo, and BeiDou, enabling robust and accurate global positioning even in challenging environments.
 
 The LC29H is commonly used in automotive, industrial, asset tracking, and IoT applications where reliable and accurate location data is critical.
 
