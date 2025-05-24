@@ -1,7 +1,7 @@
 - Distance
 - [[IMU]]
 	- [[BNO055]]
-- 
+- [[GPS Sensors]]
 - Light
 - Temperature
 - Gas
