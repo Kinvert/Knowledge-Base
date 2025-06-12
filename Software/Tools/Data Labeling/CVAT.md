@@ -1,6 +1,6 @@
 # 🖼️ CVAT (Computer Vision Annotation Tool)
 
-CVAT is an open-source annotation tool for labeling data used in computer vision applications. It was originally developed by Intel and is now maintained by the open-source community under the Apache 2.0 license.
+CVAT is an open-source annotation tool for [[Data Labeling]] used in computer vision applications. It was originally developed by Intel and is now maintained by the open-source community under the Apache 2.0 license.
 
 ---
 
