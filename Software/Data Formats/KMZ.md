@@ -1,6 +1,6 @@
 # 🌍 KMZ Files
 
-**KMZ files** are a common format used to store geographic data, primarily for use in applications like **Google Earth**. They are essentially compressed versions of **KML (Keyhole Markup Language)** files, often bundling additional resources such as images, icons, and 3D models into a single archive.
+**KMZ files** are a common format used to store geographic data, primarily for use in applications like **Google Earth**. They are essentially compressed versions of **[[KML]] (Keyhole Markup Language)** files, often bundling additional resources such as images, icons, and 3D models into a single archive.
 
 ---
 
@@ -32,10 +32,10 @@ KMZ is essentially a ZIP file with a `.kmz` extension. Inside it typically conta
 
 | Application | Platform | Notes |
 |--------------|----------|-------|
-| Google Earth | Windows, Mac, Linux, Web | Primary application |
+| [[Google Earth]] | Windows, Mac, Linux, Web | Primary application |
 | Google Maps | Web | Limited KMZ support |
-| QGIS | Windows, Mac, Linux | Advanced GIS software |
-| ArcGIS | Windows | GIS professional tool |
+| [[QGIS]] | Windows, Mac, Linux | Advanced GIS software |
+| [[ArcGIS]] | Windows | GIS professional tool |
 | Garmin BaseCamp | Windows, Mac | Import/export for GPS units |
 | Mobile Apps | Android/iOS | Various 3rd party apps support KMZ |
 
