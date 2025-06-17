@@ -101,7 +101,7 @@ eCALShutdown()
     
 - [[DDS (Data Distribution Service)]]
     
-- [[ROS 2]]
+- [[ROS2]]
     
 - [[Protobuf]]
     
@@ -117,5 +117,3 @@ eCALShutdown()
 - [Official eCAL Eclipse](https://eclipse-ecal.github.io/ecal/stable/index.html)
     
 - [[kRPC]]
-    
-- [[ROS]]
