@@ -13,7 +13,7 @@ Gazebo is a powerful open-source 3D robotics simulator that enables testing, dev
 | License | Apache 2.0 |
 | Language | C++ (core), Python (bindings and tools) |
 | Platforms | Linux (primary), macOS (partial), Windows (experimental) |
-| ROS Integration | Deep integration with [[ROS]] and [[ROS 2]] |
+| ROS Integration | Deep integration with [[ROS]] and [[ROS2]] |
 | Rendering | OpenGL |
 | Physics Engines | ODE, Bullet, Simbody, DART |
 | Simulation | Real-time and accelerated |
