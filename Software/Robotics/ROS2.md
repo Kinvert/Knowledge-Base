@@ -142,7 +142,7 @@ ROS 2 introduces optional security features via SROS 2:
 - [[eCAL]]
 - [[Autoware]]
 - [[MicroROS]]
-- [[Gazebo Simulator]]
+- [[Gazebo]]
 - [[RTOS]]
 
 ---
