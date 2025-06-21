@@ -80,7 +80,7 @@
 
 ## 🔗 Related Topics
 
-- [[K-means]]
+- [[KMeans]]
 - [[DBSCAN]]
 - [[Delaunay Triangulation]]
 - [[Point Cloud]]
