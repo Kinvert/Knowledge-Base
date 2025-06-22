@@ -17,6 +17,31 @@ tags: [middleware, communication, robotics, distributed-systems, [[Protocols/Tra
 - Language bindings: C++, Python, C#, Java, Rust (community)
 - Monitoring tools included
 
+## 📊 Comparison with Similar Middleware
+
+| Feature / Tool          | eCAL                          | DDS                           | [[gRPC]]                     | [[ZeroMQ]]                    |
+|-------------------------|------------------------------|-------------------------------|------------------------------|-------------------------------|
+| Communication Model      | Pub/Sub + RPC                 | Pub/Sub + RPC (via RTPS)       | RPC (client-server)           | Pub/Sub + request-reply        |
+| Real-time Support         | ✅ Strong                     | ✅ Strong                      | ⚠️ Limited                    | ⚠️ Limited                     |
+| Transport Layers          | Shared memory, UDP, TCP       | UDP (RTPS), TCP (optionally)   | TCP                           | TCP, IPC                       |
+| QoS Granularity           | ⚠️ Basic                      | ✅ Extensive                   | ⚠️ Basic                      | ❌ None                        |
+| Auto Discovery            | ✅ Yes                         | ✅ Yes                          | ❌ No                          | ❌ No                          |
+| Built-in Monitoring Tools | ✅ Yes (Monitor, Recorder)     | ⚠️ Vendor-specific             | ❌ No                          | ❌ No                          |
+| Typical Domains           | Robotics, automotive          | Robotics, automotive, defense  | Cloud services, microservices | Messaging, distributed systems |
+| Language Support          | C++, Python, C#, Java, Rust   | C++, Python, Java, others      | Many                          | Many                           |
+
+## ✅ Strengths
+
+- Simple setup and good performance for local and LAN distributed systems
+- Built-in monitoring, recording, and replay tools
+- Flexible transport (shared memory + network)
+
+## ❌ Weaknesses
+
+- Less mature and standardized than DDS
+- Lacks the extensive QoS options of DDS
+- Smaller ecosystem and community support compared to DDS or gRPC
+
 ## Basic Architecture
 
 - **Publishers** send messages on named topics.
