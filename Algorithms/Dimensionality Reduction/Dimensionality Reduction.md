@@ -74,6 +74,7 @@
 - [[t-SNE]]
 - [[UMAP]]
 - [[Isomap]]
+- [[Algorithms]]
 - [[Autoencoder]]
 - [[Cluster Analysis]]
 - [[Feature Engineering]]
