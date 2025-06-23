@@ -52,7 +52,7 @@
 ## 🔗 Related Notes
 
 - [[Algorithms]]
-- [[PCL (Point Cloud Library)]]
+- [[PCL]]
 - [[Open3D]]
 - [[SLAM]]
 - [[Depth Estimation]]
