@@ -24,6 +24,39 @@
 
 ---
 
+## 📝 RRT* Pseudocode
+
+```plaintext
+function RRT_Star(x_init, x_goal, max_samples, step_size):
+    T ← initialize tree with x_init
+    for i = 1 to max_samples:
+        x_rand ← sample_random_point()
+        x_nearest ← nearest_node(T, x_rand)
+        x_new ← steer_toward(x_nearest, x_rand, step_size)
+        
+        if collision_free(x_nearest, x_new):
+            X_near ← nearby_nodes(T, x_new, radius(i, max_samples))
+            x_min ← x_nearest
+            c_min ← cost(x_nearest) + distance(x_nearest, x_new)
+            
+            for x_near in X_near:
+                if collision_free(x_near, x_new) and 
+                   cost(x_near) + distance(x_near, x_new) < c_min:
+                    x_min ← x_near
+                    c_min ← cost(x_near) + distance(x_near, x_new)
+            
+            add x_new to T with parent x_min
+            
+            for x_near in X_near:
+                if collision_free(x_new, x_near) and 
+                   cost(x_new) + distance(x_new, x_near) < cost(x_near):
+                    rewire T: change parent of x_near to x_new
+    
+    return extract_path_to_goal(T, x_goal)
+```
+
+---
+
 ## 🚀 Applications
 
 - Autonomous driving (optimal path planning)
