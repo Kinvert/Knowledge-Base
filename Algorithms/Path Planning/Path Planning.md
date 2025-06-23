@@ -16,7 +16,7 @@
 
 | Category                | Example Algorithms                            | Notes                                        |
 |-------------------------|-----------------------------------------------|----------------------------------------------|
-| **Graph-based Search**   | [[A*]], [[Dijkstra]], [[Breadth First Search]] | Discretize environment as graph or grid      |
+| **Graph-based Search**   | [[A*]], [[Dijkstra's Algorithm]], [[Breadth First Search]] | Discretize environment as graph or grid      |
 | **Sampling-based**       | [[RRT]], [[PRM]]                              | Good for high-dimensional spaces             |
 | **Optimization-based**   | Gradient descent planners, CHOMP, TrajOpt     | Solve as optimization problem                |
 | **Potential Field**      | [[Potential Field Method]]                    | Treat obstacles as repulsive forces          |
@@ -68,7 +68,7 @@
 ## 🔗 Related Notes
 
 - [[A*]]
-- [[Dijkstra]]
+- [[Dijkstra's Algorithm]]
 - [[Potential Field Method]]
 - [[RRT]]
 - [[SLAM]]
