@@ -10,6 +10,16 @@
 - Typically implemented using **recursion** (implicit stack) or an explicit **stack**.
 - Useful for problems requiring complete exploration of all paths or structures in a graph.
 
+```
+function DFS(graph, start, visited):
+    if visited does not contain start:
+        add start to visited
+        process(start)
+
+        for each neighbor in graph[start]:
+            DFS(graph, neighbor, visited)
+```
+
 ---
 
 ## ⚙️ Key Properties
