@@ -53,7 +53,7 @@
 ## 🔗 Related Notes
 
 - [[Algorithms]]
-- [[A* Search]]
+- [[A*]]
 - [[Dijkstra’s Algorithm]]
 - [[Graph Theory]]
 - [[Pathfinding]]
