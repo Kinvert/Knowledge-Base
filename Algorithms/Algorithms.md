@@ -12,7 +12,7 @@ This note serves as an index to various categories of algorithms, providing link
 |-------------------------------|-------------------------------------------------------------------|---------------------------------------------------|
 | [[Search Algorithms]]          | Techniques for traversing data structures to find paths or items | A*, [[Dijkstra’s Algorithm]], BFS, DFS |
 | [[Sorting Algorithms]]         | Methods for arranging data in order                              | QuickSort, MergeSort, Bubble Sort, HeapSort       |
-| [[Pathfinding Algorithms]]      | Find paths through graphs or spaces                              | [[A* Search]], [[Dijkstra’s Algorithm]], [[Potential Fields]] |
+| [[Pathfinding Algorithms]]      | Find paths through graphs or spaces                              | A*, [[Dijkstra’s Algorithm]], [[Potential Fields]] |
 | [[Clustering]]                 | Group data points into clusters                                  | [[KMeans]], DBSCAN, Spectral Clustering          |
 | [[Optimization Algorithms]]     | Techniques for finding best solutions given constraints         | Gradient Descent, Genetic Algorithms, Simulated Annealing |
 | [[Graph Algorithms]]           | Operations on graphs                                             | Kruskal's MST, Prim's MST, Tarjan's SCC           |
