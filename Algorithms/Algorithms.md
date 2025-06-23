@@ -10,7 +10,7 @@ This note serves as an index to various categories of algorithms, providing link
 
 | Category                     | Description                                                       | Example Algorithms                                 |
 |-------------------------------|-------------------------------------------------------------------|---------------------------------------------------|
-| [[Search Algorithms]]          | Techniques for traversing data structures to find paths or items | [[A* Search]], [[Dijkstra’s Algorithm]], BFS, DFS |
+| [[Search Algorithms]]          | Techniques for traversing data structures to find paths or items | A*, [[Dijkstra’s Algorithm]], BFS, DFS |
 | [[Sorting Algorithms]]         | Methods for arranging data in order                              | QuickSort, MergeSort, Bubble Sort, HeapSort       |
 | [[Pathfinding Algorithms]]      | Find paths through graphs or spaces                              | [[A* Search]], [[Dijkstra’s Algorithm]], [[Potential Fields]] |
 | [[Clustering]]                 | Group data points into clusters                                  | [[KMeans]], DBSCAN, Spectral Clustering          |
