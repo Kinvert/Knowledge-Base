@@ -56,6 +56,34 @@
 
 ---
 
+## 📊 Sensor Fusion Technique Comparison
+
+| Technique                   | Suitable For                                  | Strengths                                              | Weaknesses                                       |
+|-----------------------------|-----------------------------------------------|--------------------------------------------------------|--------------------------------------------------|
+| Kalman Filter (KF)           | Linear systems with Gaussian noise            | Computationally efficient, well-understood             | Limited to linear systems                        |
+| Extended Kalman Filter (EKF) | Mildly non-linear systems                     | Handles non-linearities (first-order approximation)    | Linearization can introduce errors               |
+| Unscented Kalman Filter (UKF)| Highly non-linear systems                     | Better non-linear performance than EKF                 | Higher computational cost than KF/EKF            |
+| Particle Filter              | Non-linear, non-Gaussian systems              | Flexible, can represent arbitrary distributions        | Computationally intensive, requires many samples |
+| Complementary Filter         | Simple orientation/attitude estimation        | Lightweight, easy to implement                         | Limited to simple cases, no statistical modeling |
+| Bayesian Network / Prob. Graph| Complex dependencies, structured fusion      | Models dependencies and uncertainty explicitly         | Complex to design, high computational cost       |
+| Deep Learning-based Fusion   | Complex, high-dimensional sensor data         | Learns complex patterns automatically                  | Requires large data, difficult to interpret      |
+
+---
+
+## 🚀 Example Scenarios for Each Technique
+
+| Technique                   | Example Use Case                                      |
+|-----------------------------|------------------------------------------------------|
+| Kalman Filter (KF)           | Sensor smoothing for industrial machinery position tracking |
+| Extended Kalman Filter (EKF) | Drone flight control using IMU + GPS                 |
+| Unscented Kalman Filter (UKF)| Autonomous car sensor fusion with highly non-linear dynamics |
+| Particle Filter              | Mobile robot localization in a map (e.g. Monte Carlo Localization) |
+| Complementary Filter         | Basic attitude estimation for small hobby UAVs using gyro + accelerometer |
+| Bayesian Network / Prob. Graph| Multi-sensor health monitoring in aerospace systems |
+| Deep Learning-based Fusion   | Autonomous vehicle perception fusing LIDAR + camera + radar |
+
+---
+
 ## 🏆 Strengths
 
 - Increased accuracy and reliability.
