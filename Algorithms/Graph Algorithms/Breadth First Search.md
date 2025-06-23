@@ -10,6 +10,23 @@
 - Utilizes a **queue** data structure (FIFO) to track the next node to visit.
 - Guarantees the shortest path (fewest edges) in unweighted graphs.
 
+```
+function BFS(graph, start):
+    create empty set visited
+    create queue
+    enqueue start
+    add start to visited
+
+    while queue is not empty:
+        node = dequeue from queue
+        process(node)
+
+        for each neighbor in graph[node]:
+            if neighbor not in visited:
+                add neighbor to visited
+                enqueue neighbor
+```
+
 ---
 
 ## ⚙️ Key Properties
