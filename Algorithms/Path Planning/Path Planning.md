@@ -81,5 +81,6 @@
 
 - [Wikipedia - Motion Planning](https://en.wikipedia.org/wiki/Motion_planning)
 - [ROS Navigation Stack](http://wiki.ros.org/navigation)
+- [YT: Advanced Motion Planning: FMT*, Informed RRT*, BIT*, and RABIT* | An OMPL Tutorial with Examples](https://www.youtube.com/watch?v=yggi7QjfOUM)
 
 ---
