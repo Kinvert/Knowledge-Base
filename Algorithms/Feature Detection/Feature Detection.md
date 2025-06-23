@@ -42,7 +42,7 @@ A **feature** is a point or region in an image that can be reliably located and 
 ## 🚀 Applications
 
 - [[SLAM]] systems (e.g., [[ORB-SLAM]])
-- Visual odometry
+- [[Visual Odometry]]
 - Structure-from-motion
 - Object detection and tracking
 - Image stitching / panorama creation
