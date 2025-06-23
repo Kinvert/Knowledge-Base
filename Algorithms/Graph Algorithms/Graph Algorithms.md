@@ -21,7 +21,7 @@ Graphs can represent anything from social networks and maps to circuits and depe
 
 | Category                   | Description                                           | Example Algorithms                       |
 |----------------------------|-------------------------------------------------------|------------------------------------------|
-| [[Pathfinding Algorithms]]   | Find paths between nodes                             | [[Dijkstra’s Algorithm]], [[A* Search]], BFS, DFS |
+| [[Pathfinding Algorithms]]   | Find paths between nodes                             | [[Dijkstra’s Algorithm]], [[A*]], BFS, DFS |
 | [[Minimum Spanning Tree]]    | Find subset of edges forming a tree of minimal total weight | [[Kruskal's Algorithm]], [[Prim's Algorithm]] |
 | [[Connectivity Algorithms]]  | Identify connected components, cycles, bridges       | Tarjan's SCC, Kosaraju’s SCC, Union-Find |
 | [[Graph Traversal]]          | Explore nodes systematically                         | BFS, DFS                                 |
