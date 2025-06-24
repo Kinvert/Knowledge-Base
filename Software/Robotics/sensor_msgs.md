@@ -54,6 +54,146 @@
 
 ---
 
+## Examples
+
+**Publish Image**
+```python
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+import numpy as np
+import cv2
+from cv_bridge import CvBridge
+
+class ImagePublisher(Node):
+    def __init__(self):
+        super().__init__('image_publisher')
+        self.publisher_ = self.create_publisher(Image, 'camera/image_raw', 10)
+        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.bridge = CvBridge()
+
+    def timer_callback(self):
+        # Create a dummy image (black image with OpenCV)
+        img = np.zeros((480, 640, 3), dtype=np.uint8)
+        ros_img = self.bridge.cv2_to_imgmsg(img, encoding='bgr8')
+        self.publisher_.publish(ros_img)
+        self.get_logger().info('Published dummy image.')
+
+def main():
+    rclpy.init()
+    node = ImagePublisher()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+**Subscribe to Image**
+```python
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+
+class ImageSubscriber(Node):
+    def __init__(self):
+        super().__init__('image_subscriber')
+        self.subscription = self.create_subscription(
+            Image,
+            'camera/image_raw',
+            self.listener_callback,
+            10
+        )
+        self.bridge = CvBridge()
+
+    def listener_callback(self, msg):
+        cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        self.get_logger().info(f'Received image of size {cv_image.shape}')
+
+def main():
+    rclpy.init()
+    node = ImageSubscriber()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+**Publish IMU**
+```python
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Imu
+from geometry_msgs.msg import Quaternion
+import math
+
+class ImuPublisher(Node):
+    def __init__(self):
+        super().__init__('imu_publisher')
+        self.publisher_ = self.create_publisher(Imu, 'imu/data', 10)
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+    def timer_callback(self):
+        msg = Imu()
+        msg.orientation = Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+        msg.angular_velocity.x = 0.0
+        msg.angular_velocity.y = 0.0
+        msg.angular_velocity.z = math.radians(45.0)  # Example: 45 deg/sec rotation
+        msg.linear_acceleration.x = 0.0
+        msg.linear_acceleration.y = 0.0
+        msg.linear_acceleration.z = 9.81  # Simulate gravity
+        self.publisher_.publish(msg)
+        self.get_logger().info('Published dummy IMU data.')
+
+def main():
+    rclpy.init()
+    node = ImuPublisher()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+**Subscribe to IMU**
+```python
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Imu
+
+class ImuSubscriber(Node):
+    def __init__(self):
+        super().__init__('imu_subscriber')
+        self.subscription = self.create_subscription(
+            Imu,
+            'imu/data',
+            self.listener_callback,
+            10
+        )
+
+    def listener_callback(self, msg):
+        self.get_logger().info(
+            f'Orientation: [{msg.orientation.x}, {msg.orientation.y}, {msg.orientation.z}, {msg.orientation.w}]'
+        )
+
+def main():
+    rclpy.init()
+    node = ImuSubscriber()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+
+---
+
 ## 🔗 Related Notes
 
 - [[ROS2]]
