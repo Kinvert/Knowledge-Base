@@ -15,7 +15,7 @@
 ## ⚙️ Key Features
 
 - Create and manage ROS 2 nodes in Python.
-- Publish and subscribe to [[ ROS2 Topics]].
+- Publish and subscribe to [[ROS2 Topics]].
 - Define and call [[ROS2 Services]].
 - Use [[ROS2 Actions]] for long-running tasks.
 - Work with ROS 2 parameters.
