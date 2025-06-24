@@ -1,6 +1,6 @@
 # 🛰️ LSD-SLAM (Large-Scale Direct Monocular SLAM)
 
-**LSD-SLAM** is a *direct monocular SLAM* (Simultaneous Localization and Mapping) algorithm that estimates camera motion and a semi-dense map from a single camera. Unlike feature-based SLAM methods (e.g., [[ORB-SLAM]]), LSD-SLAM operates directly on pixel intensities rather than extracted features.
+**LSD-SLAM** is a *direct monocular SLAM* ([[SLAM]] Simultaneous Localization and Mapping) algorithm that estimates camera motion and a semi-dense map from a single camera. Unlike feature-based SLAM methods (e.g., [[ORB-SLAM]]), LSD-SLAM operates directly on pixel intensities rather than extracted features.
 
 ---
 
