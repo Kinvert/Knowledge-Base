@@ -129,6 +129,7 @@ SLAM fuses data from various sensors (e.g., LiDAR, cameras, IMUs, wheel encoders
 - [ORB-SLAM2 (Visual SLAM)](https://github.com/raulmur/ORB_SLAM2)
 - [Google Cartographer (LiDAR SLAM)](https://github.com/cartographer-project/cartographer)
 - [ROS SLAM Tutorials](https://wiki.ros.org/slam_gmapping)
+- [ROS2 ORB SLAM](https://github.com/Mechazo11/ros2_orb_slam3)
 
 ---
 
