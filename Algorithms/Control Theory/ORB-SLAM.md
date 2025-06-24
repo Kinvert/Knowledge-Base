@@ -42,7 +42,7 @@
 
 ## 🔄 Comparison to Similar Systems
 
-| Feature                | ORB-SLAM          | [[LSD-SLAM]]       | [[DSO (Direct Sparse Odometry)]] | [[RTAB-Map]]            |
+| Feature                | ORB-SLAM          | [[LSD-SLAM]]       | [[DSO]] (Direct Sparse Odometry) | [[RTAB-Map]]            |
 |------------------------|------------------|-------------------|----------------------------------|------------------------|
 | Type                   | Feature-based     | Direct (semi-dense) | Direct (sparse)                  | Feature + Graph-based   |
 | Camera types supported  | Mono, Stereo, RGB-D | Mono               | Mono                             | RGB-D, Stereo, LIDAR    |
