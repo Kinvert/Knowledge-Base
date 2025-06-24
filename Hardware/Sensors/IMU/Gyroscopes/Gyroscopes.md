@@ -80,10 +80,10 @@ This note focuses on gyroscopes and IMUs that are affordable, accessible, and ea
 - [[I2C]]
 - [[SPI]]
 - [[ROS2]]
-- [[MPU-6050_3-Axis_Gyroscope]]
+- [[MPU-6050_3-Axis-Gyroscope]]
 - [[BNO055]]
 - [[ITG-3200_Tri_Axis_Gyroscope]]
-- [[L3G4200D_3-Axis_Gyroscope]]
+- [[L3G4200D_3-Axis-Gyroscope]]
 
 ---
 
