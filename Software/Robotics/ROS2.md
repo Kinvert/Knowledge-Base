@@ -152,4 +152,11 @@ ROS 2 introduces optional security features via SROS 2:
 - https://docs.ros.org/en/foxy/index.html
 - https://design.ros2.org/
 - https://github.com/ros2
+  - https://github.com/ros2/ros2_documentation
 - https://index.ros.org/packages/
+- **Indexes**
+  - https://github.com/fkromer/awesome-ros2
+- **Examples**
+  - https://github.com/ros-controls/ros2_control_demos
+- **Drivers**
+  - https://github.com/flynneva/bno055
