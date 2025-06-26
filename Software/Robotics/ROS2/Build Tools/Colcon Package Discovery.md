@@ -6,7 +6,7 @@
 
 ---
 
-## How colcon Discovers Packages
+## How [[Colcon]] Discovers Packages
 
 - **Recursive Directory Traversal:**  
   When you run `colcon build` from the root of your workspace (e.g., `~/ros2_ws`), colcon recursively scans the `src` subdirectory by default, walking through all nested folders.
@@ -48,3 +48,9 @@
 - [ROS 2 Humble colcon tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
 - [colcon Discovery Arguments Documentation](https://colcon.readthedocs.io/en/released/reference/discovery-arguments.html)
 - [ROS Industrial Training](https://industrial-training-master.readthedocs.io/en/melodic/_source/session7/ROS2-Basics.html)
+
+---
+
+## See Also
+- [[package.xml]]
+- [[setup.py]]
