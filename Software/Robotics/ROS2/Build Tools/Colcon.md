@@ -45,9 +45,10 @@ ros2_ws/
 ## 🚀 How It Works
 
 1. **Source Discovery:** colcon scans the `src/` directory for packages (CMake, Python, etc).
-2. **Dependency Resolution:** It figures out the order to build packages based on dependencies.
-3. **Build:** Invokes CMake (or other build systems) in the right order.
-4. **Install:** Packages are installed into the `install/` directory (or wherever you specify).
+  - [[Colcon Package Discovery]]
+3. **Dependency Resolution:** It figures out the order to build packages based on dependencies.
+4. **Build:** Invokes CMake (or other build systems) in the right order.
+5. **Install:** Packages are installed into the `install/` directory (or wherever you specify).
 
 When you do:
 
