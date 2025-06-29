@@ -98,5 +98,10 @@
 - [ORB-SLAM2 GitHub](https://github.com/raulmur/ORB_SLAM2)
 - [LSD-SLAM Paper](https://vision.in.tum.de/research/vslam/lsdslam)
 - [DSO Paper](https://vision.in.tum.de/research/vslam/dso)
+- https://github.com/UZ-SLAMLab/ORB_SLAM3
+- https://github.com/Mechazo11/ros2_orb_slam3
+- https://github.com/luigifreda/pyslam
+- https://github.com/jagennath-hari/FusionSLAM-Unifying-Instant-NGP-for-Monocular-SLAM
+- https://github.com/rayvburn/ORB-SLAM2_ROS
 
 ---
