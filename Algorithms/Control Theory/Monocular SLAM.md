@@ -103,5 +103,6 @@
 - https://github.com/luigifreda/pyslam
 - https://github.com/jagennath-hari/FusionSLAM-Unifying-Instant-NGP-for-Monocular-SLAM
 - https://github.com/rayvburn/ORB-SLAM2_ROS
+- https://github.com/jagennath-hari/FusionSLAM-Unifying-Instant-NGP-for-Monocular-SLAM/tree/main
 
 ---
