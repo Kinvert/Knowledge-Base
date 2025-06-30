@@ -50,6 +50,37 @@ The **Raspberry Pi Camera Modules** are official camera boards designed to conne
 
 ---
 
+## 📌 Raspberry Pi Camera Pinout
+
+The Raspberry Pi Camera Module connects to the Pi via the **CSI (Camera Serial Interface)** port using a flat **ribbon cable**. This interface is **dedicated** to camera communication and provides a **high-bandwidth connection** between the camera and the GPU of the Pi. The CSI connector on the Pi is typically a 15-pin MIPI CSI-2 FFC connector.
+
+Here’s a breakdown of the main signal lines and their functions:
+
+| Pin Label   | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| **GND**     | Ground – Provides electrical ground for the circuit                         |
+| **CAM_GPIO**| General-purpose input/output line from the camera (may signal frame start)  |
+| **SCL0**    | I2C Clock line – Used to communicate with the camera's internal registers   |
+| **SDA0**    | I2C Data line – Also for camera control (e.g. exposure, gain, etc.)         |
+| **CLK**     | Clock – Supplies the pixel clock from the Pi to the camera sensor           |
+| **CN/CP**   | Clock Negative / Clock Positive – Differential clock pair for data transfer |
+| **DN0/DP0** | Data Lane 0 (Negative/Positive) – First differential data lane              |
+| **DN1/DP1** | Data Lane 1 (Negative/Positive) – Second differential data lane (used in higher bandwidth cameras) |
+
+### 🔍 Explanation
+
+- **[[MIPI CSI-2 Protocol]]**: The camera uses the MIPI CSI-2 protocol over differential pairs for **high-speed data transmission**. CSI-2 lanes include a **clock pair (CN/CP)** and one or more **data pairs (DNx/DPx)**. Basic cameras use one lane, more advanced ones like the HQ or Camera v3 may use two lanes for higher bandwidth.
+  
+- **I2C (SCL0/SDA0)**: Even though the actual image data goes through CSI, the **control signals** like camera mode, exposure, gain, resolution, and frame rate are configured using I2C.
+
+- **CAM_GPIO**: Some camera modules expose GPIO lines for functions such as signaling frame start (VSYNC-style signals) or global reset. These aren't always used but may be exposed for advanced use cases.
+
+- **CLK**: Provides a reference clock to the camera sensor itself. Some modules use external oscillators and don’t need this supplied by the Pi.
+
+Note: **Not all camera modules use all pins**. Some newer cameras, especially those with embedded ISP (like the Raspberry Pi Camera Module 3), rely more on internal logic and may use simplified signaling, while older models may need more active external control.
+
+---
+
 ## 🏆 Strengths
 
 - Small, low-power, affordable
