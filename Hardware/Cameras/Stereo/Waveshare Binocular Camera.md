@@ -73,3 +73,4 @@ The **Waveshare Binocular Camera Module** is a dual‑lens stereo imaging system
 ## 🔗 Related Notes
 
 - [[Stereo Cameras]]
+- https://www.waveshare.com/imx219-83-stereo-camera.htm?gQT=1
