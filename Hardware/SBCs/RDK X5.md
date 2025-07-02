@@ -1,63 +1,73 @@
 # 🤖 RDK X5 Robot Development Kit
 
-The **RDK X5** (Robot Development Kit X5) by D‑Robotics / Waveshare / Horizon is a powerful ROS‑ready edge AI computer designed for robotics, autonomy, and perception applications. It features dual‑MIPI inputs for stereo vision, 10‑TOPS AI acceleration, rich I/O interfaces, and PoE support — all in a compact Ubuntu 22.04 kit.
+The **RDK X5** is a compact yet powerful ROS-ready edge AI development board intended for robotics, autonomous systems, and vision-heavy embedded applications. Developed by D-Robotics, it's built around the Sunrise 5 SoC with an integrated 10-TOPS AI accelerator and supports dual MIPI CSI-2 camera inputs, PoE, and Ubuntu 22.04.
 
 ---
 
-## 🧠 Summary
+## 🧠 Overview
 
-- **SoC**: Sunrise 5 – 8× ARM Cortex‑A55 @ 1.5 GHz, 10 TOPS BPU, 32 GFLOPS GPU :contentReference[oaicite:0]{index=0}  
-- **Memory**: 4 GB or 8 GB LPDDR4; storage via micro‑SD or onboard 1 Gbit NAND :contentReference[oaicite:1]{index=1}  
-- **Cameras**: Dual MIPI CSI‑2 4‑lane ports — supports stereo + AI modules :contentReference[oaicite:2]{index=2}  
-- **Connectivity**: USB 3.0×4, USB2.0 Type‑C, HDMI, MIPI‑DSI, Gigabit Ethernet with PoE, Wi‑Fi 6, Bluetooth 5.4, CAN FD, 28 GPIOs :contentReference[oaicite:3]{index=3}  
-- **Power**: USB‑C 5 V/5 A; PoE support via HAT :contentReference[oaicite:4]{index=4}  
-- **OS**: Ubuntu 22.04 (preloaded image); ROS‑friendly :contentReference[oaicite:5]{index=5}
-
----
-
-## 🛠️ Key Features
-
-- **Stereo Vision + Depth**: Dual 4‑lane MIPI CSI ports support plugin camera modules like the SC230AI 2MP stereo depth cameras :contentReference[oaicite:6]{index=6}  
-- **AI Acceleration**: Onboard BPU offers 10 TOPS for inference on vision and robotics algorithms :contentReference[oaicite:7]{index=7}  
-- **“Flash Connect”**: Single USB‑C port for flashing, debugging, power, and display output :contentReference[oaicite:8]{index=8}  
-- **PoE Module**: Optional HAT provides PoE IEEE 802.3af/at power and active cooling :contentReference[oaicite:9]{index=9}
-
----
-
-## 📊 RDK X5 vs Similar Edge AI Boards
-
-| Device             | CPU / RAM       | AI Accel        | CSI Inputs        | USB / Ethernet / PoE | GPU   | OS Support             | Price Tier |
-|--------------------|------------------|------------------|--------------------|------------------------|--------|------------------------|------------|
-| **RDK X5**         | 8×A55, 4–8 GB LPDDR4 | 10 TOPS BPU       | 2×4‑lane MIPI CSI | USB 3 x4, GbE+PoE, Wi‑Fi6, BT5.4 | 32 GFLOPS | Ubuntu 22.04 + ROS    | Mid-range  |
-| Jetson Xavier NX   | 6×A57, 8–16 GB LPDDR4 | 21 TOPS | 2×4‑lane MIPI CSI | USB 3 x2, GbE       | 384-core Volta + 48TC | JetPack 5.x + ROS2 | High-end |
-| Jetson Orin Nano   | 4–6×A78AE, 4–8 GB LPDDR5 | 20–40 TOPS | 2×CSI (varies) | USB 3.1, GbE        | 512–1024-core Ampere | JetPack 6.x + ROS2 | Mid-high |
-| Raspberry Pi 5 CM4 + StereoPi | 4×Cortex‑A76  | None (CPU only)   | 2×CSI via CM4        | USB 3, GbE (hat)      | none   | Raspberry Pi OS, Ubuntu | Low-mid    |
-| Luxonis OAK-D Lite | Quad‑core ARM, 1–2 GB   | Myriad X (FPGA)   | None (USB Stereo)   | USB‑C only            | Myriad X NCS2 | Ubuntu/ROS              | Mid       |
+- **Processor**: Sunrise 5 SoC (8× ARM Cortex-A55 @ 1.5GHz)
+- **AI Accelerator**: 10 TOPS BPU (dedicated for vision & deep learning)
+- **RAM**: 4GB or 8GB LPDDR4
+- **Storage**: microSD + 1Gb NAND Flash
+- **Camera Support**: Dual 4-lane MIPI CSI-2 ports (suitable for stereo vision)
+- **I/O**:
+  - USB 3.0 × 4
+  - USB-C (for power, flash, UART, and debugging)
+  - Gigabit Ethernet (supports PoE via optional HAT)
+  - WiFi 6 & Bluetooth 5.4
+  - HDMI, MIPI-DSI (display)
+  - 28 GPIOs, CAN FD
+- **Power Supply**: 5V/5A USB-C or PoE
+- **OS Support**: Ubuntu 22.04 with full ROS2 compatibility
 
 ---
 
-## ✅ Pros & ⚠️ Cons
+## 🧰 Key Features
 
-### ✅ Pros
-- Rich hardware: stereo vision, PoE, AI accelerators, CAN FD, display and audio
-- Plug-and-play Ubuntu + ROS environment
-- “Flash Connect” simplifies development
-- Suitable for robotics, industrial edge, stereo perception
-
-### ⚠️ Cons
-- No embedded NVMe / PCIe (storage via micro-SD/NAND)
-- Linux-only (no RTOS or bare-metal)
-- Developer ecosystem is smaller than NVIDIA’s Jetson platform
-- BPU APIs and community tools are less mature than CUDA/TensorRT ecosystems
+- **Stereo Vision Ready**: Dual CSI ports allow real-time stereo/depth processing using modules like SC230AI.
+- **AI Acceleration**: Optimized BPU suitable for running object detection, segmentation, SLAM, etc.
+- **ROS2 Friendly**: Prebuilt images include ROS2 setup for robotics development.
+- **Compact Design**: Ideal for embedded platforms and mobile robots.
+- **"Flash Connect"**: A single USB-C port for flashing, debugging, and communication.
 
 ---
 
-## 🧰 Ideal Use Cases
+## 📊 RDK X5 vs Similar Edge AI Boards
 
-- **Stereo visual SLAM** and depth processing with dual CSI inputs
-- ROS‑based robotics: manipulation, navigation, perception
-- On-device AI inference (transformers, YOLO, optical flow, stereo depth)
-- Autonomous drones or mobile robots needing Wi‑Fi 6, PoE, CAN FD
+| Board                 | CPU/Memory            | AI Accelerator     | Camera Support        | Networking        | ROS2 Support | Price Tier |
+|----------------------|------------------------|---------------------|------------------------|-------------------|--------------|------------|
+| **RDK X5**           | 8×A55 / 4–8GB LPDDR4   | 10 TOPS BPU         | 2× 4-lane MIPI CSI-2   | GbE + PoE, WiFi6   | Yes          | Mid        |
+| Jetson Xavier NX     | 6×A57 / 8–16GB LPDDR4  | 21 TOPS (GPU+DLAs)  | 2× CSI-2               | GbE, WiFi         | Yes          | High       |
+| Jetson Orin Nano     | 4–6×A78 / 4–8GB LPDDR5 | 20–40 TOPS (GPU)    | 1–2× CSI               | GbE, WiFi         | Yes          | Mid-High   |
+| Raspberry Pi + StereoPi | 4×A76 / 4GB           | None                | 2× CSI via CM4 IO Board | GbE via HAT       | Yes          | Low-Mid    |
+| Luxonis OAK-D Lite   | ARM microcontroller    | Myriad X VPU        | Integrated stereo (USB) | USB-C only        | Limited      | Mid        |
+
+---
+
+## ✅ Pros
+
+- Rich I/O and AI features for its size
+- Full ROS2 stack and Ubuntu support out of the box
+- Modern connectivity: WiFi 6, BT 5.4, CAN FD
+- Stereo vision-ready (dual MIPI)
+- Optional PoE and custom HATs available
+
+## ⚠️ Cons
+
+- Smaller ecosystem than Jetson or Raspberry Pi
+- Fewer third-party accessories
+- Software stack is newer, so community support is still growing
+- Limited onboard storage (mostly reliant on SD)
+
+---
+
+## 🔧 Example Use Cases
+
+- Real-time stereo SLAM
+- Mobile robot with onboard AI inference (YOLOv8, SuperPoint, etc.)
+- Autonomous drone with WiFi streaming
+- Vision-guided manipulation systems
 
 ---
 
@@ -69,14 +79,5 @@ The **RDK X5** (Robot Development Kit X5) by D‑Robotics / Waveshare / Horizo
 - [[Edge Computing]]
 - [[ROS2]]
 - [[Depth Estimation]]
-- [[SBCs]]
-
----
-
-## 🌐 External References
-- RDK X5 official site – CPU, BPU, features :contentReference[oaicite:10]{index=10}  
-- DFRobot / RDK X5 specs – connectivity, Ubuntu 22.04 :contentReference[oaicite:11]{index=11}  
-- Waveshare PoE HAT details :contentReference[oaicite:12]{index=12}  
-- SC230AI stereo camera module specs :contentReference[oaicite:13]{index=13}  
 
 ---
