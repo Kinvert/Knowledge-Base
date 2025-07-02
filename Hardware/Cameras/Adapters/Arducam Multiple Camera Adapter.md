@@ -77,9 +77,6 @@ The **Arducam Multi Camera Adapter Module V2.2** is a breakout board designed to
 - [[StereoPi]]
 - [[Stereo Cameras]]
 - [[MIPI CSI-2 Protocol]]
-- [[Raspberry Pi Camera]]
-- [[Depth Estimation]]
-- [[OpenCV]]
 
 ---
 
