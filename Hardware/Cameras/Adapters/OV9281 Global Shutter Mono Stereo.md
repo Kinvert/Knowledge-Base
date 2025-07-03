@@ -105,6 +105,7 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 ## 🌐 External Links
 
 - [Arducam Dual OV9281 Camera](https://www.arducam.com/product/1mp-ov9281-global-shutter-monochrome-stereo-camera/)
+- https://www.arducam.com/arducam-1mp2-stereoscopic-camera-bundle-kit-for-raspberry-pi-nvidia-jetson-nano-xavier-nx-two-ov9281-global-shutter-monochrome-camera-modules-and-camarray-stereo-camera-hat.html
 - [Jetson CSI Camera Support Matrix](https://developer.nvidia.com/embedded/jetson-modules)
 
 ---
