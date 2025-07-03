@@ -70,7 +70,7 @@ These sensors are often found in MIPI CSI-2 ribbon-based cameras and are critica
 - [[Stereo Cameras]]
 - [[Global Shutter]]
 - [[Rolling Shutter]]
-- [[MIPI CSI-2]]
+- [[MIPI CSI-2 Protocol]]
 - [[Raspberry Pi Camera]]
 - [[Cameras]]
 
