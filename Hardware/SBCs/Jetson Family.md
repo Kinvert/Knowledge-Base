@@ -66,6 +66,32 @@ This document summarizes the full Jetson lineup, including the **Nano**, **TX**,
 
 ---
 
+## 🎥 Jetson Family Camera Interface Comparison
+
+This section focuses on the Jetson modules' camera capabilities, particularly **CSI-2 lane count**, **ribbon cable support**, and **compatibility with common camera modules** like IMX219, IMX477, Arducam, and others. Camera support is a crucial factor in vision-based AI applications.
+
+| Module               | CSI-2 Interfaces | Max CSI Lanes | Ribbon Connectors on Dev Kit | Supported Cameras         | Notes                                                                 |
+|----------------------|------------------|----------------|------------------------------|----------------------------|------------------------------------------------------------------------|
+| Jetson Nano 4GB      | 1                | 2              | 1 (15-pin)                   | IMX219, Arducam Mini, HQ   | Limited to one 2-lane camera; camera multiplexers (e.g., Arducam) required for more |
+| Jetson Nano 2GB      | 1                | 2              | 1 (15-pin)                   | IMX219                     | Similar to 4GB, but lower memory limits processing capabilities       |
+| Jetson Orin Nano 4GB | 1                | 4              | 1 (22-pin)                   | IMX477, HQ, Arducam 4-lane | Higher CSI bandwidth allows high-res or dual-lane cameras             |
+| Jetson Orin Nano 8GB | 1                | 4              | 1 (22-pin)                   | IMX477, HQ, others         | Same as 4GB with more RAM and performance                             |
+| Jetson TX2           | 3                | 6              | Varies (carrier board)       | Multiple via custom boards | Advanced with multiple CSI ports if supported by carrier              |
+| Jetson Xavier NX     | 3                | 6              | 1–2 (depending on kit)       | IMX219, IMX477, Arducam    | Supports stereo and multi-cam with proper breakout                    |
+| Jetson AGX Xavier    | 6                | 16             | 2+ (varies by carrier)       | Many industrial cameras    | Industrial-level multi-camera support; often used with custom carrier boards |
+| Jetson Orin NX       | 5                | 8              | Depends on carrier           | Up to 4× IMX477, IMX708    | Excellent multi-cam performance for smaller footprint                 |
+| Jetson AGX Orin      | 8                | 16–32          | 2+ (via dev board/carrier)   | Multiple high-end cameras  | Best for full sensor suites (LiDAR, stereo, thermal, etc.)            |
+
+---
+
+### 🧠 Notes on Interface
+
+- **CSI Lanes**: Each camera sensor may use 2 or 4 lanes depending on resolution and FPS.
+- **15-pin vs 22-pin**: 15-pin is common on older Pis and Jetsons; newer Jetsons and cameras are switching to 22-pin for 4-lane support.
+- **Camera Support**: JetPack versions affect supported cameras—some newer sensors require JetPack 5+.
+
+---
+
 ## 🔧 Developer Tools
 
 - [[CUDA]] and [[cuDNN]] for GPU computing
