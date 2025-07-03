@@ -52,7 +52,7 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 
 ## 🎯 Use Cases
 
-- [[Monocular SLAM]] and [[Stereo Cameras]]
+- Monocular SLAM and [[Stereo Cameras]]
 - [[Visual Odometry]]
 - [[Gesture Recognition]]
 - [[Depth Estimation]]
@@ -95,7 +95,7 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 - [[Stereo Cameras]]
 - [[Raspberry Pi Camera]]
 - [[Global Shutter]]
-- [[MIPI CSI-2 Protocol]]
+- [[MIPI CSI-2]]
 - [[Arducam Multi Camera Adapter Module V2.2]]
 - [[Jetson Family]]
 - [[Depth Estimation]]
