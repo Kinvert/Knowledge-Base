@@ -126,5 +126,8 @@ Camarray boards support **up to 4 sensors** of the same type, connected via:
 - [Arducam Camarray Landing Page](https://www.arducam.com/camarray/)
 - [Camarray Dev Kits](https://www.arducam.com/product-category/multi-camera-solutions/)
 - [GitHub – Arducam Drivers and Overlays](https://github.com/ArduCAM)
+- https://docs.arducam.com/Raspberry-Pi-Camera/Multi-Camera-CamArray/Multi-Camera-CamArray/#variable-baseline-version-camera-kit
+- https://www.uctronics.com/arducam-1mp-2-stereoscopic-camera-bundle-kit-for-raspberry-pi-nvidia-jetson-nano-xavier-nx-two-ov9281-global-shutter-monochrome-camera-modules-and-camarray-stereo-camera-hat.html
+- https://docs.arducam.com/Nvidia-Jetson-Camera/Multi-Camera-CamArray/quick-start/#imx519-stereo-camera-kit
 
 ---
