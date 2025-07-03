@@ -95,7 +95,7 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 - [[Stereo Cameras]]
 - [[Raspberry Pi Camera]]
 - [[Global Shutter]]
-- [[MIPI CSI-2]]
+- [[MIPI CSI-2 Protocol]]
 - [[Arducam Multi Camera Adapter Module V2.2]]
 - [[Jetson Family]]
 - [[Depth Estimation]]
