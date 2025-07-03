@@ -99,6 +99,7 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 - [[Arducam Multi Camera Adapter Module V2.2]]
 - [[Jetson Family]]
 - [[Depth Estimation]]
+- [[Arducam Camarray]]
 
 ---
 
@@ -110,6 +111,3 @@ Your software (e.g. Arducam drivers, V4L2 kernel modules) must support **virtual
 
 ---
 
-## 📂 Suggested Folder Location
-
-`Hardware/Cameras/Modules/Stereo`
