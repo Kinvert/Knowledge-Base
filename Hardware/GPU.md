@@ -57,7 +57,7 @@ A **GPU (Graphics Processing Unit)** is a specialized electronic circuit origina
 
 ## ⚠️ Weaknesses
 
-- Higher power consumption than CPUs or [[TPUs]].
+- Higher power consumption than CPUs or [[TPU]]s.
 - Can be expensive at the high end.
 - Latency-sensitive tasks may underperform compared to dedicated ASICs.
 - Requires knowledge of specific APIs (e.g., [[CUDA]]).
