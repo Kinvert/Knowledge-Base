@@ -61,7 +61,7 @@
 
 - [[FFmpeg]] – VLC uses FFmpeg internally and shares many codecs and capabilities.
 - [[OpenCV]] – CV pipelines can grab frames from VLC-compatible streams.
-- [[sensor_msgs/Image]] – VLC-captured frames can be adapted into ROS image messages.
+- [[sensor_msgs-Image]] – VLC-captured frames can be adapted into ROS image messages.
 - [[Video Streaming]]
 - [[Media Formats]]
 
