@@ -6,7 +6,7 @@ ROS2 Services are a communication mechanism in the Robot Operating System (ROS2)
 
 ## 📚 Overview
 
-A ROS2 Service defines a pair of messages: a **request** and a **response**. One node advertises a service (server), and another node calls it (client). This is ideal for tasks like parameter setting, device control, or querying state, where immediate feedback is expected.
+A ROS2 Service defines a pair of messages: a **[[ROS2 Requests]]** and a **[[ROS2 Responses]]**. One node advertises a service (server), and another node calls it (client). This is ideal for tasks like parameter setting, device control, or querying state, where immediate feedback is expected.
 
 ---
 
@@ -75,6 +75,8 @@ A ROS2 Service defines a pair of messages: a **request** and a **response**. One
 - [[ROS2 Parameters]] (Persistent configuration values)
 - [[ROS2 Node]] (Run clients/servers)
 - [[ROS2 Interface Definition]] (Defines custom services)
+- [[ROS2 Requests]]
+- [[ROS2 Responses]]
 
 ---
 
