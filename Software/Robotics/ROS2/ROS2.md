@@ -14,7 +14,7 @@ ROS 2 is the next-generation version of the Robot Operating System (ROS), design
 | License | Apache 2.0 |
 | Platform Support | Linux (primary), macOS, Windows |
 | Language Support | C++, Python (via `rclpy`), Rust (community), Java (experimental) |
-| Core Protocols | DDS (Data Distribution Service), RTPS |
+| Core Protocols | [[DDS]] (Data Distribution Service), [[RTPS]] |
 | Main Use Cases | Robotics, autonomous vehicles, drones, industrial automation |
 
 ---
