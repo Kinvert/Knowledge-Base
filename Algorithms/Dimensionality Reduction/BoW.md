@@ -79,7 +79,7 @@ The BoW model transforms input data into a histogram of occurrences of words fro
 - [[SLAM]] (Loop closure and place recognition modules)
 - [[Visual Odometry]] (May use BoW for relocalization)
 - [[ORB]] (Feature detector often used with BoW)
-- [[k-d Tree]] (May be used to speed up matching)
+- [[KDTree]] (May be used to speed up matching)
 - [[BoW2]] (An evolution with optimizations and TF-IDF weighting)
 
 ---
