@@ -69,7 +69,7 @@ The BoW model transforms input data into a histogram of occurrences of words fro
 
 - [[DBoW2]] (C++ library for visual BoW)
 - [[ORB-SLAM2]] (Uses BoW for loop closure)
-- [[k-means]] (For vocabulary generation)
+- [[KMeans]] (For vocabulary generation)
 - [[Feature Extraction]] (Supplies the local descriptors)
 
 ---
