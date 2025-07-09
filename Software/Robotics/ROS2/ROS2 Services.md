@@ -16,7 +16,7 @@ A ROS2 Service defines a pair of messages: a **[[ROS2 Requests]]** and a **[[ROS
 - **Client Node**: Sends request and waits for response.
 - **Server Node**: Implements logic to handle requests and send back results.
 - **Blocking Call**: The client blocks until it receives a response or times out.
-- **IDL**: ROS2 services are defined using Interface Definition Language (IDL).
+- **[[IDL]]**: ROS2 services are defined using Interface Definition Language (IDL).
 
 ---
 
@@ -77,6 +77,7 @@ A ROS2 Service defines a pair of messages: a **[[ROS2 Requests]]** and a **[[ROS
 - [[ROS2 Interface Definition]] (Defines custom services)
 - [[ROS2 Requests]]
 - [[ROS2 Responses]]
+- [[IDL]]
 
 ---
 
