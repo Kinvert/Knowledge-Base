@@ -1,4 +1,4 @@
-# Feature Matching in the Context of Loop Closure
+# Feature Matching
 
 Feature matching plays a vital role in loop closure for Simultaneous Localization and Mapping (SLAM) systems. When a robot revisits a previously mapped area, loop closure helps correct accumulated drift in the map and trajectory. To determine whether a current observation corresponds to a past location, visual features are extracted and matched across frames. This matching enables detection of revisited places and contributes to global map optimization.
 
