@@ -73,7 +73,7 @@ In ROS2, publishers are created within nodes and are associated with a specific 
 - [[ROS2 Subscribers]] (Receive messages from publishers)
 - [[ROS2 Topics]] (Communication channels)
 - [[ROS2 QoS Policies]] (Control message behavior)
-- [[ROS2 Nodes]] (Contain publishers and subscribers)
+- [[ROS2 Node]] (Contain publishers and subscribers)
 - [[Sensor Integration]] (Typically uses publishers)
 - [[Real-Time ROS2]] (QoS tuning for deterministic behavior)
 
