@@ -64,7 +64,7 @@ Parameters in ROS2 are key-value pairs associated with a specific node. Each nod
 - `rclcpp::Node::get_parameter()` / `rclpy.node.get_parameter()`
 - `ros2 param get`, `ros2 param set`, `ros2 param list`
 - YAML configuration via `--params-file` in launch
-- [[ROS2 Nodes]]
+- [[ROS2 Node]]
 - [[ROS2 Launch Files]]
 - [[Lifecycle Nodes]]
 
