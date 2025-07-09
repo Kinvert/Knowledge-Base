@@ -21,13 +21,13 @@ ROS 2 is the next-generation version of the Robot Operating System (ROS), design
 
 ## 🧱 Core Concepts
 
-- **Nodes**: Executable units of functionality that perform computation.
-- **Topics**: Named buses over which nodes exchange messages (pub/sub).
-- **Services**: RPC-style request/response mechanism.
-- **Actions**: For long-running tasks with feedback and preemption.
-- **Parameters**: Runtime configuration of nodes.
-- **Launch System**: XML or Python-based launch files to run multiple nodes.
-- **Middleware**: DDS handles real-time publish/subscribe transport layer.
+- **[[ROS2 Node]]s**: Executable units of functionality that perform computation.
+- **[[ROS2 Topic]]s**: Named buses over which nodes exchange messages (pub/sub).
+- **[[ROS2 Service]]s**: RPC-style request/response mechanism.
+- **[[ROS2 Action]]s**: For long-running tasks with feedback and preemption.
+- **[[ROS2 Parameters]]**: Runtime configuration of nodes.
+- **[[ROS2 Launch System]]**: XML or Python-based launch files to run multiple nodes.
+- **Middleware**: [[DDS]] handles real-time publish/subscribe transport layer.
 
 ---
 
