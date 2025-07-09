@@ -74,8 +74,8 @@ Lie Algebras provide a linearized space (the tangent space at the identity of a 
 - [[SO(3)]] (Special Orthogonal group for 3D rotations)
 - [[Pose Graph Optimization]] (Common use of Lie Algebra)
 - [[Manifolds]] (General class of non-Euclidean spaces)
-- [[Jacobians]] (Often derived on Lie groups)
-- [[Kalman Filters]] (Adapted for Lie Algebra spaces in robotics)
+- [[Jacobian]] (Often derived on Lie groups)
+- [[Kalman Filter]] (Adapted for Lie Algebra spaces in robotics)
 
 ---
 
