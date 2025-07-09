@@ -35,7 +35,7 @@ ROS 2 is the next-generation version of the Robot Operating System (ROS), design
 
 | Feature | ROS 1 | ROS 2 |
 |--------|--------|-------|
-| Middleware | Custom TCP/UDP | DDS (Real-time capable) |
+| Middleware | Custom TCP/UDP | [[DDS]] (Real-time capable) |
 | Real-Time Support | Limited | Yes (RTOS, priority scheduling) |
 | OS Support | Primarily Linux | Linux, Windows, macOS |
 | Security | Minimal | SROS 2 (security layer via DDS-Security) |
@@ -47,7 +47,7 @@ ROS 2 is the next-generation version of the Robot Operating System (ROS), design
 
 ## 🧬 Middleware: DDS
 
-ROS 2 uses DDS (Data Distribution Service) as its core communication middleware. DDS provides:
+ROS 2 uses [[DDS]] (Data Distribution Service) as its core communication middleware. DDS provides:
 
 - Real-time guarantees
 - Quality of Service (QoS) configurations
