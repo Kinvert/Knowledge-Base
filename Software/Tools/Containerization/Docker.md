@@ -97,7 +97,7 @@ Docker uses lightweight containerization to bundle software, libraries, configur
 - [[VSCode Dev Containers]] (Use Docker to provide local dev environments)
 - [[CI-CD Pipelines]] (Use Docker for reproducible builds)
 - [[Podman]] (Docker alternative with rootless support)
-- [[NVIDIA Jetson]] (Requires special containers for hardware acceleration)
+- [[Jetson Family]] (Requires special containers for hardware acceleration)
 - [[Kubernetes]]
 
 ---
