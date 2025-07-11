@@ -90,7 +90,7 @@ Originally designed to enable JavaScript on the server, Node.js uses an event-dr
 - [[Express]] – Popular Node.js web framework  
 - [[ROS2 Web Bridge]] – Uses Node.js for web-robot interfaces  
 - [[Docker]] – Containerize Node.js applications  
-- [[WebSocket]] – Real-time communication protocol commonly used with Node.js  
+- [[WebSockets]] – Real-time communication protocol commonly used with Node.js  
 
 ---
 
@@ -100,7 +100,7 @@ Originally designed to enable JavaScript on the server, Node.js uses an event-dr
 - [[npm]] (Package management for Node.js)  
 - [[ROS2 Web Bridge]] (Node.js-based robotics web bridge)  
 - [[Docker]] (Containerization platform for Node.js apps)  
-- [[WebSocket]] (Protocol for real-time data exchange)  
+- [[WebSockets]] (Protocol for real-time data exchange)  
 
 ---
 
