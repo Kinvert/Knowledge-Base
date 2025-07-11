@@ -70,7 +70,7 @@ Given the 2D projections of a point in two or more images and the corresponding 
 
 - [[PnP]] (Estimates pose using 3D points from triangulation)
 - [[Epipolar Geometry]] (Supports triangulation)
-- [[Structure from Motion]] (Uses triangulation for 3D points)
+- [[SfM]] (Structure from Motion) (Uses triangulation for 3D points)
 - [[Feature Matching]] (Provides 2D correspondences)
 - [[Pose Estimation]] (Triangulated points improve pose accuracy)
 
