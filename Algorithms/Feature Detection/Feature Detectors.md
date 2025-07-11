@@ -6,7 +6,7 @@
 
 ## 📚 Overview
 
-A good feature detector identifies keypoints that are robust to changes in scale, rotation, illumination, and viewpoint. Once detected, these keypoints can be described by [[Feature Descriptors]] and used in [[Keypoint Matching]], [[Structure from Motion]], or [[Visual Odometry]].
+A good feature detector identifies keypoints that are robust to changes in scale, rotation, illumination, and viewpoint. Once detected, these keypoints can be described by [[Feature Descriptors]] and used in [[Keypoint Matching]], [[SfM]] (Structure from Motion), or [[Visual Odometry]].
 
 Feature detection is the first stage in many vision pipelines and directly affects performance in downstream tasks.
 
@@ -102,7 +102,7 @@ Feature detection is the first stage in many vision pipelines and directly affec
 - [[Keypoint Matching]] (relies on feature detection as a precursor)  
 - [[ORB]], [[SIFT]], [[SURF]], [[FAST]] (specific detectors)  
 - [[Visual Odometry]] (built on top of tracking detected features)  
-- [[Structure from Motion]] (initial step involves feature detection)  
+- [[SfM]] (Structure from Motion) (initial step involves feature detection)  
 
 ---
 
