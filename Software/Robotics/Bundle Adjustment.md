@@ -49,7 +49,7 @@
 ## 🔧 Applications
 
 - [[SLAM]] back-end optimization (refining map + trajectory).
-- [[Structure from Motion]] in 3D reconstruction pipelines.
+- [[SfM]] (Structure from Motion) in 3D reconstruction pipelines.
 - Loop closure corrections in pose graphs.
 - Multi-view stereo and panoramic stitching.
 
