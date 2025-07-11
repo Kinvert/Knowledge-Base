@@ -101,7 +101,7 @@ Qt provides a rich set of libraries and tools for developing modern, performant,
 - [[rqt]] (Qt-based ROS GUI framework)  
 - [[PyQt]] / [[PySide]] (Python bindings for Qt)  
 - [[CMake]] (Build system used for Qt C++ projects)  
-- [[ROS2 Nodes]] (Qt GUIs can be ROS2 nodes)  
+- [[ROS2 Node]] (Qt GUIs can be ROS2 nodes)  
 - [[QML]] (Declarative UI language in Qt)  
 
 ---
