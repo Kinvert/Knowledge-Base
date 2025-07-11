@@ -95,7 +95,7 @@ Where:
 ## 🔧 Compatible Items
 
 - [[Pose Estimation]] – Requires 3D → 2D projection  
-- [[Structure from Motion]] – Uses pinhole model in camera pose estimation  
+- [[SfM]] (Structure from Motion) – Uses pinhole model in camera pose estimation  
 - [[Camera Calibration]] – Based on estimating this model's parameters  
 - [[Stereo Vision]] – Assumes rectified pinhole model for disparity  
 - [[Projection Matrix]] – Built from intrinsic and extrinsic components  
