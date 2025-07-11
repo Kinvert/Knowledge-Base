@@ -89,7 +89,7 @@ rqt acts as a modular GUI platform with numerous plugins covering visualization 
 
 - [[ROS2 Topics]] – rqt subscribes and publishes to topics  
 - [[ROS2 Parameters]] – Supports dynamic reconfiguration  
-- [[ROS2 Nodes]] – Visualizes and manages nodes and services  
+- [[ROS2 Node]] – Visualizes and manages nodes and services  
 - [[ROS2 Messages]] – Used for visualizations and debugging  
 - [[RViz]] – Complements rqt with advanced 3D visualization  
 - [[ROS2 Launch Files]] – Start systems that rqt can introspect  
@@ -99,7 +99,7 @@ rqt acts as a modular GUI platform with numerous plugins covering visualization 
 ## 🔗 Related Concepts
 
 - [[RViz]] (3D visualization companion)  
-- [[ROS2 Nodes]] (Nodes monitored by rqt)  
+- [[ROS2 Node]] (Nodes monitored by rqt)  
 - [[ROS2 Topics]] (Data streams visualized by rqt)  
 - [[ROS2 Services]] (Interact through rqt plugins)  
 - [[Python]] and [[Qt]] (Languages/tools for custom plugins)  
