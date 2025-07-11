@@ -97,7 +97,7 @@
 - [[dpkg]] (Low-level tool that apt wraps)  
 - [[Dockerfile]] (Often uses `apt install` in image layers)  
 - [[Conda]] (Higher-level, multi-language alternative)  
-- [[snap]] (Another system package manager for Ubuntu)
+- [[Snap]] (Another system package manager for Ubuntu)
 
 ---
 
