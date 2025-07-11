@@ -76,7 +76,7 @@ When a 3D point is observed by two different cameras, its projections lie along 
 - [[Homography]] (Alternative model used in special cases)
 - [[Pinhole Camera Model]] (Foundation of projection)
 - [[Stereo Calibration]] (Estimates camera parameters and epipolar constraints)
-- [[Structure from Motion]] (Relies heavily on epipolar geometry)
+- [[SfM]] (Structure from Motion) (Relies heavily on epipolar geometry)
 
 ---
 
