@@ -28,6 +28,7 @@ They are particularly useful for researchers and engineers exploring RL methods 
 
 ## Environments
 
+- [[Puffer Target]]
 - [[Puffer Pong]]
 - [[Puffer Breakout]]
 - Puffer Space Invaders
