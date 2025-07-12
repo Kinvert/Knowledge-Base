@@ -100,6 +100,7 @@ It is particularly useful for comparing RL algorithms, creating custom environme
 
 ## 📚 Further Reading
 
+- Docs https://pufferai.github.io/build/html/rst/blog.html
 - [PufferLib GitHub Repo](https://github.com/jxhe/pufferlib)  
 - [PufferLib Docs](https://jxhe.github.io/pufferlib/)  
 - [PufferLib Blog Intro](https://jxhe.github.io/pufferlib/posts/pufferlib-intro/)  
