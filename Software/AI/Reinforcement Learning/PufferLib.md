@@ -105,6 +105,7 @@ It is particularly useful for comparing RL algorithms, creating custom environme
 - [PufferLib Docs](https://jxhe.github.io/pufferlib/)  
 - [PufferLib Blog Intro](https://jxhe.github.io/pufferlib/posts/pufferlib-intro/)  
 - [Comparison with PettingZoo](https://www.pettingzoo.ml/)  
-- [OpenAI Gym](https://www.gymlibrary.dev/)  
+- [OpenAI Gym](https://www.gymlibrary.dev/)
+- Docs https://puffer.ai/docs.html
 
 ---
