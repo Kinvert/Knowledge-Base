@@ -93,7 +93,7 @@ State is a critical concept in defining value functions, policy mappings, and tr
 - [[Observation Space]] (Subset of state exposed to agent)  
 - [[Markov Decision Process]] (Formalism where decisions depend on state)  
 - [[POMDP]] (When states are partially observable)  
-- [[Policy]] (Maps from state or observation to action)  
+- [[RL Policy]] (Maps from state or observation to action)  
 - [[RL Agent]] (Acts based on perceived state or observation)  
 
 ---
