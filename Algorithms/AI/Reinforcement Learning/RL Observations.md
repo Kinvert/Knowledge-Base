@@ -94,7 +94,7 @@ Environments define their own `observation_space`, which should be compatible wi
 - [[RL Actions]] (Observations are used to choose actions)  
 - [[Observation Space Normalization]] (Standardizing values improves training)  
 - [[Partial Observability]] (Observation ≠ full environment state)  
-- [[Policy]] (Consumes observations to output actions)  
+- [[RL Policy]] (Consumes observations to output actions)  
 - [[Replay Buffer]] (Stores past observations for training)  
 
 ---
