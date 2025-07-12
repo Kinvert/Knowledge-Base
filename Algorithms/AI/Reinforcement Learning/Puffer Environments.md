@@ -26,6 +26,36 @@ They are particularly useful for researchers and engineers exploring RL methods 
 
 ---
 
+## Environments
+
+- [[Puffer Pong]]
+- [[Puffer Breakout]]
+- Puffer Space Invaders
+- Puffer Seaquest
+- Puffer Q*bert
+- Puffer Enduro
+- Puffer Boxing
+- Puffer Beam Rider
+- Puffer Freeway
+- Puffer Riverraid
+- Puffer Hero
+- Puffer Frostbite
+- Puffer MsPacman
+- Puffer Asteroids
+- Puffer Atlantis
+- Puffer Tennis
+- Puffer Bowling
+- Puffer Demon Attack
+- Puffer Wizard of Wor
+- Puffer Gravitar
+- Puffer Montezuma's Revenge
+- Puffer Private Eye
+- Puffer Robotank
+- Puffer Venture
+- Puffer Zaxxon
+
+---
+
 ## 🧰 Use Cases
 
 - Benchmarking new RL algorithms quickly without heavy simulation overhead.  
