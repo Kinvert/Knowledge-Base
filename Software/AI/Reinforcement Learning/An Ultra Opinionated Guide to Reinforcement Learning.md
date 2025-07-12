@@ -31,7 +31,7 @@ on GitHub and RT this article.
 
 . Just the first paragraph. You now know some words we use in RL and not much else.
 
-**Read the [[PufferLib]] docs on writing your own environment**. Including all the linked code on the squared sample environment. Map the terms from the introduction to this code. [[RL Observations]], [[RL Actions]], [[Rewards]], and terminals are just arrays. The observations are inputs to the agent's neural network, which outputs actions. Rewards determine whether the agent has reached its goal, at which point the terminal value is set to true. You don't know how we use all these things to actually train yet and that is fine.
+**Read the [[PufferLib]] docs on writing your own environment**. Including all the linked code on the squared sample environment. Map the terms from the introduction to this code. [[RL Observations]], [[RL Actions]], [[RL Reward]], and terminals are just arrays. The observations are inputs to the agent's neural network, which outputs actions. Rewards determine whether the agent has reached its goal, at which point the terminal value is set to true. You don't know how we use all these things to actually train yet and that is fine.
 
 **Write your own [[RL Environment]]**. Keep it so simple as to not even be useful. That will come next. If you can't think of anything, do a stripped down version of flappy bird on a 2-block tall grid. The agent can move either up or down. It observes whether there is a wall on the roof or floor. -1 reward for hitting the ceiling, 0 otherwise. Bind it to PufferLib following the docs and train your first agent. Ask in the
 
