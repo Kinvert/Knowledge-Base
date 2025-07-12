@@ -96,7 +96,7 @@ Trajectories can be full (complete episodes) or partial (fixed length segments).
 
 ## 🔗 Related Concepts
 
-- [[Transition]] (Basic building block of trajectories)  
+- [[RL Transition]] (Basic building block of trajectories)  
 - [[Monte Carlo Methods]] (Use full trajectories for updates)  
 - [[Experience Replay]] (Sampling from stored trajectories)  
 - [[On-policy vs Off-policy]] (Trajectory source differences)  
