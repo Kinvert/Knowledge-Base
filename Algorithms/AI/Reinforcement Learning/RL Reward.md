@@ -94,7 +94,7 @@ Designing good reward functions requires balancing task goals, learning speed, a
 - [[Reinforcement Learning]] (Parent concept)  
 - [[Reward Shaping]] (Refines reward signals to improve learning)  
 - [[Imitation Learning]] (Sometimes avoids needing an explicit reward function)  
-- [[Policy]] (Learns to maximize expected reward)  
+- [[RL Policy]] (Learns to maximize expected reward)  
 - [[RL Actions]] (Determine how rewards are earned)  
 
 ---
