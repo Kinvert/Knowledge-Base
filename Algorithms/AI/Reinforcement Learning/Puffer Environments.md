@@ -31,6 +31,7 @@ They are particularly useful for researchers and engineers exploring RL methods 
 - [[Puffer Target]]
 - [[Puffer Pong]]
 - [[Puffer Breakout]]
+- [[Puffer Snake]]
 - Puffer Space Invaders
 - Puffer Seaquest
 - Puffer Q*bert
