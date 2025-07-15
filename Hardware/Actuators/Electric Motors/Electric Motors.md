@@ -55,14 +55,14 @@ Understanding the full landscape of motor types and how they compare is essentia
 
 ## 🧪 Use Cases
 
-- [[Drones]]: Coreless, BLDC, PMSM
-- [[AGVs]] (Automated Guided Vehicles): PMSM, AC induction
-- [[Industrial Robotics]]: Servo motors, PMSMs with FOC
-- [[CNC and 3D Printing]]: Stepper motors with microstepping
-- [[Quadrupeds]]: High-torque PMSM or brushless servos
-- [[Prosthetics]]: Compact servos with torque feedback
-- [[Consumer Electronics]]: Coreless or universal motors
-- [[Medical Devices]]: Coreless or PMSM for clean operation
+- Drones: Coreless, BLDC, PMSM
+- AGVs (Automated Guided Vehicles): PMSM, AC induction
+- Industrial Robotics: Servo motors, PMSMs with FOC
+- CNC and 3D Printing: Stepper motors with microstepping
+- Quadrupeds: High-torque PMSM or brushless servos
+- Prosthetics: Compact servos with torque feedback
+- Consumer Electronics: Coreless or universal motors
+- Medical Devices: Coreless or PMSM for clean operation
 
 ---
 
