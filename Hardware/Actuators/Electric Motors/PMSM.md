@@ -74,3 +74,8 @@ PMSMs feature a rotor with embedded or surface-mounted permanent magnets and a s
 - [[Torque Control]]
 - [[Motor Control Algorithms]]
 - [[Encoder]]
+
+
+## Links
+
+- https://www.youtube.com/watch?v=cmRGhoF_ZEM
