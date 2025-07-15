@@ -31,7 +31,7 @@ This allows precise control over:
 
 ## 📊 Comparison Table
 
-| Feature                   | VFD                     | [[ESC]]                  | [[Motor Controller]]     | [[Soft Starter]]            |
+| Feature                   | VFD                     | [[ESC]]                  | [[Motor Controllers]]     | [[Soft Starter]]            |
 |---------------------------|-------------------------|--------------------------|---------------------------|-----------------------------|
 | Motor Compatibility       | AC motors (Induction, Synchronous) | [[BLDC]], [[Brushed DC Motor]] | DC, stepper, servo        | Induction Motors            |
 | Frequency Control         | Yes                     | No (voltage/current only)| Sometimes                 | No                          |
