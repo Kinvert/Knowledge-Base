@@ -96,7 +96,7 @@ Policies are used in almost all RL methods—value-based, policy-based, and hybr
 - [[Entropy Regularization]] – Promotes diverse policy actions  
 - [[Value Function]] – Can be used to derive a policy  
 - [[RL Environment]] – Where the policy acts and learns  
-- [[Soft Actor-Critic (SAC)]] – Stochastic policy optimization  
+- [[SAC]] – (Soft Actor-Critic) Stochastic policy optimization  
 
 ---
 
