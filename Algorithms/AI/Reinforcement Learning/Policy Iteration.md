@@ -68,7 +68,7 @@
 - [[Bellman Equation]] – Core to policy evaluation  
 - [[Value Function]] – Evaluated and used to improve policy  
 - [[MDP]] (Markov Decision Process) – The formal setting for Policy Iteration  
-- [[Policy]] – The primary object being updated  
+- [[RL Policy]] – The primary object being updated  
 - [[Dynamic Programming]] – Category where Policy Iteration belongs  
 - [[Value Iteration]] – Related but performs simultaneous updates  
 
