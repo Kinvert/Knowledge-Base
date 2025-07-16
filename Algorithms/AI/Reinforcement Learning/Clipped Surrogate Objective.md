@@ -90,7 +90,7 @@ The **Clipped Surrogate Objective** is a key innovation introduced in the **[[PP
 - [[Policy Gradient]] (General framework for optimizing policies)  
 - [[KL Divergence]] (Measure of policy deviation)  
 - [[Advantage Function]] (Baseline to reduce variance)  
-- [[On-Policy Learning]] (Training paradigm using current policy samples)  
+- [[On-Policy]] (Training paradigm using current policy samples)  
 
 ---
 
