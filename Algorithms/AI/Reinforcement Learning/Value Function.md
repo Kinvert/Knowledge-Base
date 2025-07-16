@@ -78,7 +78,7 @@ A **Value Function** in reinforcement learning represents the expected return (c
 
 - [[Q-Value Function]] – A specific type of value function  
 - [[TD Learning]] – Core method for value function updates  
-- [[Policy]] – Value function is defined under a policy  
+- [[RL Policy]] – Value function is defined under a policy  
 - [[MDP]] (Markov Decision Process) – The environment where value functions apply  
 - [[Function Approximation]] – Common for estimating V(s) or Q(s, a) in large domains  
 
