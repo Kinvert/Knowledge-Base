@@ -65,7 +65,7 @@ A **Replay Buffer** is a crucial data structure in reinforcement learning that s
 ## 🔧 Compatible Items
 
 - [[Deep Q Learning]] – Classic algorithm using replay buffers  
-- [[Off-Policy RL]] – Category of algorithms relying on replay buffers  
+- [[Off-Policy]] – Category of algorithms relying on replay buffers  
 - [[Experience Replay]] – The technique enabled by replay buffers  
 - [[TD Learning]] – Updates often based on replay buffer samples  
 - [[Neural Networks]] – Function approximators trained using replay samples  
