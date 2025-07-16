@@ -1,6 +1,6 @@
 # SAC
 
-**Soft Actor-Critic (SAC)** is a state-of-the-art [[off-policy]] deep reinforcement learning algorithm designed for [[Continuous Action Space]]s. It combines the benefits of maximum entropy reinforcement learning with actor-critic methods to achieve both sample efficiency and stable training.
+**Soft Actor-Critic (SAC)** is a state-of-the-art [[Off-Policy]] deep reinforcement learning algorithm designed for [[Continuous Action Space]]s. It combines the benefits of maximum entropy reinforcement learning with actor-critic methods to achieve both sample efficiency and stable training.
 
 ---
 
@@ -76,7 +76,7 @@
 - [[Policy Gradient]] – SAC uses stochastic policy gradients  
 - [[TD Learning]] – Critics are trained with temporal difference learning  
 - [[Automatic Entropy Tuning]] – Dynamically adjusts exploration-exploitation tradeoff  
-- [[Off-Policy Learning]] – SAC’s learning paradigm  
+- [[Off-Policy]] – SAC’s learning paradigm  
 - [[Twin Q Networks]] – Technique for reducing overestimation bias  
 
 ---
