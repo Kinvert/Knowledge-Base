@@ -86,7 +86,7 @@ The **Clipped Surrogate Objective** is a key innovation introduced in the **[[PP
 
 ## 🔗 Related Concepts
 
-- [[Trust Region Policy Optimization (TRPO)]] (Precursor with hard trust region constraints)  
+- [[TRPO]] (Trust Region Policy Optimization) (Precursor with hard trust region constraints)  
 - [[Policy Gradient]] (General framework for optimizing policies)  
 - [[KL Divergence]] (Measure of policy deviation)  
 - [[Advantage Function]] (Baseline to reduce variance)  
