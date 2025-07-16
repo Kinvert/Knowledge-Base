@@ -70,7 +70,6 @@ A **POMDP (Partially Observable Markov Decision Process)** extends the classic [
 - [[Bayes Filter]] – Used to update the belief state  
 - [[Sensor Fusion]] – May help reduce observability gaps  
 - [[RL Agent]] – Needs modification to operate in a POMDP  
-- [[Policy]] – Becomes belief-state dependent  
 
 ---
 
