@@ -108,6 +108,7 @@ Introduced as a mid-performance core in ARM's Cortex-M series, the M4 balances e
 
 ## 🧩 Related Notes
 
+- [[Microcontrollers]]
 - [[DSP]] (Digital Signal Processing)
 - [[FPU]] (Floating Point Unit)
 - [[RTOS]] (Real-Time Operating System)
