@@ -113,6 +113,7 @@ ROS 2 Humble:
 - [[pyenv]] (Python version management)
 - [[pip]] (Python package manager)
 - [[Poetry]] (Python dependency and venv manager)
+- [[venv]]
 - [[UV]]
 
 ---
