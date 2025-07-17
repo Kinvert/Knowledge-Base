@@ -110,6 +110,7 @@ The ARM Cortex-M7 builds on the success of the Cortex-M4, offering significantly
 
 ## 🧩 Related Notes
 
+- [[Microcontrollers]]
 - [[DSP]] (Digital Signal Processing)
 - [[RTOS]] (Real-Time Operating Systems)
 - [[CMSIS-NN]] (ARM's ML libraries)
