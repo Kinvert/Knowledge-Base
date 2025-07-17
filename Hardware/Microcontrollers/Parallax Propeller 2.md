@@ -112,7 +112,7 @@ Unlike traditional microcontrollers that rely on a central core and interrupts, 
 - [[Microcontrollers]]
 - [[Parallel Processing]] (Multiple concurrent execution units)
 - [[Smart Pins]] (Programmable I/O logic)
-- [[Teensy 4-1]] (High-speed single-core alternative)
+- [[Teensy 4.1]] (High-speed single-core alternative)
 - [[STM32F756 Nucleo-144]] (Mainstream high-performance MCU)
 - [[Forth]] (Programming language occasionally used on Propeller)
 - [[Assembly Language]] (Often used for Propeller core routines)
