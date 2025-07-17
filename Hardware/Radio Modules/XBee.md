@@ -119,6 +119,8 @@ XBee modules simplify adding wireless connectivity to microcontrollers and embed
 - [[Serial Communication]]
 - [[ESP32]] (Can interface with XBee modules)
 - [[Home Automation]]
+- [[Parallax Propeller 1]]
+- [[Parallax Propeller 2]]
 
 ---
 
