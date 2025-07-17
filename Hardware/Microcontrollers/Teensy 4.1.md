@@ -111,6 +111,7 @@ Teensy 4.1 brings the raw power of NXP’s i.MX RT1062 processor to hobbyists an
 
 ## 🧩 Related Notes
 
+- [[Microcontrollers]]
 - [[Teensy]] (Family overview)
 - [[Cortex-M7]] (Processor core architecture)
 - [[CAN Bus]] (Communication protocol)
