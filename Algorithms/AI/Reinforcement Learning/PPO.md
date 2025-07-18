@@ -37,6 +37,7 @@ This approach allows for **multiple epochs of minibatch updates** using the same
 
 ## 🧠 Pseudocode (Proximal Policy Optimization)
 
+**CPP**
 ```cpp
 // PPO High-Level Pseudocode in C++-like syntax
 initialize_policy_parameters(theta)
@@ -57,6 +58,7 @@ for each iteration:
             update_parameters(theta, phi, total_loss)
 ```
 
+**Python**
 ```python
 # PPO High-Level Pseudocode in Python-like syntax
 initialize_policy_parameters(theta)
