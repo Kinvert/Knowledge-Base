@@ -16,7 +16,7 @@ This note serves as an index to various categories of algorithms, providing link
 | [[Clustering]]                 | Group data points into clusters                                  | [[KMeans]], DBSCAN, Spectral Clustering          |
 | [[Optimization Algorithms]]     | Techniques for finding best solutions given constraints         | Gradient Descent, Genetic Algorithms, Simulated Annealing |
 | [[Graph Algorithms]]           | Operations on graphs                                             | Kruskal's MST, Prim's MST, Tarjan's SCC           |
-| [[ControlTheory]]              | Design of systems with desired dynamic behavior                  | [[PID Controller]], LQR, MPC                      |
+| [[Control Theory]]              | Design of systems with desired dynamic behavior                  | [[PID Controller]], LQR, MPC                      |
 | [[Point Cloud Algorithms]]      | Operate on 3D point cloud data                                   | ICP, RANSAC, Surface Reconstruction               |
 | [[Machine Learning Algorithms]] | Learn patterns and predictions from data                         | Decision Trees, SVM, Neural Networks, [[Transformer]] |
 | [[Compression Algorithms]]      | Reduce data size                                                 | Huffman Coding, LZ77, Arithmetic Coding           |
