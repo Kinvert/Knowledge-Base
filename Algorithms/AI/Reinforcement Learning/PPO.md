@@ -35,6 +35,50 @@ This approach allows for **multiple epochs of minibatch updates** using the same
 
 ---
 
+## 🧠 Pseudocode (Proximal Policy Optimization)
+
+```cpp
+// PPO High-Level Pseudocode in C++-like syntax
+initialize_policy_parameters(theta)
+initialize_value_function_parameters(phi)
+
+for each iteration:
+    trajectories = collect_trajectories(policy=theta)
+    advantages = compute_advantages(trajectories, value_function=phi)
+
+    for each epoch:
+        for each minibatch in trajectories:
+            r = policy_ratio(minibatch, theta, old_theta)
+            clipped_objective = min(r * advantages, clip(r, 1 - epsilon, 1 + epsilon) * advantages)
+            value_loss = mse(value_function(minibatch.states, phi), minibatch.returns)
+            entropy_bonus = compute_entropy(policy(minibatch.states, theta))
+
+            total_loss = -clipped_objective + c1 * value_loss - c2 * entropy_bonus
+            update_parameters(theta, phi, total_loss)
+```
+
+```python
+# PPO High-Level Pseudocode in Python-like syntax
+initialize_policy_parameters(theta)
+initialize_value_function_parameters(phi)
+
+for iteration in range(num_iterations):
+    trajectories = collect_trajectories(policy=theta)
+    advantages = compute_advantages(trajectories, value_fn=phi)
+
+    for epoch in range(num_epochs):
+        for minibatch in iterate_minibatches(trajectories):
+            r = policy_ratio(minibatch, theta, old_theta)
+            clipped_obj = torch.min(r * advantages, clip(r, 1 - eps, 1 + eps) * advantages)
+            value_loss = mse(value_fn(minibatch.states), minibatch.returns)
+            entropy = compute_entropy(policy(minibatch.states))
+
+            total_loss = -clipped_obj.mean() + c1 * value_loss.mean() - c2 * entropy.mean()
+            update(theta, phi, loss=total_loss)
+```
+
+---
+
 ## ✅ Pros
 
 - High training stability  
