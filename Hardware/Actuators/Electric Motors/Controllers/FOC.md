@@ -74,4 +74,8 @@ Implementation typically requires rotor position feedback (via encoder, resolver
 - [[Sensorless Control]]  
 - [[PID Controller]]  
 - [[Space Vector Modulation]]  
-- [[Torque Control]]  
+- [[Torque Control]]
+
+## Links
+
+- https://www.youtube.com/watch?v=e0sQnVmE7DU
