@@ -94,6 +94,8 @@ The **original ORB-SLAM (ORB-SLAM1)** introduced a powerful SLAM system using on
 - [ORB-SLAM GitHub](https://github.com/raulmur/ORB_SLAM2)
 - [Original Paper](https://arxiv.org/abs/1502.00956)
 - [ORB-SLAM3 (extended version)](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+- https://github.com/arthurfenderbucker/indoor_drone
+- https://www.youtube.com/watch?v=DxqzwBQVCNw
 
 ---
 
