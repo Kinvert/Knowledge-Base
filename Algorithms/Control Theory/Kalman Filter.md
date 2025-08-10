@@ -76,7 +76,7 @@ The **Kalman Filter** is an efficient recursive algorithm used for estimating th
 
 - [[Sensor Fusion]]
 - [[SLAM]]
-- [[PID Control]]
+- [[PID Controller]]
 - [[Extended Kalman Filter]]
 - [[Unscented Kalman Filter]]
 - [[State Estimation]]
