@@ -104,7 +104,7 @@ KSP stands out as both an educational tool and an engineering sandbox, making it
 ## 🔗 Related Topics
 
 - [[kRPC]]
-- [[PID Control]]
+- [[PID Controller]]
 - [[Feedforward Algorithms]]
 - [[Simulation Tools]]
 - [[Orbital Mechanics]]
