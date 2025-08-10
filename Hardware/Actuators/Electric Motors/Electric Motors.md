@@ -104,7 +104,7 @@ Understanding the full landscape of motor types and how they compare is essentia
 - [[Torque Control]]
 - [[Sensorless Control]]
 - [[Motion Planning]]
-- [[PID Control]]
+- [[PID Controller]]
 - [[Actuators]]
 
 ---
