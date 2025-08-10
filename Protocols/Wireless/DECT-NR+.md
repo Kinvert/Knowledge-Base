@@ -84,6 +84,7 @@ DECT-NR+ modernizes DECT by incorporating 5G NR principles, delivering determini
 
 ## 🔗 Related Concepts / Notes
 
+- [[Wireless Protocols]]
 - [[XBee]] (Zigbee/802.15.4 modules)
 - [[LoRa]]
 - [[Mesh Networking]]
