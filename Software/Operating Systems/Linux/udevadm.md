@@ -241,3 +241,4 @@
 - man page: `man udevadm`
 - Kernel.org Documentation: `https://www.kernel.org/doc/html/latest/admin-guide/udev.html`
 - Arch Wiki (reference-quality guide): `https://wiki.archlinux.org/title/udev`
+- Spaceball Driver https://dev.to/denladeside/reviving-legacy-hardware-with-web-hid-3447
