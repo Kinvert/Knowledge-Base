@@ -139,7 +139,7 @@ int main() {
 
 ---
 
-## Related [[links]]
+## Related Links
 - [[Computer Vision]]
 - [[Edge Detection]]
 - [[OpenCV]]
