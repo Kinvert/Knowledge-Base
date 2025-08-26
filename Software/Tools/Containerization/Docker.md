@@ -99,7 +99,7 @@ flowchart TD
 
   I -- no --> H
 
-  subgraph Host (robot PC)
+  subgraph Host: robot PC
     A
     B
     J
@@ -107,7 +107,7 @@ flowchart TD
     M
   end
 
-  subgraph Container (isolated userspace)
+  subgraph Container: isolated userspace
     C
     D
     E
