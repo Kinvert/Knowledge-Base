@@ -36,7 +36,7 @@
 ## 🛠️ Common Use Cases
 
 - Batch replacing configuration values in robotics log files.  
-- Cleaning CSV/JSON sensor outputs before feeding into [[ROS]].  
+- Cleaning CSV/JSON sensor outputs before feeding into ROS. 
 - Automating version string updates in source code.  
 - Removing or filtering lines in datasets for ML preprocessing.  
 - Inline editing inside CI/CD pipelines.  
