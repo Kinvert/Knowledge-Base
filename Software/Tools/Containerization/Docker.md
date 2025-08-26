@@ -80,6 +80,45 @@ Docker uses lightweight containerization to bundle software, libraries, configur
 
 ---
 
+```mermaid
+flowchart TD
+  A[Write/Update Dockerfile\n(pin Ubuntu, CUDA, ROS 2, Python, Torch, deps)] --> B[docker build -> Image]
+  B --> C[docker run -> Container]
+  C --> D[Container entrypoint starts ROS 2 environment]
+  D --> E[Node subscribes to /camera/image_raw]
+  E --> F[PyTorch(CUDA) inference + color thresholding]
+  F --> G[Publish /pick_goal or /cmd to manipulator]
+  G --> H[Robot arm picks red cubes]
+
+  C --> I{Need to tweak\nthresholds?}
+  I -- yes --> J[SSH into robot HOST]
+  J --> K[Edit ./config/vision.ini on host\n(or docker exec to edit inside)]
+  K --> L[File is bind-mounted into /app/config inside container]
+  L --> M[docker restart robot_vision\n(or auto-reload if your node watches files)]
+  M --> D
+
+  I -- no --> H
+
+  subgraph Host (robot PC)
+    A
+    B
+    J
+    K
+    M
+  end
+
+  subgraph Container (isolated userspace)
+    C
+    D
+    E
+    F
+    G
+    L
+  end
+```
+
+---
+
 ## 🔧 Compatible Items
 
 - `docker`, `docker-compose`
