@@ -89,7 +89,7 @@
 ```mermaid
 flowchart TD
     A[Clone ROS 2 Package] --> B[Check dependencies with rosdep]
-    B -->|rosdep install| C[OS Package Manager (apt/yum/dnf/pip)]
+    B -->|rosdep install| C[OS Package Manager: apt yum dnf pip]
     C --> D[Dependencies Installed]
     D --> E[colcon build workspace]
     E --> F[Run ROS 2 nodes]
