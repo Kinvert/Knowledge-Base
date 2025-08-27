@@ -122,6 +122,10 @@ However, this skips environment setup, so things like parameters, ROS topic name
 - [[ROS2 Topics]]
 - [[rclpy]]
 - [[sensor_msgs]]
+- [[Colcon Spreadsheet]]
+- [[Colcon Package Discovery]]
+- [[ROS2 Build Tools]]
+- [[ament_cmake]]
 
 ---
 
