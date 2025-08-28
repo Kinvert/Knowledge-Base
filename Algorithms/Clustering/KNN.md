@@ -140,6 +140,7 @@ Example cheatsheet (not full code here, just quick reference):
 
 - [Scikit-learn KNN Documentation](https://scikit-learn.org/stable/modules/neighbors.html)  
 - [Stanford CS229 Notes on KNN](https://cs229.stanford.edu/)  
-- [Approximate Nearest Neighbors Libraries (FAISS, Annoy, HNSW)](https://github.com/facebookresearch/faiss)  
+- [Approximate Nearest Neighbors Libraries (FAISS, Annoy, HNSW)](https://github.com/facebookresearch/faiss)
+- https://github.com/Kinvert/Machine-Learning/blob/master/Regression/Concrete/KNN.ipynb
 
 ---
