@@ -35,7 +35,7 @@
 | Google Coral Dev Board         | Edge TPU-powered device for ML workloads                 |
 | NVIDIA Jetson Orin             | High-performance AI processing at the edge               |
 | Intel NUC                      | Small form-factor x86 PC, often used in industrial edge  |
-| ESP32 / RP2040                 | Used for sensor-level edge processing in IoT             |
+| [[ESP32]] / RP2040                 | Used for sensor-level edge processing in IoT             |
 | Edge Gateways (e.g., Advantech, OnLogic) | Industrial-grade edge computers with I/O interfaces  |
 
 ---
