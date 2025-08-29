@@ -142,5 +142,6 @@ Example cheatsheet (not full code here, just quick reference):
 - [Stanford CS229 Notes on KNN](https://cs229.stanford.edu/)  
 - [Approximate Nearest Neighbors Libraries (FAISS, Annoy, HNSW)](https://github.com/facebookresearch/faiss)
 - https://github.com/Kinvert/Machine-Learning/blob/master/Regression/Concrete/KNN.ipynb
+- https://github.com/Kinvert/CUDA-Stuff/tree/master/Algorithms/Regression/KNN/Concrete
 
 ---
