@@ -36,7 +36,7 @@ e-con Systems
 
 If 1MP is enough: [[OV9281]] (1280×800 GS) is ubiquitous and also supports hardware frame sync ([[FSIN]]). Easy mode for proving out the FPGA and synchronization first.
 
-For hard sync, prefer sensors with an FSIN/trigger pin. OV9281/OV2311/AR0234 all support external trigger/sync; Arducam documents this for Pi/Jetson use. 
+For hard sync, prefer sensors with an FSIN/trigger pin. [[OV9281]]/[[OV2311]]/[[AR0234]] all support external trigger/sync; Arducam documents this for Pi/Jetson use. 
 docs.arducam.com
 
 ## 4) System architecture (recommended)
