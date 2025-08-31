@@ -1,4 +1,4 @@
-##1) What MultiCam actually does (and what it uses)
+## 1) What MultiCam actually does (and what it uses)
 
 Function: Takes 2–4 [[MIPI CSI-2 Protocol]] camera inputs and produces one CSI-2 output. Arducam markets both “virtual-channel merge” (multiple streams over one link) and stitching (combine into a single, larger frame). Their docs and listings explicitly mention “combine four cameras into one frame.”
 
