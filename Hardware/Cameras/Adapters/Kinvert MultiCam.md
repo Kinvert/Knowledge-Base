@@ -61,7 +61,7 @@ FPGA: Lattice CrossLink or CrossLink-NX parts have hardened MIPI [[D-PHY]] RX/TX
 
 Control plane: One I²C path to program the FPGA plus a [[TCA9546A]]/[[TCA9548A]]-type I²C mux to reach four identical sensors (same default address).
 
-Clocking: Provide a low-jitter 24–27 MHz MCLK to each sensor (use a fanout buffer), and a clean oscillator for the FPGA. Use the sensors’ FSIN for exposure start alignment (one sensor can be “master” or a small MCU/FPGA GPIO can be the strobe).
+Clocking: Provide a low-jitter 24–27 MHz MCLK to each sensor (use a [[Fanout Buffer]]), and a clean oscillator for the FPGA. Use the sensors’ FSIN for exposure start alignment (one sensor can be “master” or a small MCU/FPGA GPIO can be the strobe).
 
 Output format: Advertise a single RAW8/10 mode with width = 4×single-cam width (e.g., 7680×1080 @ 30 fps). That keeps the host drivers simple.
 
