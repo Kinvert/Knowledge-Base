@@ -97,13 +97,13 @@ MIPI lanes: 100 Ω differential, tight intra-pair length matching (±5–10 mil 
 
 Connectors: 22-pin/15-pin FFC for camera inputs; one 4-lane FFC to the host. Keep connector-to-FPGA runs as short and symmetric as possible.
 
-Power: Separate analog/digital rails for sensors (AVDD/DVDD/IOVDD), quiet LDOs for PLL/analog domains. Bulk + high-freq decoupling near each device.
+Power: Separate analog/digital rails for sensors ([[AVDD]]/[[DVDD]]/[[IOVDD]]), quiet [[LDO]]s for [[PLL]]/analog domains. Bulk + high-freq decoupling near each device.
 
 Clocking: Low-jitter oscillator(s), clock fanout to sensors, impedance-controlled routes.
 
-I²C mux & GPIOs: A TCA9546A/9548A to reach four identical sensors; dedicated reset lines per sensor help during bring-up.
+I²C mux & GPIOs: A [[TCA9546A]]/9548A to reach four identical sensors; dedicated reset lines per sensor help during bring-up.
 
-Trigger nets: Route FSIN as matched single-ended lines from your trigger source to all sensors.
+Trigger nets: Route [[FSIN]] as matched single-ended lines from your trigger source to all sensors.
 
 **C. FPGA/firmware work**
 
