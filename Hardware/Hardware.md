@@ -1,4 +1,5 @@
 - [[Actuators]]
+- [[Cameras]]
 - [[Dev Boards]]
 - [[Displays]]
 - [[FPGAs]]
