@@ -99,6 +99,7 @@ RTK works by transmitting correction data from a fixed base station (with a know
 - [Quectel LC29H RTK Module](https://www.quectel.com/product/gnss/lc29h/)
 - [RTK vs D-GPS (Topcon)](https://www.topconpositioning.com/insights/rtk-vs-dgps)
 - [NTRIP Protocol Overview](https://igs.bkg.bund.de/ntrip/about)
+- https://www.youtube.com/watch?v=Oc1LBFDj2MA
 
 ---
 
