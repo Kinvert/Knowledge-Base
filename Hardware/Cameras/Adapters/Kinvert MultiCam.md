@@ -138,7 +138,7 @@ Turn on streaming, verify that all four assert frame start within a few µs of e
 Simplest host model: Present your board as one sensor with a custom DT entry (one CSI-2 port, 4 lanes, RAW8/10, resolution = (4×W)×H). Jetson supports 4-lane CSI-2 up to 1.5 Gb/s per lane on Nano, higher on Orin. 
 OpenZeka | NVIDIA Embedded Distribütörü
 
-Frameworks: [[V4L2]] [[subdevice]] + [[NVCSI]] + [[libargus]] (Jetson). If you ever run multi-VC mode, Jetson can expose multiple /dev/video nodes. (NVIDIA’s docs & community posts cover nvcsi/DT plumbing.) 
+Frameworks: [[V4L2]] [[subdevice]] + [[NVCSI]] + [[LibArgus]] (Jetson). If you ever run multi-VC mode, Jetson can expose multiple /dev/video nodes. (NVIDIA’s docs & community posts cover nvcsi/DT plumbing.) 
 Embien
 
 Pi path: Libcamera/V4L2 on Pi expects a single sensor stream; bandwidth may cap you to lower modes due to 2-lane connectors. 
