@@ -1,6 +1,6 @@
 ## 1) What MultiCam actually does (and what it uses)
 
-Function: Takes 2–4 [[MIPI CSI-2 Protocol]] camera inputs and produces one CSI-2 output. Arducam markets both “virtual-channel merge” (multiple streams over one link) and stitching (combine into a single, larger frame). Their docs and listings explicitly mention “combine four cameras into one frame.”
+Function: Takes 2–4 [[MIPI CSI-2 Protocol]] camera inputs and produces one CSI-2 output, sometimes called a sensor aggregator. Arducam markets both “virtual-channel merge” (multiple streams over one link) and stitching (combine into a single, larger frame). Their docs and listings explicitly mention “combine four cameras into one frame.”
 
 Device on board: Multiple independent reports and vendor Q&A indicate MultiCam uses a Lattice CrossLink family FPGA (purpose-built for MIPI bridging/aggregation). Lattice themselves promote a 4-to-1 CSI-2 aggregator reference design that does either virtual channels or side-by-side stitch.
 
@@ -234,6 +234,13 @@ Thermals: Four sensors + FPGA in a tight space get warm; plan airflow or a small
 
 Host caps: Jetson Nano dev kit camera sockets are 2-lane each; use a carrier that exposes a 4-lane port for your stitched stream. 
 pbrobinson.fedorapeople.org
+
+---
+
+- https://www.youtube.com/watch?v=HxytsTGWODs
+- https://www.youtube.com/watch?v=HsaRFPqTxpM
+- https://www.youtube.com/watch?v=oIp882BCeD4
+- 
 
 Pi limits: Many Pi docs show 2-lane CSI and ~800 Mb/s/lane nominal; that caps stitched modes unless you downscale/deframe. 
 Microchip
