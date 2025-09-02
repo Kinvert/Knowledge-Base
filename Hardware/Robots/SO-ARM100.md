@@ -91,6 +91,7 @@ The SO-ARM100 can be purchased as a DIY kit or fully assembled. Its modular desi
 - [SO-ARM100 GitHub Repository](https://github.com/TheRobotStudio/SO-ARM100)
 - [LeRobot Framework Documentation](https://huggingface.co/lerobot)
 - [Assembly Guide and Tutorials](https://wiki.seeedstudio.com/lerobot_so100m/)
+- https://github.com/TheRobotStudio/SO-ARM100
 
 ---
 
