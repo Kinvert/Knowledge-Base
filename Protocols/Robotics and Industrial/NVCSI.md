@@ -65,21 +65,21 @@ NVCSI serves as the hardware and protocol layer for receiving image data from ca
 
 ## 🛠️ Compatible Items
 
-- [[Jetson Nano]]  
-- [[Jetson Xavier]]  
-- [[Jetson Orin]]  
-- [[Arducam CamArray]]  
-- [[OV9281]] (and other MIPI CSI-2 sensors)  
+- [[Jetson Nano]]
+- [[Jetson Xavier]]
+- [[Jetson Orin]]
+- [[Arducam CamArray]]
+- [[OV9281]] (and other MIPI CSI-2 sensors)
 
 ---
 
 ## 📚 Related Concepts
 
-- [[FSIN]] (Frame Sync In)  
-- [[FSOUT]] (Frame Sync Out)  
-- [[MIPI CSI-2]]  
-- [[V4L2]] (Video for Linux 2)  
-- [[ISP]] (Image Signal Processor)  
+- [[FSIN]] (Frame Sync In)
+- [[FSOUT]] (Frame Sync Out)
+- [[MIPI CSI-2 Protocol]]
+- [[V4L2]] (Video for Linux 2)
+- [[ISP]] (Image Signal Processor)
 
 ---
 
