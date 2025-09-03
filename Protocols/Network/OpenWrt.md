@@ -87,6 +87,7 @@ OpenWrt transforms consumer routers into flexible, Linux-based network appliance
 - [OpenWrt Device Table](https://openwrt.org/toh/start)
 - [OpenWrt GitHub](https://github.com/openwrt/openwrt)
 - Community forums and documentation at openwrt.org
+- https://www.youtube.com/watch?v=ofR7GFNZzJY
 
 ---
 
