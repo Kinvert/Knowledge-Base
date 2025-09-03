@@ -89,6 +89,7 @@ HaLow extends Wi-Fi into the sub-GHz ISM bands (typically 750–950 MHz), enabli
 - [IEEE 802.11ah Standard](https://standards.ieee.org)
 - Morse Micro and Newracom developer kits
 - OpenWrt support for 802.11ah drivers
+- https://www.youtube.com/watch?v=ofR7GFNZzJY
 
 ---
 
