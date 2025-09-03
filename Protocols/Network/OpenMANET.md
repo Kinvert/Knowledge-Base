@@ -83,6 +83,7 @@ MANETs enable devices to form networks on the fly, ideal for applications like s
 - INETMANET project (OMNeT++ extensions for MANET)
 - INET’s MANET routing showcase documentation (DSDV, GPSR, etc.)
 - OSPF-MDR implementation for MANET in Quagga (development by NRL)
+- https://www.youtube.com/watch?v=ofR7GFNZzJY
 
 ---
 
