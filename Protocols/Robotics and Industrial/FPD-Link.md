@@ -58,26 +58,26 @@ FPD-Link transmits serialized video and data over differential pairs, with deser
 - Proprietary (TI-specific ecosystem)  
 - Requires dedicated serializers and deserializers  
 - Less common outside automotive/industrial use cases  
-- Costlier than short-range interfaces like [[MIPI CSI-2]]  
+- Costlier than short-range interfaces like [[MIPI CSI-2 Protocol]]
 
 ---
 
 ## 🛠️ Compatible Items
 
-- [[Jetson Xavier]] and [[Jetson Orin]] (via serializer/deserializer bridges)  
-- [[Cameras]] designed with FPD-Link III support  
-- [[Display Interfaces]] in automotive robotics  
-- [[SerDes]] chipsets from Texas Instruments  
+- [[Jetson Xavier]] and [[Jetson Orin]] (via serializer/deserializer bridges)
+- [[Cameras]] designed with FPD-Link III support
+- [[Display Interfaces]] in automotive robotics
+- [[SerDes]] chipsets from Texas Instruments
 
 ---
 
 ## 📚 Related Concepts
 
-- [[GMSL]] (Gigabit Multimedia Serial Link)  
-- [[MIPI CSI-2]]  
-- [[NVCSI]]  
-- [[SerDes]]  
-- [[HDMI]]  
+- [[GMSL]] (Gigabit Multimedia Serial Link)
+- [[MIPI CSI-2 Protocol]]
+- [[NVCSI]]
+- [[SerDes]]
+- [[HDMI]]
 
 ---
 
