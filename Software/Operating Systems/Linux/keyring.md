@@ -80,7 +80,8 @@ A **keyring** is a secure storage system for credentials such as passwords, API 
 - [[Password Managers]]  
 - [[Encryption]]  
 - [[Pip]] (uses keyring for PyPI authentication)  
-- [[Git]] (can integrate with system keyrings)  
+- [[Git]] (can integrate with system keyrings)
+- [[Linux]]
 
 ---
 
