@@ -82,7 +82,8 @@ Conda works by creating isolated environments with their own package versions, P
 - `conda env export > environment.yml` – Export env to YAML  
 - `conda env create -f environment.yml` – Create env from YAML  
 - `conda update conda` – Update conda itself  
-- `conda clean -a` – Clean up caches  
+- `conda clean -a` – Clean up caches
+- `conda list --revisions` and `conda install --revision 2` - Undo Conda changes
 
 ---
 
