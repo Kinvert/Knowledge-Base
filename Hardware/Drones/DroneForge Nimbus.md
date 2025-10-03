@@ -117,6 +117,8 @@ DroneForge "Nimbus" is an SDK + desktop app for building, testing and deploying 
 - ExpressLRS telemetry & serial protocols page — details on CRSF and receiver output modes. Useful to understand serial options for FC integration.
 - BetaFPV Air65 product and Air 5-in-1 FC pages — shows that the Air65 ships with Serial ELRS RX (CRSF output) on the integrated FC. Good practical example for small-whoop integration.
 - TBS Crossfire product pages & comparisons — for design decisions if you plan to use Crossfire instead of ELRS.
+- https://github.com/droneforge/nimbus_sdk
+- https://thedroneforge.com/the-forge
 
 ---
 
@@ -128,7 +130,7 @@ DroneForge "Nimbus" is an SDK + desktop app for building, testing and deploying 
 ---
 
 ## 🔗 Related Concepts / Notes
-- - [[ELRS]] (open-source RC link)  
+- - [[ExpressLRS]] (open-source RC link)  
 - - [[CRSF]] (Crossfire serial protocol)  
 - - [[BETAFPV Air65]] (example micro airframe with Serial ELRS)  
 - - [[Betaflight]] (flight controller firmware that will show CRSF channels)  
