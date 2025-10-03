@@ -174,6 +174,7 @@ Yes — the Air65 includes an ELRS serial receiver (5IN1 variant) so **an ELRS t
 - DroneForge Nimbus SDK (official repo / docs — hardware-agnostic SDK for drone AI).
 - PX4 + ROS2 integration guide (offboard / companion computer workflows).
 - PufferLib docs and paper (training in sim; sim2real workflows).
+- https://www.amazon.com/BETAFPV-Brushless-Quadcopter-Ultralight-Controller/dp/B0DQPP4DR8/
 
 ---
 
