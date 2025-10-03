@@ -58,7 +58,7 @@ Created by José Valim in 2011, Elixir was designed to make the power of Erlang/
 
 - Runtime performance slower than systems languages like [[C++]] or [[Rust]]
 - Smaller ecosystem compared to Python or JavaScript
-- Less adoption in traditional robotics compared to [[C++]], [[Python]], or [[ROS]]
+- Less adoption in traditional robotics compared to [[C++]], [[Python]], or ROS
 - Learning curve for OTP abstractions despite easier syntax
 
 ---
