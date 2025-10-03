@@ -81,7 +81,7 @@ Nerves provides a specialized environment for creating and deploying **embedded 
 - [[OTP]] (fault-tolerant architecture used in embedded apps)
 - [[Erlang]] (runtime that enables concurrency and reliability)
 - [[IoT]] (Internet of Things devices where Nerves is commonly used)
-- [[ROS 2]] (robotics middleware, often complementary in robotics projects)
+- [[ROS2]] (robotics middleware, often complementary in robotics projects)
 
 ---
 
