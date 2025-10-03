@@ -1,6 +1,6 @@
 # 🤖 Gazebo Simulator
 
-Gazebo is a powerful open-source 3D robotics simulator that enables testing, development, and validation of robotic systems in virtual environments. It provides accurate physics simulation, sensor modeling, and interfaces with robotic frameworks like [[ROS]] and [[ROS2]].
+Gazebo is a powerful open-source 3D robotics simulator that enables testing, development, and validation of robotic systems in virtual environments. It provides accurate physics simulation, sensor modeling, and interfaces with robotic frameworks like [[ROS2]].
 
 ---
 
@@ -13,7 +13,7 @@ Gazebo is a powerful open-source 3D robotics simulator that enables testing, dev
 | License | Apache 2.0 |
 | Language | C++ (core), Python (bindings and tools) |
 | Platforms | Linux (primary), macOS (partial), Windows (experimental) |
-| ROS Integration | Deep integration with [[ROS]] and [[ROS2]] |
+| ROS Integration | Deep integration with [[ROS2]] |
 | Rendering | OpenGL |
 | Physics Engines | ODE, Bullet, Simbody, DART |
 | Simulation | Real-time and accelerated |
@@ -121,7 +121,6 @@ Gazebo classic has been rebranded as **Gazebo Classic**, while a modern reimplem
 
 ## 🔗 Internal Links
 
-- [[ROS]]
 - [[ROS2]]
 - [[URDF]]
 - [[SDF]]
