@@ -1,6 +1,6 @@
 # Isaac Sim
 
-Isaac Sim is NVIDIA’s robotics simulation platform built on the Omniverse framework. It enables realistic physics-based simulation, synthetic data generation, and integration with robotic middleware such as [[ROS]]. Isaac Sim is widely used for developing, testing, and validating robotic systems in virtual environments before deployment in the real world.
+Isaac Sim is NVIDIA’s robotics simulation platform built on the Omniverse framework. It enables realistic physics-based simulation, synthetic data generation, and integration with robotic middleware such as ROS. Isaac Sim is widely used for developing, testing, and validating robotic systems in virtual environments before deployment in the real world.
 
 ---
 
