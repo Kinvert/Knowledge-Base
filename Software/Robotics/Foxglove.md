@@ -1,6 +1,6 @@
 # 🦊 Foxglove Studio
 
-**Foxglove Studio** is a powerful open-source visualization and debugging platform built for robotics and autonomous systems. It serves as a modern alternative (or complement) to tools like [[RViz]] and [[rqt]] in the ROS ecosystem, supporting both [[ROS1]] and [[ROS2]] data formats, as well as other middleware and log-based data workflows.
+**Foxglove Studio** is a powerful open-source visualization and debugging platform built for robotics and autonomous systems. It serves as a modern alternative (or complement) to tools like [[RViz]] and [[rqt]] in the ROS ecosystem, supporting [[ROS2]] data formats, as well as other middleware and log-based data workflows.
 
 ---
 
@@ -20,7 +20,7 @@ Foxglove Studio is a **desktop application** and web-based tool that allows robo
 
 ## 📦 Key Features
 
-- **Multi-protocol support**: ROS1, ROS2, [[MCAP]] logs, custom WebSocket-based sources
+- **Multi-protocol support**: ROS2, [[MCAP]] logs, custom WebSocket-based sources
 - **Extensible plugins**: Add new visualization panels or data sources
 - **Cross-platform**: Mac, Linux, Windows, browser
 - **Cloud sync**: Optionally integrates with Foxglove Data Platform
@@ -105,7 +105,6 @@ Foxglove Studio is a **desktop application** and web-based tool that allows robo
 ## 🔗 Internal Links
 
 - [[RViz]]
-- [[ROS]]
 - [[ROS2]]
 - [[MCAP]]
 - [[rqt]]
