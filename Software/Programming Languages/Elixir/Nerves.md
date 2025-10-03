@@ -97,4 +97,4 @@ Nerves provides a specialized environment for creating and deploying **embedded 
 
 ## 🏆 Summary
 
-Nerves bridges the gap between **embedded systems** and **fault-tolerant distributed computing**. By combining Elixir’s productivity with OTP’s resilience, it enables engineers to build IoT and robotic systems that are maintainable, scalable, and robust against failures. While not as widespread as [[ROS]], it excels in scenarios where reliability and remote deployment are critical.
+Nerves bridges the gap between **embedded systems** and **fault-tolerant distributed computing**. By combining Elixir’s productivity with OTP’s resilience, it enables engineers to build IoT and robotic systems that are maintainable, scalable, and robust against failures. While not as widespread as ROS, it excels in scenarios where reliability and remote deployment are critical.
