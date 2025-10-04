@@ -98,6 +98,7 @@ Originally designed for data conversion, `dd` has become a core Unix tool for ta
 - GNU coreutils manual (dd): https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html
 - man page: `man dd`
 - ArchWiki guide on disk cloning: https://wiki.archlinux.org/title/Disk_cloning
+- https://serverfault.com/questions/4906/using-dd-for-disk-cloning
 
 ---
 
