@@ -113,6 +113,7 @@ Docker CLI commands fall into several categories: managing containers, images, n
 
 ## 📚 Related Notes
 
+- [[Docker]]
 - [[Podman]] (Daemonless container engine)
 - [[LXC]] (Linux Containers)
 - [[Nomad]] (Workload orchestrator)
