@@ -52,7 +52,7 @@ The X870 and X870E represent the **second wave** of AM5 chipsets, improving upon
 
 ---
 
-## 🧠 AUROS X870E Comparison Table
+## 🧠 AORUS X870E Comparison Table
 
 | Feature                          | **Pro** | **Elite** | **XTREME** | **Pro X3D Ice** | **Master X3D Ice** | **Elite X3D Ice** |
 |----------------------------------|---------|-----------|------------|-----------------|-------------------|-------------------|
