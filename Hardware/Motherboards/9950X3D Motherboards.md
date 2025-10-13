@@ -37,6 +37,21 @@ The X870 and X870E represent the **second wave** of AM5 chipsets, improving upon
 
 ---
 
+## 🧩 X870E Comparison Table
+
+| Feature                          | **ASUS ROG Strix X870E-E Gaming WiFi** | **MSI MPG X870E Carbon WiFi** | **ASRock X870E Taichi** | **Gigabyte X870E AORUS Master** | **ASRock X870E Nova WiFi** |
+|----------------------------------|----------------------------------------|-------------------------------|-------------------------|----------------------------------|----------------------------|
+| **PCIe 5.0 x16 Slots**          | 1 (via CPU)                            | 1 (via CPU)                   | 2 (x16/x8)              | 2 (x16/x8)                       | 1 (via CPU)                |
+| **PCIe 4.0 x16 Slots**          | 1 (via chipset)                        | 1 (via chipset)               | 1 (via chipset)         | 1 (via chipset)                 | 2 (via chipset)            |
+| **SATA Ports**                  | 4                                      | 4                             | 4                       | 4                                | 2                          |
+| **USB Ports**                   | 2 x USB4, 2 x USB 3.2 Gen 2, 4 x USB 3.2 Gen 1, 4 x USB 2.0 | 2 x USB4, 2 x USB 3.2 Gen 2, 4 x USB 3.2 Gen 1, 4 x USB 2.0 | 2 x USB4, 2 x USB 3.2 Gen 2, 4 x USB 3.2 Gen 1, 4 x USB 2.0 | 2 x USB4, 2 x USB 3.2 Gen 2, 4 x USB 3.2 Gen 1, 4 x USB 2.0 | 2 x USB4, 2 x USB 3.2 Gen 2, 4 x USB 3.2 Gen 1, 4 x USB 2.0 |
+| **RAM Slots**                   | 4 x DDR5                               | 4 x DDR5                      | 4 x DDR5                | 4 x DDR5                         | 4 x DDR5                   |
+| **Max RAM Capacity**            | 128GB                                  | 128GB                         | 128GB                   | 128GB                            | 128GB                     |
+| **Wi-Fi Module**                | Wi-Fi 7 (integrated)                   | Wi-Fi 7 (integrated)          | Wi-Fi 7 (integrated)    | Wi-Fi 7 (integrated)            | Wi-Fi 7 (integrated)      |
+| **Wi-Fi Module Accessibility**  | Not easily removable                   | Not easily removable          | Not easily removable    | Not easily removable            | Not easily removable      |
+
+---
+
 ## 🔍 Key Differences: X870 vs X870E
 
 The **“E” in X870E** stands for **“Extreme”**, and this distinction follows AMD’s tradition from X670 vs X670E.
