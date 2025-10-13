@@ -52,6 +52,24 @@ The X870 and X870E represent the **second wave** of AM5 chipsets, improving upon
 
 ---
 
+## 🧠 AUROS X870E Comparison Table
+
+| Feature                          | **Pro** | **Elite** | **XTREME** | **Pro X3D Ice** | **Master X3D Ice** | **Elite X3D Ice** |
+|----------------------------------|---------|-----------|------------|-----------------|-------------------|-------------------|
+| **VRM Phases**                   | 16+2+2  | 16+2+2    | 20+1+2     | 18+2+2          | 18+2+2            | 16+2+2            |
+| **Wi-Fi 7**                      | Yes     | Yes       | Yes        | Yes             | Yes               | Yes               |
+| **Bluetooth Version**            | 5.3     | 5.3       | 5.4        | 5.3             | 5.3               | 5.3               |
+| **USB Ports**                    | 10      | 10        | 12         | 12              | 12                | 12                |
+| **PCIe 5.0 x16 Slots**           | 1       | 1         | 2          | 1               | 2                 | 1                 |
+| **PCIe 4.0 x16 Slots**           | 1       | 1         | 1          | 1               | 1                 | 1                 |
+| **DDR5 Support**                 | Up to 6400 MT/s | Up to 6400 MT/s | Up to 6400 MT/s | Up to 9000 MT/s (via X3D Turbo Mode 2.0) | Up to 9000 MT/s (via X3D Turbo Mode 2.0) | Up to 9000 MT/s (via X3D Turbo Mode 2.0) |
+| **USB4 Ports**                   | 2       | 2         | 2          | 2               | 2                 | 2                 |
+| **M.2 Slots**                    | 4       | 4         | 4          | 4               | 4                 | 4                 |
+| **SATA Ports**                   | 4       | 4         | 4          | 4               | 4                 | 4                 |
+| **Price Range**                  | $319.99 | $307.92   | $799.99    | $394.99         | $499.99           | $354.99           |
+
+---
+
 ## 🔍 Key Differences: X870 vs X870E
 
 The **“E” in X870E** stands for **“Extreme”**, and this distinction follows AMD’s tradition from X670 vs X670E.
