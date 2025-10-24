@@ -75,6 +75,7 @@ Created by José Valim in 2011, Elixir was designed to make the power of Erlang/
 
 ## 📑 Related Concepts
 
+- [[Programming Languages]]
 - [[Functional Programming]] (Elixir is functional-first)
 - [[Erlang]] (Elixir builds on it)
 - [[OTP]] (the heart of Elixir fault tolerance and concurrency)
