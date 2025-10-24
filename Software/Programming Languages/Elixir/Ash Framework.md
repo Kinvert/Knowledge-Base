@@ -1,6 +1,6 @@
 # 🧩 Ash Framework
 
-The **Ash Framework** is an **Elixir-based, declarative application framework** designed to make it easier to build maintainable and flexible systems. It emphasizes **declarative data modeling**, **introspection**, and **extensible domain logic**, allowing developers to describe application behavior through configurations rather than ad hoc imperative code. In robotics and embedded systems, Ash can serve as a robust backend framework for managing data pipelines, configuration state, or REST/gRPC APIs connected to robotic middleware like [[ROS]] or [[DDS]].
+The **Ash Framework** is an **Elixir-based, declarative application framework** designed to make it easier to build maintainable and flexible systems. It emphasizes **declarative data modeling**, **introspection**, and **extensible domain logic**, allowing developers to describe application behavior through configurations rather than ad hoc imperative code. In robotics and embedded systems, Ash can serve as a robust backend framework for managing data pipelines, configuration state, or REST/gRPC APIs connected to robotic middleware like ROS or DDS.
 
 ---
 
