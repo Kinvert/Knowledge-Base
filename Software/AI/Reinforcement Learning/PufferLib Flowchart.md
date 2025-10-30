@@ -1,0 +1,32 @@
+## python -m pufferlib.pufferl train puffer_envname
+- pufferl.py train()
+  - vecenv train() pufferl before
+  - vecenv = None
+    - pufferl.py load_env() begin
+      - pufferl.py load_env() about to pufferlib.vector.make(make_env
+      - vector.py make() begin num_envs = 2
+        - vector.py make() if not isinstance(env_creator_or_creators, (list, tuple)):
+        - vector.py make() env_creators = [<class 'pufferlib.ocean.env.env.Env'>, <class 'pufferlib.ocean.env.env.Env'>]
+        - vector.py make() before bkend = backend(env_creators, env_args, env_kwargs, num_envs, **kwargs)
+        - vector.py make() env_args = [[], []]
+        - vector.py make() env_kwargs = [{'num_envs': 4096, 'num_agents': 1, 'num_cpu': 10, 'illegal_move_penalty': 0, 'continuous': 0}, {'num_envs': 4096, 'num_agents': 1, 'num_cpu': 10, 'illegal_move_penalty': 0, 'continuous': 0}]
+        - vector.py make() num_envs = 2
+          - init env.py begin
+            - before binding.shared() env.py
+            - my_shared() in binding.c begin
+              - loop through shared data
+              - about to return PyLong_FromVoidPtr(state) my_shared() binding.c
+            - my_shared() in binding.c end
+            - after binding.shared() env.py
+            - before for i in range(num_envs): env.py
+            - after for i in range(num_envs): env.py
+            - before self.c_envs = binding.vectorize(*c_envs) env.py
+            - after self.c_envs = binding.vectorize(*c_envs) env.py
+          - init env.py end
+      - make vector.py bkend = <pufferlib.vector.Multiprocessing object at 0x7a0506db3a10>
+      - make vector.py end
+    - thing = <pufferlib.vector.Multiprocessing object at 0x7a0506db3a10>
+    - pufferl.py load_env() end
+- --vecenv train() pufferl after
+
+[[PufferLib]]
