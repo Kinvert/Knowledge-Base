@@ -184,7 +184,7 @@
         return logs
 ```
 
-compute_puff_advantage is in:
+compute_puff_advantage [[GAE]] is in:
 - pufferlib/extensions/pufferlib.cpp
 - or
 - pufferlib/extensions/cuda/pufferlib.cu
