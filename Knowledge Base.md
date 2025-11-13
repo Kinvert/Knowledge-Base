@@ -102,7 +102,7 @@ title: Knowledge Base
   - Graphs
 
 ### [[Systems]]
-- [[ADAS]]
+- ADAS
 
 ### [[Tools and Equipment]]
 - [[Software Tools]]
