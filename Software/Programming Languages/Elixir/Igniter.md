@@ -39,6 +39,19 @@ While Igniter is not a robotics simulator or middleware, if you have a robotics 
 
 ---
 
+## 📊 Comparison Chart
+
+| Tool / Framework | Purpose | Level | Similarity to Igniter | Notes |
+|------------------|---------|-------|------------------------|-------|
+| **Ash Igniter** | Ash-specific scaffolding & project setup | High | 100% | Tailored to Ash; opinionated |
+| **Phoenix Generators** | Web project scaffolding | Medium | 50% | Complementary; Iginter often coexists with Phoenix |
+| **Rails Generators** | Full web scaffolding | High | 40% | Similar spirit but language/framework specific |
+| **Yeoman** | JavaScript generator ecosystem | High | 30% | Very broad; less domain-aware |
+| **Nx + Livebook Mix Tasks** | ML/Elixir helpers | Low | 10% | Not focused on full app scaffolding |
+| **Zig Build System** | Generic build tooling | Low | 0% | Included for cross-domain comparison only |
+
+---
+
 ## 🧩 Use Cases
 
 - Automatically generating module scaffolding for a robotics API backend built with Ash + Phoenix (e.g., telemetry endpoints).  
