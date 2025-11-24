@@ -1,6 +1,6 @@
 # Python Dependency Hell
 
-Python Dependency Hell is the collection of problems teams hit when Python packages, native libraries, toolchains, system paths, and multiple interpreters interact in surprising ways. This note digs deep into common failure modes, compares the major tooling (Conda/mamba/micromamba, venv/virtualenv, pyenv, pip, pipenv, poetry, pip-tools, pipx, **uv**), and covers C/C++/Rust/Zig bindings, wheels vs source builds, reproducible CI pipelines, and practical recipes for fast-moving startup teams.
+Python Dependency Hell is the collection of problems teams hit when Python packages, native libraries, toolchains, system paths, and multiple interpreters interact in surprising ways. This note digs deep into common failure modes, compares the major tooling ([[Conda]]/mamba/micromamba, [[venv]]/virtualenv, [[pyenv]], [[pip]], pipenv, [[poetry]], pip-tools, pipx, [[UV]]), and covers C/C++/Rust/Zig bindings, wheels vs source builds, reproducible CI pipelines, and practical recipes for fast-moving startup teams.
 
 ---
 
@@ -10,17 +10,17 @@ Dependency hell arises from several interacting factors:
 - multiple Python versions and interpreters on one machine
 - binary-ABI incompatibilities (glibc, manylinux tags)
 - package managers with different dependency resolution semantics
-- PATH and environment activation side effects
+- [[PATH]] and environment activation side effects
 - mixing system package managers (apt/yum/brew) with Python installers
 
-Fixing it is partly about tooling choice and mostly about predictable build & CI practices: lockfiles, wheels, explicit native deps, and lightweight reproducible environments (containers, micromamba, or **uv-managed environments**).
+Fixing it is partly about tooling choice and mostly about predictable build & CI practices: lockfiles, wheels, explicit native deps, and lightweight reproducible environments (containers, micromamba, or uv-managed environments).
 
 ---
 
 ## 🧭 Quick taxonomy (tools & roles)
 - **Interpreter/version managers:** `pyenv`, system `python`, `uv python`
 - **Virtual environment managers:** `venv`, `virtualenv`, `conda env`, `uv venv`
-- **Package installers / dependency managers:** `pip`, `conda`, `mamba`, `micromamba`, **uv**
+- **Package installers / dependency managers:** `pip`, `conda`, `mamba`, `micromamba`, `uv`
 - **Higher-level dependency tools / workflow:** `poetry`, `pipenv`, `pip-tools` (`pip-compile`), `poetry-core`
 - **Global tool installers for CLIs:** `pipx`, `uvx`
 - **Build tools for native extensions:** `setuptools`, `maturin` (Rust), `cibuildwheel`, `scikit-build`, `pybind11`, `cffi`
@@ -29,11 +29,11 @@ Fixing it is partly about tooling choice and mostly about predictable build & CI
 ---
 
 ## 🧠 Core failure modes (why "hell" happens)
-1. **Path & Activation Side Effects** — Activating Conda or other envs rewrites `PATH` and can change `LD_LIBRARY_PATH`, `PYTHONPATH`, and shell hooks; unexpected activation order can shadow system `python` or binaries like `gcc`.  
-2. **Mixed Managers** — Installing some packages with `conda` and some with `pip` in the same env leads to inconsistent dependency graphs and broken native libs. Similar issues arise when mixing `uv`-managed envs with legacy global pip installs.  
-3. **Binary ABI mismatch** — Wheels built for a different `manylinux` tag or linked against different `glibc`/libstdc++ versions fail at import.  
-4. **Solver Differences** — `conda` historically had a slower solver (fixed by `mamba`), `pip` uses SAT solver semantics vs dependency constraints expressed differently across tools; **uv introduces a fast, parallel resolver optimized for deterministic installs**.  
-5. **Transitive C deps** — Python package X depends on system lib Y; if Y is missing or wrong version, `pip install X` will fail or compile from source unpredictably.  
+1. **Path & Activation Side Effects** — Activating Conda or other envs rewrites [[PATH]] and can change [[LD_LIBRARY_PATH]], [[PYTHONPATH]], and shell hooks; unexpected activation order can shadow system `python` or binaries like `gcc`.
+2. **Mixed Managers** — Installing some packages with `conda` and some with `pip` in the same env leads to inconsistent dependency graphs and broken native libs. Similar issues arise when mixing `uv`-managed envs with legacy global pip installs.
+3. **Binary ABI mismatch** — Wheels built for a different `manylinux` tag or linked against different `glibc`/libstdc++ versions fail at import.
+4. **Solver Differences** — `conda` historically had a slower solver (fixed by `mamba`), `pip` uses SAT solver semantics vs dependency constraints expressed differently across tools; uv introduces a fast, parallel resolver optimized for deterministic installs.
+5. **Transitive C deps** — Python package X depends on system lib Y; if Y is missing or wrong version, `pip install X` will fail or compile from source unpredictably.
 6. **Reproducibility gaps** — Not pinning direct and transitive versions, or not locking platform-specific wheels, causes builds to diverge across developers and CI.
 
 ---
@@ -52,7 +52,7 @@ Fixing it is partly about tooling choice and mostly about predictable build & CI
 | `pipenv` | `pip` + `virtualenv` integration | Opinionated env + lockfile | Historically slow/buggy; less popular now | Legacy projects |
 | `pip-tools` (`pip-compile`) | Produce pinned `requirements.txt` from loose specs | Deterministic locked files for `pip` | Extra build step, needs workflow discipline | Teams using `pip` + `venv` but want reproducibility |
 | `pipx` | Install Python CLIs globally | Installs tools isolated from project | Not for apps, just CLIs | Developer tooling (black, ruff) |
-| **uv** | All-in-one package/env manager | Fast, universal lockfile, built-in venv & Python version management | Newer tool, smaller ecosystem than pip/conda | Startups & teams needing fast reproducible installs, mixed projects |
+| uv | All-in-one package/env manager | Fast, universal lockfile, built-in venv & Python version management | Newer tool, smaller ecosystem than pip/conda | Startups & teams needing fast reproducible installs, mixed projects |
 
 ---
 
@@ -64,7 +64,7 @@ Fixing it is partly about tooling choice and mostly about predictable build & CI
 |------|----------|----------------------------------|-----------------------|
 | pip + constraints/pip-tools | `requirements.txt` (pinned) | Yes if pinned to wheels per-platform | No (needs system libs) |
 | poetry | `poetry.lock` | Yes-ish (platform-specific differences) | No, relies on wheels or conda for native libs |
-| **uv** | Universal lockfile in `pyproject.toml` | Yes | No native lib packaging (but installs wheels and uses pip backend efficiently) |
+| UV | Universal lockfile in `pyproject.toml` | Yes, uses a universal lockfile that records exact wheels per platform, ensuring consistent installs across different operating systems. | No native lib packaging (but installs wheels and uses pip backend efficiently) |
 | conda | `environment.yml` + explicit pins | Yes (conda packages are binaries) | Yes — main advantage |
 | micromamba | same as conda | Yes, great in CI/docker | Yes |
 
@@ -77,7 +77,7 @@ Fixing it is partly about tooling choice and mostly about predictable build & CI
 | cibuildwheel + pip | Builds manylinux wheels in CI | Excellent (produces wheels you can host on PyPI) | Good for OSS packages |
 | maturin (Rust) | Produces wheels (manylinux) | Excellent for Rust bindings | Best for Rust-based extensions |
 | pybind11 / setuptools | Source extension building | Works but requires dev toolchain | Good if CI builds wheels for you |
-| **uv** | Uses pip wheels; can cache & reuse across projects | Built-in wheel installation; can invoke cibuildwheel indirectly | Good for Rust/C extensions when using wheels |
+| uv | Uses pip wheels; can cache & reuse across projects | Built-in wheel installation; can invoke cibuildwheel indirectly | Good for Rust/C extensions when using wheels |
 
 ### 3) Performance & developer UX
 
