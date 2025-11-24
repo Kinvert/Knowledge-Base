@@ -256,6 +256,7 @@ Key features:
 - [[Manylinux Wheel]]
 - [[Docker for Python]]
 - [[UV]]
+- [[Python]]
 
 ---
 
