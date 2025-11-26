@@ -86,14 +86,15 @@
 
 ## 🔗 Related Concepts/Notes
 
-- [[GRUB]] (Bootloader)  
-- [[UEFI]] (Firmware interface)  
-- [[Shell]]  
-- [[Pip]]  
-- [[Conda]]  
-- [[SSH]]  
-- [[ROS2]] (Robot Operating System)  
-- [[Docker]]  
+- [[Operating Systems]]
+- [[GRUB]] (Bootloader)
+- [[UEFI]] (Firmware interface)
+- [[Shell]]
+- [[Pip]]
+- [[Conda]]
+- [[SSH]]
+- [[ROS2]] (Robot Operating System)
+- [[Docker]]
 
 ---
 
