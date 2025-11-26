@@ -168,7 +168,8 @@ It helps accelerate RL experimentation by reducing boilerplate and improving ite
 ---
 
 ## 📎 Related Concepts/Notes
-- [[Large Language Models]] (LLM)
+- [[Local AI]]
+- [[LLM]]
 - [[Transformer Architecture]]
 - [[Reinforcement Learning]]
 - [[Python]]
