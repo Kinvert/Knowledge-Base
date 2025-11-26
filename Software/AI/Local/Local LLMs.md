@@ -136,7 +136,8 @@ In short: local LLMs are very competitive for many developer workflows — but f
 ---
 
 ## 🔗 Related Concepts / Other Notes
-
+- [[Local AI]]
+- [[LLM]]
 - [[HumanEval]] (benchmark for Python code generation)  
 - [[MBPP]] (Another popular code generation benchmark)  
 - [[StarCoder2]]  
