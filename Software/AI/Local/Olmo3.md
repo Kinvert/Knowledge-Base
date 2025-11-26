@@ -153,8 +153,8 @@ Mixed precision (FP16/BF16) greatly improves throughput.
 ---
 
 ## 📎 Related Concepts/Notes
-- [[Large Language Models]] (LLM)
-- [[Reinforcement Learning]]
+- [[Local AI]]
+- [[LLM]]
 - [[Transformers]]
 - [[CUDA]]
 - [[Fine-Tuning]]
