@@ -114,7 +114,8 @@ LM Studio balances ease-of-use with flexibility for advanced experimentation.
 ---
 
 ## 🔍 Related Concepts/Notes
-- [[Large Language Models]] (LLM)
+- [[Local AI]]
+- [[LLM]]
 - [[Olmo3]]
 - [[CodeLlama]]
 - [[vLLM]]
