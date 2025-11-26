@@ -96,6 +96,106 @@ These commands trigger build and install processes based on the logic declared i
 
 ---
 
+## 🧾 Cheatsheet: One-Liners & Common kwargs
+
+### Common Commands
+- Install local package: `pip install .`
+- Editable install: `pip install -e .`
+- Build source distribution: `python setup.py sdist`
+- Build wheel: `python setup.py bdist_wheel`
+- Install with verbose output: `pip install . -v`
+- Clean build artifacts: `python setup.py clean --all`
+
+### Core `setuptools.setup()` kwargs
+
+**Metadata**
+- `name`
+- `version`
+- `description`
+- `long_description`
+- `long_description_content_type`
+- `author`
+- `author_email`
+- `url`
+- `project_urls`
+- `license`
+- `classifiers`
+- `keywords`
+
+**Package Discovery**
+- `packages`
+- `py_modules`
+- `package_dir`
+- `include_package_data`
+- `exclude_package_data`
+
+**Dependencies**
+- `install_requires`
+- `extras_require`
+- `setup_requires`
+- `python_requires`
+- `tests_require`
+
+**Build / Distribution**
+- `cmdclass`
+- `ext_modules`
+- `entry_points`
+- `scripts`
+- `zip_safe`
+- `data_files`
+
+**Advanced / Hooks**
+- `dependency_links`
+- `namespace_packages`
+- `test_suite`
+- `test_loader`
+- `obsoletes`
+- `provides`
+- `requires`
+
+---
+
+**⚡ Using uv with setup.py**
+
+`uv` is a modern, ultra-fast Python package manager that works seamlessly with legacy `setup.py` projects.
+
+**Common Usage**
+- Install package: `uv pip install .`
+- Editable install: `uv pip install -e .`
+- Install with extras: `uv pip install .[dev,rl]`
+- Lock dependencies: `uv pip compile requirements.in`
+- Sync environment: `uv pip sync requirements.txt`
+
+**Notes**
+- `uv` respects `install_requires` and `extras_require`
+- Wraps PEP-517 behavior but supports legacy setup.py workflows
+- Accelerates RL experiment iterations and reproducible builds
+
+---
+
+## ✏️ Editable Mode
+
+Editable mode allows installed packages to directly reflect changes made in the source code without reinstallation.
+
+**Invocation**
+- Using pip: `pip install -e .`
+- Using setuptools: `python setup.py develop`
+
+**Behavior**
+- Creates a symlink to the source directory
+- Changes take effect immediately
+- Ideal for:
+  - Development of RL environments
+  - Rapid experimentation
+  - Debugging reusable modules
+
+**Notes**
+- Relies on setuptools `develop` mode
+- Best used with virtual environments
+- Compatible with modern build backends, but conflicts can occur if using strict PEP-517-only setups
+
+---
+
 ## 🔧 Compatible Items
 
 - Python
