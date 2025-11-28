@@ -82,6 +82,106 @@ Zig unit tests are written directly in source files using the `test` keyword. Wh
 
 ---
 
+## Examples
+
+```zig
+const std = @import("std");
+
+test "basic arithmetic works" {
+    try std.testing.expect(1 + 1 == 2);
+    try std.testing.expect(5 * 5 == 25);
+}
+```
+
+```zig
+const std = @import("std");
+
+fn add(a: i32, b: i32) i32 {
+    return a + b;
+}
+
+test "add returns correct result" {
+    try std.testing.expectEqual(@as(i32, 10), add(4, 6));
+    try std.testing.expectEqual(@as(i32, -2), add(3, -5));
+}
+```
+
+```zig
+const std = @import("std");
+
+fn divide(a: i32, b: i32) !i32 {
+    if (b == 0) return error.DivisionByZero;
+    return @divTrunc(a, b);
+}
+
+test "divide handles errors" {
+    try std.testing.expectError(error.DivisionByZero, divide(10, 0));
+    try std.testing.expectEqual(@as(i32, 5), try divide(10, 2));
+}
+```
+
+```zig
+const std = @import("std");
+
+test "array comparison" {
+    const a = [_]u8{ 1, 2, 3 };
+    const b = [_]u8{ 1, 2, 3 };
+
+    try std.testing.expectEqualSlices(u8, &a, &b);
+}
+```
+
+```zig
+const std = @import("std");
+
+test "allocator usage" {
+    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
+    defer _ = gpa.deinit();
+
+    const allocator = gpa.allocator();
+
+    const buf = try allocator.alloc(u8, 16);
+    defer allocator.free(buf);
+
+    try std.testing.expect(buf.len == 16);
+}
+```
+
+```zig
+const std = @import("std");
+
+test "comptime evaluation" {
+    const value = comptime blk: {
+        const x = 5;
+        break :blk x * 2;
+    };
+
+    try std.testing.expectEqual(@as(i32, 10), value);
+}
+```
+
+```zig
+const std = @import("std");
+
+test "table-driven test example" {
+    const cases = [_]struct {
+        a: i32,
+        b: i32,
+        expected: i32,
+    }{
+        .{ .a = 1, .b = 2, .expected = 3 },
+        .{ .a = 5, .b = 5, .expected = 10 },
+        .{ .a = -2, .b = 2, .expected = 0 },
+    };
+
+    for (cases) |case| {
+        try std.testing.expectEqual(case.expected, case.a + case.b);
+    }
+}
+```
+
+---
+
 ## 🧰 Compatible Items
 - Zig build system
 - GitHub Actions and CI pipelines
