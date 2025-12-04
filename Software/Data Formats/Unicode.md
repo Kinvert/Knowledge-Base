@@ -1,6 +1,6 @@
 # Unicode
 
-Unicode is a universal character set designed to represent nearly every writing system, symbol, and emoji in a single, consistent framework. It is foundational in modern computing, enabling interoperable text representation across languages, platforms, and protocols. For engineers working in [[RL]] (Reinforcement Learning), Unicode ensures that environment metadata, filenames, logs, and serialized observations are handled reliably across systems.
+Unicode is a universal character set designed to represent nearly every writing system, symbol, and emoji in a single, consistent framework. It is foundational in modern computing, enabling interoperable text representation across languages, platforms, and protocols. For engineers working in RL (Reinforcement Learning), Unicode ensures that environment metadata, filenames, logs, and serialized observations are handled reliably across systems.
 
 ---
 
