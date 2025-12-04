@@ -1,6 +1,6 @@
 # UTF-8
 
-UTF-8 is the dominant variable-length character encoding used in modern computing, enabling universal text representation across platforms, languages, and protocols. It is deeply integrated into systems programming, networking, machine learning data pipelines, and nearly every modern software toolchain. Understanding UTF-8 is essential for engineers working with text-based observations, logs, and environment serialization in [[RL]] (Reinforcement Learning).
+UTF-8 is the dominant variable-length character encoding used in modern computing, enabling universal text representation across platforms, languages, and protocols. It is deeply integrated into systems programming, networking, machine learning data pipelines, and nearly every modern software toolchain. Understanding UTF-8 is essential for engineers working with text-based observations, logs, and environment serialization in RL (Reinforcement Learning).
 
 ---
 
