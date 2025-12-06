@@ -73,5 +73,8 @@
 - [[PCA]]
 - [[Isomap]]
 - [[Cluster Analysis]]
+- [[Clustering]]
+- [[K-Means]]
+- [[DBSCAN]]
 
 ---
