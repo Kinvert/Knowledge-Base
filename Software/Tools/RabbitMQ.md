@@ -183,7 +183,6 @@ RabbitMQ focuses on *guaranteed delivery and routing*, not on historical replay 
 - - [[AMQP]]
 - - [[MQTT]]
 - - [[DLX]] (Dead Letter Exchange)
-- - [[RL]] (Reinforcement Learning)
 
 ---
 
