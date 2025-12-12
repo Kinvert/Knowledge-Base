@@ -107,6 +107,8 @@ Error Unions combine a value type with an error set, forming a composite return 
 - [[Zig]]
 - [[Error Handling]]
 - [[Type System]]
+- [[Optional Types]]
+- [[Systems Programming]]
 - [[Rust Result]]
 - [[Functional Programming]]
 - [[Reliability Engineering]]
