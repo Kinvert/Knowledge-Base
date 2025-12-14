@@ -9,7 +9,7 @@
 Hammer is designed to be **backend-agnostic** and highly configurable. At its core, it allows developers to track requests or events over time windows and limit actions per user, IP, or key. It is modular and integrates naturally with Phoenix, Plug, and other Elixir frameworks.
 
 Key capabilities:
-- ETS, Redis, or in-memory storage
+- [[ETS]], [[Redis]], or in-memory storage
 - Configurable rate-limiting strategies
 - Time-window or rolling-window counters
 - Integration with Plugs (`Hammer.Plug`) for request throttling
@@ -128,6 +128,7 @@ Example workflow:
 - [[Plug]]
 - [[LiveView]]
 - [[PubSub]]
+- [[API]]
 - [[ETS]]
 - [[Redis]]
 - [[Telemetry]]
