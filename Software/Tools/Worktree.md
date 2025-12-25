@@ -154,7 +154,7 @@ Often paired with:
 - [[Claude]]
 - [[Multi-Agent Systems]]
 - [[Experiment Management]]
-- [[beam.ai]]
+- [[Beam.ai]]
 - [[Reproducibility]]
 - [[Branching Strategies]]
 - [[Automation]]
