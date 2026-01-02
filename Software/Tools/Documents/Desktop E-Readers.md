@@ -9,9 +9,9 @@ Document readers that work well in Ubuntu for viewing and managing formats like 
 Many document formats are common when reading ebooks or technical documents on Linux. Ubuntu has solid support for most of these formats. The goal here is simple, reliable tools that are easy to install and use.
 
 Formats covered include:
-- [[PDF]]
-- [[EPUB]]
-- [[MOBI]]
+- PDF
+- EPUB
+- MOBI
 - [[DJVU]]
 - AZW3
 - FB2
@@ -34,12 +34,12 @@ Formats covered include:
 - GNOME's default document viewer.
 - Lightweight and simple.
 - Pre-installed on many Ubuntu systems.
-- Primarily aimed at [[PDF]] and [[DJVU]] formats.
+- Primarily aimed at PDF and DJVU formats.
 
 ### [[Foliate]]
 
-- Modern [[EPUB]] reader.
-- Supports [[MOBI]], AZW3, FB2, and limited [[PDF]].
+- Modern EPUB reader.
+- Supports MOBI, AZW3, FB2, and limited PDF.
 - Has customizable night mode, themes, and dictionaries.
 - Available via Flatpak.
 
@@ -54,22 +54,22 @@ Formats covered include:
 
 - Originally built for e-ink devices.
 - Now available as Flatpak or AppImage for desktop.
-- Excellent support for both [[PDF]] and [[EPUB]].
+- Excellent support for both PDF and EPUB.
 - Highly configurable reading environment.
 
 ### [[Zathura]]
 
 - Lightweight, keyboard-driven viewer.
-- Supports [[PDF]] natively; [[EPUB]] and [[DJVU]] via plugins.
+- Supports PDF natively; EPUB and DJVU via plugins.
 - Extremely fast and efficient.
 - Highly scriptable and configurable.
 
 ### [[Bookworm]]
 
 - Simple, clean reader.
-- Supports [[EPUB]], [[PDF]], [[MOBI]], CBZ, and CBR.
+- Supports EPUB, PDF, MOBI, CBZ, and CBR.
 - Available as Flatpak.
-- Lighter feature set than [[Foliate]] or [[KOReader]].
+- Lighter feature set than Foliate or KOReader.
 
 ---
 
@@ -77,13 +77,13 @@ Formats covered include:
 
 | Application | Formats | Night Mode | Custom Colors | Notes |
 | ------------| --------| -----------| --------------| ------|
-| [[Okular]] | [[PDF]], [[EPUB]] (plugin), [[MOBI]] (plugin), [[DJVU]], CBZ | Yes | Limited | Strong for academic work |
-| [[Evince]] | [[PDF]], [[DJVU]], TIFF, DVI, XPS | Yes | No | GNOME default |
-| [[Foliate]] | [[EPUB]], [[MOBI]], AZW3, FB2, [[PDF]] (basic) | Yes | Yes | Excellent for EPUB |
-| [[Calibre]] | [[PDF]], [[EPUB]], [[MOBI]], AZW3, CBZ, CBR, etc | Yes | Yes | Full suite |
-| [[KOReader]] | [[PDF]], [[EPUB]], [[MOBI]], FB2, [[DJVU]], CBZ, CBR | Yes | Yes | Highly customizable |
-| [[Zathura]] | [[PDF]] (native), [[EPUB]] (plugin), [[DJVU]] | Yes | Yes (via config) | Lightweight, fast |
-| [[Bookworm]] | [[EPUB]], [[PDF]], [[MOBI]], CBR, CBZ | Yes | Yes | Simple interface |
+| Okular | PDF, EPUB (plugin), MOBI (plugin), DJVU, CBZ | Yes | Limited | Strong for academic work |
+| Evince | PDF, DJVU, TIFF, DVI, XPS | Yes | No | GNOME default |
+| Foliate | EPUB, MOBI, AZW3, FB2, PDF (basic) | Yes | Yes | Excellent for EPUB |
+| Calibre | PDF, EPUB, MOBI, AZW3, CBZ, CBR, etc | Yes | Yes | Full suite |
+| KOReader | PDF, EPUB, MOBI, FB2, DJVU, CBZ, CBR | Yes | Yes | Highly customizable |
+| Zathura | PDF (native), EPUB (plugin), DJVU | Yes | Yes (via config) | Lightweight, fast |
+| Bookworm | EPUB, PDF, MOBI, CBR, CBZ | Yes | Yes | Simple interface |
 
 ---
 
@@ -91,19 +91,19 @@ Formats covered include:
 
 | Application | Annotation | Highlights | Editing | Notes |
 | ------------| -----------| ----------| --------| ------|
-| [[Okular]] | Yes | Yes | Limited | Great academic annotator |
-| [[Evince]] | Limited | No | No | Lightweight |
-| [[Foliate]] | Bookmarks, highlights | Yes | No | Good basic annotations |
-| [[Calibre]] | Yes (via plugins) | Yes | Yes | Full management suite |
-| [[KOReader]] | Yes | Yes | No | Good for touch annotation |
-| [[Zathura]] | No | No | No | Pure reader |
-| [[Bookworm]] | Bookmarks | No | No | Lightweight |
+| Okular | Yes | Yes | Limited | Great academic annotator |
+| Evince | Limited | No | No | Lightweight |
+| Foliate | Bookmarks, highlights | Yes | No | Good basic annotations |
+| Calibre | Yes (via plugins) | Yes | Yes | Full management suite |
+| KOReader | Yes | Yes | No | Good for touch annotation |
+| Zathura | No | No | No | Pure reader |
+| Bookworm | Bookmarks | No | No | Lightweight |
 
 ---
 
 ## Conversion / Management
 
-### [[Calibre]]
+### Calibre
 
 - The dominant suite for ebook management.
 - Converts between most formats.
@@ -112,13 +112,13 @@ Formats covered include:
 
 ### ebook-convert (Calibre CLI)
 
-- Ships with [[Calibre]].
+- Ships with Calibre.
 - Full conversion functionality available via terminal.
 - Supports batch conversion with scripting.
 
 ### [[Pandoc]]
 
-- Limited support for [[EPUB]] creation.
+- Limited support for EPUB creation.
 - Better for technical documents than ebook library management.
 - Excellent when working with Markdown or LaTeX sources.
 
@@ -126,7 +126,7 @@ Formats covered include:
 
 - Lightweight single-purpose converters.
 - Useful for quick format changes.
-- Less robust than [[Calibre]].
+- Less robust than Calibre.
 
 ---
 
@@ -134,9 +134,9 @@ Formats covered include:
 
 | Tool | Converts | Metadata | Batch? | Notes |
 | ---- | -------- | -------- | ------ | ----- |
-| [[Calibre]] | Yes | Yes | Yes | Full-featured |
-| ebook-convert | Yes | Yes | Yes | CLI version of [[Calibre]] |
-| [[Pandoc]] | Limited | No | Yes | Great for text/Markdown |
+| Calibre | Yes | Yes | Yes | Full-featured |
+| ebook-convert | Yes | Yes | Yes | CLI version of Calibre |
+| Pandoc | Limited | No | Yes | Great for text/Markdown |
 | pdf2epub / epub2pdf | Yes | No | No | Lightweight tools |
 
 ---
@@ -159,13 +159,13 @@ flatpak install flathub org.koreader.KOReader
 
 ### AppImage
 
-- [[KOReader]] offers portable AppImages.
+- KOReader offers portable AppImages.
 
 ---
 
 ## Notes
 
-- Flatpak often offers newer versions than Ubuntu’s apt packages.
-- [[Calibre]]'s GUI and CLI tools cover nearly every ebook management task.
-- [[Zathura]] excels at keyboard-driven [[PDF]] reading.
-- [[Foliate]] and [[KOReader]] are top choices for heavy [[EPUB]] usage.
+- Flatpak often offers newer versions than Ubuntu's apt packages.
+- Calibre's GUI and CLI tools cover nearly every ebook management task.
+- Zathura excels at keyboard-driven PDF reading.
+- Foliate and KOReader are top choices for heavy EPUB usage.
