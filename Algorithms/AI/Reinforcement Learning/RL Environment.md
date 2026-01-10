@@ -96,7 +96,7 @@ Popular RL frameworks like `Gymnasium` and `PettingZoo` define standard APIs for
 - [[RL Observations]] (Output of the environment each timestep)  
 - [[RL Actions]] (Input to the environment from the agent)  
 - [[RL Reward]] (Feedback signal calculated by the environment)  
-- [[Sim-to-Real Transfer]] (Environments should match physical reality)  
+- [[Sim2Real]] (Environments should match physical reality)  
 - [[Trajectory]] (Sequence of interactions within the environment)  
 
 ---

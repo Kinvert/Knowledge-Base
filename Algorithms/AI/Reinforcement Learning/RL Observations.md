@@ -85,7 +85,7 @@ Environments define their own `observation_space`, which should be compatible wi
 - [[PufferLib]] – Manages observation normalization and encoding  
 - [[PettingZoo]] – Defines per-agent observations in multi-agent settings  
 - [[Isaac Gym]] – Exposes tensors representing environment observations  
-- [[Sim-to-Real Transfer]] – Observations need to generalize across domains  
+- [[Sim2Real]] – Observations need to generalize across domains  
 
 ---
 

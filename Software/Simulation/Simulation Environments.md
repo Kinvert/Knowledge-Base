@@ -116,7 +116,7 @@ Many simulation environments support plugins, sensors, cameras, depth data, and 
 - [[Gymnasium]] (Standardized RL API)  
 - [[Unity ML-Agents]] (Game engine simulation for RL)  
 - [[AirSim]] (Drone and car sim for RL and vision)  
-- [[Sim-to-Real Transfer]] (Closing the gap between simulation and reality)  
+- [[Sim2Real]] (Closing the gap between simulation and reality)  
 
 ---
 

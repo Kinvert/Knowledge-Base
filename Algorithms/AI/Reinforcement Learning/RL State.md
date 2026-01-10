@@ -83,7 +83,7 @@ State is a critical concept in defining value functions, policy mappings, and tr
 - [[RL Observations]] – Often a subset or transformation of the full state  
 - [[RL Reward]] – Can be based on state features  
 - [[RL Step]] – Transitions the state given an action  
-- [[Sim-to-Real Transfer]] – State is typically used during simulation training  
+- [[Sim2Real]] – State is typically used during simulation training  
 - [[Trajectory]] – Sequence of states, actions, and rewards  
 
 ---

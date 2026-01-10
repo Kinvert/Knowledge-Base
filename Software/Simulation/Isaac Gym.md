@@ -89,7 +89,7 @@ Isaac Gym is part of NVIDIA's broader Isaac ecosystem, which includes [[Isaac Si
 - [[PufferLib]] – Can be wrapped to integrate Isaac Gym environments  
 - [[PettingZoo]] – Less direct, but multi-agent patterns can be adapted  
 - [[CUDA]] – Required for simulation backend  
-- [[Sim-to-Real Transfer]] – Isaac Gym is ideal for robust training  
+- [[Sim2Real]] – Isaac Gym is ideal for robust training  
 
 ---
 
