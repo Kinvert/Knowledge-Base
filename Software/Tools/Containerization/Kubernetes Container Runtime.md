@@ -86,7 +86,7 @@ Kubernetes does **not** run containers directly. Instead, it uses a **Container 
 - [[kubelet]] (Directly communicates with the runtime)
 - [[Docker Container]] (Created and managed via runtime)
 - [[Kubernetes Pod]] (Executed via runtime)
-- [[CI-CD Pipelines]] (Build container images for runtime use)
+- [[CI-CD]] (Build container images for runtime use)
 - [[GPU Support in Kubernetes]] (Requires runtime plugins)
 - [[containerd]]
 

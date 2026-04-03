@@ -87,7 +87,7 @@ Registries can be public (like Docker Hub) or private (hosted on-prem or in the 
 - [[Docker Image]] (Stored in registries)
 - [[Docker Container]] (Pulled from registry and run)
 - [[Dockerfile]] (Build source for images pushed to registry)
-- [[CI-CD Pipelines]] (Use registries for reproducible deploys)
+- [[CI-CD]] (Use registries for reproducible deploys)
 - [[Kubernetes Pod]] (Images fetched from registries)
 - [[Air-Gapped Deployment]] (May require local registry)
 

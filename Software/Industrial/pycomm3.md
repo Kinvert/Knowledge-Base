@@ -90,7 +90,7 @@ It is often used in control systems development and industrial integration scena
 - [[EtherCAT]] – Operates at lower level; pycomm3 interfaces with higher-level controllers  
 - [[ROS2 Web Bridge]] – Can wrap pycomm3 calls for web-based interaction  
 - [[Real-Time Systems]] – pycomm3 used for supervisory, not hard real-time tasks  
-- [[CI-CD Pipelines]] – Can automate tests against hardware-in-the-loop PLCs  
+- [[CI-CD]] – Can automate tests against hardware-in-the-loop PLCs  
 
 ---
 

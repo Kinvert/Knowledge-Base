@@ -82,7 +82,7 @@ Dockerfiles define layers in a container image using declarative instructions. E
 - `Makefile` to invoke build steps
 - [[Docker Image]], [[Docker Container]]
 - [[VSCode Dev Containers]], [[ROS2]]
-- [[CI-CD Pipelines]], [[GitHub Actions]]
+- [[CI-CD]], [[GitHub Actions]]
 
 ---
 

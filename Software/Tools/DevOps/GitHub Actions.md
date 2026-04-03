@@ -97,14 +97,14 @@ GitHub Actions works by defining workflows in `.github/workflows/*.yaml` files. 
 - [[Docker Container]] (Image build/deploy automation)
 - [[Kubernetes Deployment]] (Trigger deploys post-build)
 - [[ROS2 Package]] (Can be built and tested automatically)
-- [[CI-CD Pipelines]] (GitHub Actions is one implementation)
+- [[CI-CD]] (GitHub Actions is one implementation)
 - [[Heroku]] / [[DigitalOcean App Platform]] (For automated deploys)
 
 ---
 
 ## 🔗 Related Concepts
 
-- [[CI-CD Pipelines]] (General concept of continuous automation)
+- [[CI-CD]] (General concept of continuous automation)
 - [[Docker Compose]] (May be used in local testing workflows)
 - [[Microservices Architecture]] (Each service can have its own workflow)
 - [[Kubernetes]] (Actions can deploy directly to clusters)

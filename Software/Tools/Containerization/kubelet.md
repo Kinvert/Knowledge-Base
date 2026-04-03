@@ -87,7 +87,7 @@ The `kubelet` listens to the Kubernetes API Server for pod assignments and works
 - [[Docker Container]] (Managed on node by kubelet)
 - [[ROS2]] (Runs inside containers supervised by kubelet)
 - [[Kubernetes Control Plane]] (Assigns pods to nodes via kubelet)
-- [[CI-CD Pipelines]] (Deploy workloads monitored by kubelet)
+- [[CI-CD]] (Deploy workloads monitored by kubelet)
 
 ---
 

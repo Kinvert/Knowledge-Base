@@ -133,7 +133,7 @@ jobs:
 ## 🔗 Related Concepts
 
 - [[GitHub Actions]] (Automation and builds)
-- [[CI-CD Pipelines]] (Deployment automation)
+- [[CI-CD]] (Deployment automation)
 - [[PWA]] (Progressive Web Apps)
 - [[Jekyll]] (Static site generator)
 

@@ -92,7 +92,7 @@ A ROS2 package is a directory with a standardized structure, including a `packag
 - [[ROS2 Parameters]] – Used to configure package behavior
 - [[ROS2 Launch Files]] – Used to orchestrate multiple nodes
 - [[Docker Container]] – Can encapsulate packages for deployment
-- [[CI-CD Pipelines]] – Automate building and testing of packages
+- [[CI-CD]] – Automate building and testing of packages
 - [[colcon]] – The official ROS2 build tool
 
 ---

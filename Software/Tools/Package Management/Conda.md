@@ -94,7 +94,7 @@ Conda works by creating isolated environments with their own package versions, P
 - [[OpenCV]] – Easily installed in isolated environments  
 - [[PyTorch]] – GPU and CPU builds available via Conda  
 - [[Docker]] – Conda envs often containerized  
-- [[CI-CD Pipelines]] – Used in reproducible testing pipelines  
+- [[CI-CD]] – Used in reproducible testing pipelines  
 
 ---
 

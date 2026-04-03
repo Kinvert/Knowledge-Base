@@ -1,105 +1,266 @@
 # sed (Stream Editor)
 
-`sed` is a command-line utility for parsing and transforming text in a stream or file. It is most commonly used for search-and-replace operations, but it can also insert, delete, and manipulate text in highly efficient ways. For robotics engineers, `sed` is useful in automation pipelines, configuration file updates, and log preprocessing.
+**sed** (stream editor) is a Unix command-line utility for parsing and transforming text. It processes input line-by-line, applying commands like substitution, deletion, and insertion. Unlike interactive editors, sed works non-interactively - perfect for automation, pipelines, and batch processing.
 
 ---
 
 ## ⚙️ Overview
 
-`sed` processes text line-by-line and applies transformations based on scripts or one-liner commands. It excels at quick edits, batch substitutions, and automating repetitive text manipulations without opening a file in an editor.
+sed reads input (file or stdin), applies editing commands to each line, and outputs the result. It maintains a "pattern space" (current line being processed) and optionally a "hold space" (temporary buffer for advanced operations).
+
+**Basic syntax:**
+```bash
+sed [options] 'command' file
+sed [options] -e 'cmd1' -e 'cmd2' file
+cat file | sed 'command'
+```
 
 ---
 
 ## 🧠 Core Concepts
 
-- **Stream editing:** Operates on input as a stream (stdin or file) without interactive editing.  
-- **Patterns & regex:** Uses regular expressions to match text.  
-- **Commands:** Includes substitution (`s`), deletion (`d`), printing (`p`), and insertion (`i`).  
-- **Non-interactive:** Unlike editors (`vim`, `nano`), `sed` works in pipelines or scripts.  
+- **Pattern space:** Buffer holding current line being processed
+- **Address:** Line number or regex pattern specifying which lines to affect
+- **Command:** Action to perform (substitute, delete, print, etc.)
+- **Flags:** Modifiers like `g` (global), `i` (case-insensitive), `p` (print)
+- **In-place editing:** `-i` flag modifies file directly (use with caution)
+
+---
+
+## 🔧 Common Options
+
+| Option | Description |
+|--------|-------------|
+| `-i` | Edit file in-place (modifies original file) |
+| `-i.bak` | Edit in-place, save backup with .bak extension |
+| `-n` | Suppress automatic printing (use with `p` command) |
+| `-e` | Add multiple commands |
+| `-E` or `-r` | Use extended regex (ERE) instead of basic (BRE) |
+| `-f script` | Read commands from file |
+
+---
+
+## 📍 Address Syntax
+
+Addresses specify which lines a command affects:
+
+| Address | Meaning | Example |
+|---------|---------|---------|
+| `5` | Line 5 only | `sed '5d' example.h` |
+| `$` | Last line | `sed '$d' example.h` |
+| `1,10` | Lines 1-10 | `sed '1,10d' example.h` |
+| `5,$` | Line 5 to end | `sed '5,$d' example.h` |
+| `/pattern/` | Lines matching regex | `sed '/TODO/d' example.h` |
+| `/start/,/end/` | From pattern to pattern | `sed '/BEGIN/,/END/d' example.h` |
+| `1~2` | Every 2nd line starting at 1 (GNU) | `sed '1~2d' example.h` |
+
+**Example you might see Claude use:**
+```bash
+sed -i '983,1318d' example.h
+```
+This deletes lines 983 through 1318 from example.h in-place.
 
 ---
 
 ## 📊 Comparison Chart
 
-| Tool     | Type              | Interactive? | Primary Use | Strengths | Weaknesses |
-|----------|-------------------|--------------|-------------|-----------|-------------|
-| `sed`    | Stream editor     | No           | Batch text editing | Fast, regex support, scripting | Non-interactive, limited context editing |
-| `awk`    | Text processing   | No           | Field-based operations | Arithmetic, formatting, reports | More complex syntax than `sed` |
-| `grep`   | Search tool       | No           | Pattern matching | Fast search, regex support | No editing capabilities |
-| `vi/vim` | Text editor       | Yes          | Manual editing | Powerful, modal editing, scripting | Steeper learning curve |
-| `nano`   | Text editor       | Yes          | Simple editing | Easy to use | Limited features |
-| `perl`   | Language          | No/Yes       | Advanced text processing | More powerful than `sed/awk` | Heavier runtime |
-| `python` | Language          | No/Yes       | General-purpose scripting | Huge ecosystem, readability | Slower startup, more verbose |
+| Tool | Type | Interactive | Primary Use | Strengths |
+|------|------|-------------|-------------|-----------|
+| **sed** | Stream editor | No | Line-by-line transforms | Fast, regex, pipelines |
+| [[awk]] | Text processor | No | Field-based operations | Arithmetic, columns |
+| [[grep]] | Search tool | No | Pattern matching | Fast search, no editing |
+| [[vim]] | Text editor | Yes | Manual editing | Powerful, modal |
+| [[Perl]] | Language | No | Complex text processing | More powerful than sed |
 
 ---
 
-## 🛠️ Common Use Cases
+## 📋 Cheatsheet
 
-- Batch replacing configuration values in robotics log files.  
-- Cleaning CSV/JSON sensor outputs before feeding into ROS. 
-- Automating version string updates in source code.  
-- Removing or filtering lines in datasets for ML preprocessing.  
-- Inline editing inside CI/CD pipelines.  
+### Substitution (s command)
+
+```bash
+# Basic substitution (first match per line)
+sed 's/old/new/' example.h
+
+# Global substitution (all matches per line)
+sed 's/old/new/g' example.h
+
+# Case-insensitive
+sed 's/old/new/gi' example.h
+
+# In-place edit (modifies file!)
+sed -i 's/old/new/g' example.h
+
+# In-place with backup
+sed -i.bak 's/old/new/g' example.h
+
+# Only on lines matching pattern
+sed '/pattern/s/old/new/g' example.h
+
+# Only on line 5
+sed '5s/old/new/g' example.h
+
+# Different delimiter (useful when / in pattern)
+sed 's|/usr/local|/opt|g' example.h
+sed 's#old#new#g' example.h
+```
+
+### Deletion (d command)
+
+```bash
+# Delete specific line
+sed '5d' example.h
+
+# Delete line range
+sed '983,1318d' example.h
+
+# Delete from line to end
+sed '100,$d' example.h
+
+# Delete lines matching pattern
+sed '/DEBUG/d' example.h
+
+# Delete empty lines
+sed '/^$/d' example.h
+
+# Delete lines containing "TODO"
+sed '/TODO/d' example.h
+
+# Delete from pattern to pattern
+sed '/START/,/END/d' example.h
+```
+
+### Printing (p command)
+
+```bash
+# Print only matching lines (use -n to suppress default output)
+sed -n '/pattern/p' example.h
+
+# Print line range
+sed -n '10,20p' example.h
+
+# Print first 10 lines (like head)
+sed -n '1,10p' example.h
+
+# Print last line
+sed -n '$p' example.h
+```
+
+### Insertion & Appending
+
+```bash
+# Insert before line 5
+sed '5i\New line here' example.h
+
+# Append after line 5
+sed '5a\New line here' example.h
+
+# Insert before pattern match
+sed '/pattern/i\Inserted line' example.h
+
+# Add text to beginning of each line
+sed 's/^/PREFIX: /' example.h
+
+# Add text to end of each line
+sed 's/$/ SUFFIX/' example.h
+```
+
+### Multiple Commands
+
+```bash
+# Semicolon separated
+sed 's/foo/bar/; s/baz/qux/' example.h
+
+# Multiple -e flags
+sed -e 's/foo/bar/' -e 's/baz/qux/' example.h
+
+# From script file
+sed -f commands.sed example.h
+```
+
+### Trimming & Cleanup
+
+```bash
+# Remove leading whitespace
+sed 's/^[ \t]*//' example.h
+
+# Remove trailing whitespace
+sed 's/[ \t]*$//' example.h
+
+# Remove all whitespace
+sed 's/[ \t]//g' example.h
+
+# Remove blank lines
+sed '/^$/d' example.h
+
+# Remove C++ comments (// style)
+sed 's|//.*||' example.h
+
+# Remove shell comments (# style)
+sed 's/#.*//' example.h
+```
+
+### Capture Groups
+
+```bash
+# Swap two fields (basic regex uses \( \))
+sed 's/\(.*\):\(.*\)/\2:\1/' example.h
+
+# With extended regex (-E), cleaner syntax
+sed -E 's/(.*):(.*):\2:\1/' example.h
+
+# Reference whole match with &
+sed 's/[0-9]*/(&)/' example.h
+```
 
 ---
 
-## 📋 Cheatsheet (One-Liners)
+## ⚠️ Gotchas
 
-- `sed 's/foo/bar/' file` → Replace first occurrence of `foo` with `bar` per line  
-- `sed 's/foo/bar/g' file` → Replace all occurrences of `foo` with `bar`  
-- `sed -i 's/foo/bar/g' file` → Replace all occurrences in-place  
-- `sed '/pattern/d' file` → Delete lines matching `pattern`  
-- `sed -n '/pattern/p' file` → Print only lines matching `pattern`  
-- `sed '1,5d' file` → Delete lines 1 through 5  
-- `sed -n '5,10p' file` → Print lines 5 through 10  
-- `sed 's/[0-9]//g' file` → Remove all digits  
-- `sed 's/\(.*\):\(.*\)/\2:\1/' file` → Swap fields around `:`  
-- `sed 's/^/prefix_/' file` → Add prefix to each line  
-- `sed 's/$/_suffix/' file` → Add suffix to each line  
-- `sed 's/^[ \t]*//' file` → Trim leading spaces/tabs  
-- `sed 's/[ \t]*$//' file` → Trim trailing spaces/tabs  
-- `sed 's/\bword\b/NEWWORD/g' file` → Replace whole word only  
-- `sed -i 's/old/new/; s/foo/bar/' file` → Multiple replacements at once  
-- `sed -e 's/foo/bar/g' -e 's/baz/qux/g' file` → Chain replacements  
-- `echo "Hello" | sed 'a\World'` → Append text after line  
+- **In-place on macOS:** `sed -i '' 's/old/new/' file` (empty string required)
+- **Newlines:** sed processes one line at a time; multi-line matches need special handling
+- **Escaping:** Special chars `.*[]^$\` need escaping in patterns
+- **No undo:** `-i` permanently modifies files - always test first without `-i`
 
 ---
 
-## ✅ Strengths
+## 🌟 Strengths
 
-- Lightweight and ubiquitous on Linux systems.  
-- Perfect for inline replacements in automation.  
-- Works in pipelines with other tools like [[grep]] and [[awk]].  
-- Supports complex regex for advanced transformations.  
-
----
-
-## ❌ Weaknesses
-
-- Limited interactivity (not a text editor).  
-- Syntax can be cryptic for beginners.  
-- Complex multi-line manipulations are tricky compared to scripting languages.  
+- Ubiquitous on Unix/Linux systems
+- Extremely fast for large files
+- Perfect for pipelines and automation
+- Powerful regex support
 
 ---
 
-## 📚 Related Concepts
+## ⚠️ Weaknesses
 
-- [[awk]] (field-based text processing)  
-- [[grep]] (pattern searching)  
-- [[Perl]] (text manipulation language)  
-- [[Bash]] (shell scripting)  
-- [[Regex]] (regular expressions)  
-
----
-
-## 🌍 External Resources
-
-- GNU sed Manual: https://www.gnu.org/software/sed/manual/sed.html  
-- One-Liner Sed Examples: https://www.pement.org/sed/sed1line.txt  
-- "Sed & Awk" (book by Dale Dougherty, Arnold Robbins)  
+- Cryptic syntax for beginners
+- Multi-line operations are awkward
+- Basic regex (BRE) by default, quirky escaping
+- No built-in arithmetic (use [[awk]] instead)
 
 ---
 
-## 🏁 Summary
+## 🔗 Related Notes
 
-`sed` is an indispensable tool in the Linux command-line ecosystem for robotics engineers and developers who deal with large datasets, logs, or configuration files. It is not an editor like `vim` or `nano`, but a stream-based editor that shines in automation and pipelines. For tasks requiring interactive or multi-line editing, editors or scripting languages are often better choices.
+- [[awk]]
+- [[grep]]
+- [[Bash]]
+- [[Regex]]
+- [[vim]]
+
+---
+
+## 🌐 External Resources
+
+- [GNU sed Manual](https://www.gnu.org/software/sed/manual/sed.html)
+- [sed One-Liners](https://www.pement.org/sed/sed1line.txt)
+- [QuickRef Cheatsheet](https://quickref.me/sed.html)
+- [Grymoire sed Tutorial](https://www.grymoire.com/Unix/Sed.html)
+
+---
+
+## 📝 Summary
+
+sed is a stream editor for non-interactive text transformation. It excels at search-and-replace, line deletion, and text manipulation in pipelines. The command `sed -i '983,1318d' example.h` deletes lines 983-1318 in-place. While cryptic at first, sed's address + command syntax becomes powerful once learned. For field-based operations use [[awk]]; for interactive editing use [[vim]].

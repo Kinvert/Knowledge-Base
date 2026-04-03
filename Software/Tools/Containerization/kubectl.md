@@ -94,7 +94,7 @@
 - [[Helm Chart]] (Higher-level package manager using `kubectl` under the hood)
 - [[Docker Container]] (Used in pods managed via `kubectl`)
 - [[ROS2 Web Bridge]] (Deployed as services managed with `kubectl`)
-- [[CI-CD Pipelines]] (Scripted `kubectl` for automation)
+- [[CI-CD]] (Scripted `kubectl` for automation)
 
 ---
 

@@ -136,6 +136,7 @@ In short: local LLMs are very competitive for many developer workflows — but f
 ---
 
 ## 🔗 Related Concepts / Other Notes
+- [[OpenClaw]] - Autonomous AI assistant using local or cloud LLMs
 - [[Local AI]]
 - [[LLM]]
 - [[HumanEval]] (benchmark for Python code generation)  

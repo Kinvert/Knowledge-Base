@@ -90,7 +90,7 @@ Helm streamlines Kubernetes application management by packaging all necessary re
 - [[Kubernetes Deployment]] – Helm installs and manages deployments  
 - [[Kubernetes Service]] – Charts define services alongside deployments  
 - [[kubectl]] – Helm uses `kubectl` under the hood for Kubernetes operations  
-- [[CI-CD Pipelines]] – Helm automates deployments in pipelines  
+- [[CI-CD]] – Helm automates deployments in pipelines  
 - [[Docker]] – Helm deploys Dockerized containers to clusters  
 - [[Kubernetes Ingress]] – Managed by Helm charts for routing  
 
@@ -100,7 +100,7 @@ Helm streamlines Kubernetes application management by packaging all necessary re
 
 - [[Kubernetes]] (Helm is native to Kubernetes app management)  
 - [[kubectl]] (Command-line client Helm complements)  
-- [[CI-CD Pipelines]] (Automate Helm chart deployment)  
+- [[CI-CD]] (Automate Helm chart deployment)  
 - [[Docker]] (Container images deployed via Helm)  
 - [[Kustomize]] (Alternative Kubernetes configuration tool)  
 - [[Terraform]] (Infrastructure as code for Kubernetes and beyond)  

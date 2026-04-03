@@ -91,7 +91,7 @@ pip installs Python packages and their dependencies directly into the active Pyt
 - [[Dockerfile]] – Uses pip to install Python packages  
 - [[Conda]] – Often used together; conda for environments, pip for packages  
 - [[ROS2 Package]] – Python packages can be pip-installable  
-- [[CI-CD Pipelines]] – Automate installs in build/test workflows  
+- [[CI-CD]] – Automate installs in build/test workflows  
 - [[OpenCV]] / [[scikit-learn]] – Available via pip on PyPI  
 
 ---

@@ -91,7 +91,7 @@ With Deployments, developers define the desired number of replicas, the containe
 - [[Helm Chart]] – Often used to template Deployment YAMLs
 - [[Docker Container]] – The application unit inside pods
 - [[Kubernetes Service]] – Used to expose Deployment-managed pods
-- [[CI-CD Pipelines]] – Automate creation/updates of Deployments
+- [[CI-CD]] – Automate creation/updates of Deployments
 
 ---
 

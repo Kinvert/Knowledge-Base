@@ -76,7 +76,7 @@
 ## 🔧 Compatible Items
 
 - [[Kubernetes API Server]], [[kubelet]], [[Kubernetes Control Plane]]
-- [[Microservices Architecture]], [[CI-CD Pipelines]]
+- [[Microservices Architecture]], [[CI-CD]]
 - Kubernetes etcd backup tools (`etcdctl`, `velero`)
 - ROS2 deployments storing metadata externally
 
@@ -88,7 +88,7 @@
 - [[Kubernetes API Server]] (etcd is its backing store)
 - [[kubelet]] (Gets node info via API server backed by etcd)
 - [[Microservices Architecture]] (etcd used for coordination or config)
-- [[CI-CD Pipelines]] (Stateful deployment relies on accurate etcd state)
+- [[CI-CD]] (Stateful deployment relies on accurate etcd state)
 
 ---
 

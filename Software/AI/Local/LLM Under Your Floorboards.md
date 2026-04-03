@@ -444,6 +444,7 @@ If you're serious about "under your floorboards":
 
 ## 🔗 Related Concepts
 
+- [[OpenClaw]] - Autonomous AI assistant that runs on your own hardware (uses these LLMs)
 - [[LLM Inference Hardware]] - Detailed hardware benchmarks and tokens/second data
 - [[LLM Model Guide]] - Model benchmarks and recommendations
 - [[LLM Inference Engines]] - llama.cpp vs vLLM vs Ollama comparison

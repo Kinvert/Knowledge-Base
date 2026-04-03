@@ -88,7 +88,7 @@ Chocolatey leverages **PowerShell** and **NuGet** infrastructure to install `.ex
 - [[CMake]] – Install via Chocolatey
 - [[Python]] – Windows Python installs managed easily
 - [[Docker]] – Chocolatey provides CLI-only Docker installations
-- [[CI-CD Pipelines]] – Can be used in GitHub Actions or Jenkins on Windows runners
+- [[CI-CD]] – Can be used in GitHub Actions or Jenkins on Windows runners
 - [[Windows Terminal]] – Install via Chocolatey
 
 ---
@@ -100,7 +100,7 @@ Chocolatey leverages **PowerShell** and **NuGet** infrastructure to install `.ex
 - [[winget]] (Modern Windows package manager)  
 - [[pip]] (Language-specific, often installed alongside)  
 - [[Dockerfile]] (Chocolatey can be used in Windows containers)  
-- [[CI-CD Pipelines]] (Used to provision runners with needed tools)
+- [[CI-CD]] (Used to provision runners with needed tools)
 
 ---
 

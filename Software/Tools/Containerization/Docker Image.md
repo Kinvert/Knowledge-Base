@@ -90,7 +90,7 @@ Docker images serve as the *blueprint* for Docker containers. They are built fro
 - [[Kubernetes]] (Orchestrates containers from images)
 - [[Dev Containers]] (Development using Docker images)
 - [[ROS2]] (Often built into Docker images)
-- [[CI-CD Pipelines]] (Docker images ensure reproducibility)
+- [[CI-CD]] (Docker images ensure reproducibility)
 
 ---
 

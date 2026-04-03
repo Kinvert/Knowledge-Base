@@ -80,7 +80,7 @@ At its core, Kubernetes manages clusters of machines (nodes) and runs workloads 
 - `kubectl`, `kubeadm`, `helm`, `kustomize`
 - Container runtimes (Docker, containerd, CRI-O)
 - [[Docker Image]], [[Kubernetes Pod]], [[Helm Chart]], [[Kubernetes Deployment]]
-- [[ROS2]], [[Gazebo]], [[CI-CD Pipelines]]
+- [[ROS2]], [[Gazebo]], [[CI-CD]]
 - [[Microservices Architecture]], [[DevOps Tools]]
 
 ---
@@ -91,7 +91,7 @@ At its core, Kubernetes manages clusters of machines (nodes) and runs workloads 
 - [[Docker Image]] (Pods run containers built from images)
 - [[Kubernetes Deployment]] (Manages pod lifecycle)
 - [[Helm Chart]] (Reusable package format for K8s apps)
-- [[CI-CD Pipelines]] (Often target Kubernetes deployments)
+- [[CI-CD]] (Often target Kubernetes deployments)
 - [[ROS2]] (ROS2 stacks can be containerized and deployed via K8s)
 
 ---

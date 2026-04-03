@@ -76,7 +76,7 @@ Helm abstracts Kubernetes manifests into reusable templates, allowing parameteri
 ## 🔧 Compatible Items
 
 - [[Kubernetes]], [[Kubernetes Service]], [[Kubernetes Pod]]
-- [[CI-CD Pipelines]], [[Microservices Architecture]]
+- [[CI-CD]], [[Microservices Architecture]]
 - [[Docker Container]]
 - Templating engines (Go templates via Helm)
 
@@ -85,7 +85,7 @@ Helm abstracts Kubernetes manifests into reusable templates, allowing parameteri
 ## 🔗 Related Concepts
 
 - [[Kubernetes]] (Helm deploys resources to the cluster)
-- [[CI-CD Pipelines]] (Charts used in automated deployments)
+- [[CI-CD]] (Charts used in automated deployments)
 - [[Kubernetes Service]] (Declared in Helm templates)
 - [[ROS2 Node]] (Robot nodes deployed as Helm-managed workloads)
 - [[Microservices Architecture]] (Bundles service orchestration logic)

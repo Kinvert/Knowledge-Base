@@ -96,12 +96,13 @@ Nx also supports native Elixir evaluation for debugging or environments where JI
 
 ## 🔗 Related Concepts / Notes
 
-- [[Axon]] (Elixir neural network library)  
-- [[EXLA]] (Accelerated Linear Algebra backend)  
-- [[Torchx]] (LibTorch integration)  
-- [[Bumblebee]] (Pretrained model interface)  
-- [[Autograd]] (Automatic differentiation)  
-- [[JAX]] (Functional ML library)  
+- [[OpenXLA]] (XLA compiler that EXLA wraps)
+- [[Axon]] (Elixir neural network library)
+- [[EXLA]] (Accelerated Linear Algebra backend)
+- [[Torchx]] (LibTorch integration)
+- [[Bumblebee]] (Pretrained model interface)
+- [[Autograd]] (Automatic differentiation)
+- [[JAX]] (Functional ML library)
 - [[NumPy]] (Numerical Python library)  
 
 ---

@@ -134,7 +134,7 @@ flowchart TD
 
 - [[ROS2]] (Often containerized for testing and deployment)
 - [[VSCode Dev Containers]] (Use Docker to provide local dev environments)
-- [[CI-CD Pipelines]] (Use Docker for reproducible builds)
+- [[CI-CD]] (Use Docker for reproducible builds)
 - [[Podman]] (Docker alternative with rootless support)
 - [[Jetson Family]] (Requires special containers for hardware acceleration)
 - [[Kubernetes]]

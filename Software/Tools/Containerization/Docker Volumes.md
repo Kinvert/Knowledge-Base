@@ -89,7 +89,7 @@ Volumes are stored in the host filesystem (usually under `/var/lib/docker/volume
 - [[Dockerfile]] – Doesn’t define volumes but must support them
 - [[Docker Compose]] – Mounts volumes across services
 - [[ROS2 Package]] – Data or config can be volume-mounted
-- [[CI-CD Pipelines]] – Store build/test artifacts persistently
+- [[CI-CD]] – Store build/test artifacts persistently
 - [[Kubernetes Pod]] – Analogous concept: `PersistentVolumeClaim`
 
 ---
@@ -99,7 +99,7 @@ Volumes are stored in the host filesystem (usually under `/var/lib/docker/volume
 - [[Docker Container]] (Volumes are attached to containers)
 - [[Docker Compose]] (Manages and mounts volumes across services)
 - [[Kubernetes Volume]] (Equivalent concept for k8s)
-- [[CI-CD Pipelines]] (Volumes help persist logs/artifacts)
+- [[CI-CD]] (Volumes help persist logs/artifacts)
 - [[ROS2 Launch Files]] (Use mounted config or bag files)
 
 ---

@@ -78,7 +78,7 @@ The control plane exposes the Kubernetes API and orchestrates the lifecycle of a
 - `etcdctl` for managing etcd state
 - `kubeadm` for control plane installation
 - [[Kubernetes Pod]], [[Docker Image]], [[Helm Chart]]
-- [[ROS2]], [[CI-CD Pipelines]], [[Edge Computing]]
+- [[ROS2]], [[CI-CD]], [[Edge Computing]]
 
 ---
 
@@ -87,7 +87,7 @@ The control plane exposes the Kubernetes API and orchestrates the lifecycle of a
 - [[Kubernetes]] (Overall platform)
 - [[Kubernetes Pod]] (Scheduled by the control plane)
 - [[Helm Chart]] (Control plane interprets manifests)
-- [[CI-CD Pipelines]] (Deploy to the control plane)
+- [[CI-CD]] (Deploy to the control plane)
 - [[ROS2]] (Runs as pods scheduled by the control plane)
 - [[DevOps Tools]] (Often interact directly with control plane)
 

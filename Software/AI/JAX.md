@@ -14,11 +14,33 @@ In robotics and engineering, JAX is emerging as a tool for high-speed differenti
 
 ## 🧠 Core Concepts
 
-- **Autograd**: Differentiation of native Python functions  
-- **JIT Compilation**: Compiles Python+NumPy-like code to fast GPU/TPU kernels  
-- **vmap**: Automatic vectorization of functions over batch dimensions  
-- **pmap**: Parallel execution across multiple devices  
-- **Functional Programming Style**: Code is often stateless and immutable  
+- **Autograd**: Differentiation of native Python functions
+- **JIT Compilation**: Compiles Python+NumPy-like code to fast GPU/TPU kernels
+- **vmap**: Automatic vectorization of functions over batch dimensions
+- **pmap**: Parallel execution across multiple devices
+- **Functional Programming Style**: Code is often stateless and immutable
+
+### How JAX Actually Works — A Tracing-Based DSL
+
+JAX is effectively a **Python-embedded DSL that targets [[OpenXLA]] as its only compiler backend**. It looks like NumPy, but under the hood it's building computation graphs for XLA.
+
+When you call `jit(f)(x)`, JAX doesn't execute `f` normally. It **traces** through the function with abstract values (placeholders that carry shape/dtype but no data) to capture the computation graph as a **jaxpr** (JAX expression). That jaxpr is then lowered:
+
+```
+Python function → jaxpr → StableHLO IR → XLA compiler → native GPU/TPU/CPU code
+```
+
+The function transformations (`jit`, `grad`, `vmap`, `pmap`) are essentially **compiler directives** disguised as Python decorators — each one transforms the jaxpr in a different way before handing it to XLA.
+
+### Why Functional Constraints Exist
+
+JAX's strict rules (no mutation, no side effects, no Python control flow inside `jit`) aren't arbitrary design choices — they're **XLA's rules leaking through**. XLA compiles static computation graphs, so:
+
+- **No in-place mutation** — XLA needs to know the full dataflow graph upfront
+- **No Python `if`/`for` inside `jit`** — Python control flow happens at trace time, not runtime. Use `jax.lax.cond` / `jax.lax.fori_loop` instead (these become XLA operations)
+- **No side effects** — printing, random state, etc. don't exist in XLA's computation model
+
+When you hit a "JAX gotcha," you're seeing the boundary between Python and the DSL. Debugging is harder because you're debugging the **traced program**, not the Python you wrote.
 
 ---
 
@@ -91,10 +113,11 @@ In robotics and engineering, JAX is emerging as a tool for high-speed differenti
 
 ## 🔗 Related Concepts
 
-- [[Reinforcement Learning]] (where JAX is increasingly used)  
-- [[PufferLib]] (supports JAX and PyTorch backends)  
-- [[NumPy]] (JAX is NumPy-compatible)  
-- [[PettingZoo]] (works with RL pipelines that use JAX)  
+- [[OpenXLA]] (XLA compiler that powers JAX)
+- [[Reinforcement Learning]] (where JAX is increasingly used)
+- [[PufferLib]] (supports JAX and PyTorch backends)
+- [[NumPy]] (JAX is NumPy-compatible)
+- [[PettingZoo]] (works with RL pipelines that use JAX)
 - [[PyTorch]] (popular alternative to JAX for DL)  
 
 ---

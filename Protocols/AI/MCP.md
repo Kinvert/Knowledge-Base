@@ -236,6 +236,14 @@ npx @modelcontextprotocol/server-gdrive
 npx @modelcontextprotocol/server-memory
 ```
 
+**Community MCP Servers**:
+```bash
+# Livebook Tools - Connect AI agents to Elixir Livebook sessions
+mix escript.install github thmsmlr/livebook_tools
+# Enables: editing .livemd from Cursor/Claude, running livebooks as CLI scripts
+# Config: LIVEBOOK_NODE="livebook@127.0.0.1" LIVEBOOK_COOKIE="secret"
+```
+
 **Server Configuration**: Servers can accept configuration via environment variables or arguments:
 ```json
 {
@@ -1322,6 +1330,7 @@ async def test_client_with_mock_server(mock_server):
 - [[Microservices]]
 - [[Service-Oriented Architecture]]
 - [[Ash AI]]
+- [[Livebook]] (Elixir notebooks - livebook_tools MCP server)
 
 ## 💡 Advanced Use Cases
 

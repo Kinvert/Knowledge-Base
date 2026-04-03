@@ -77,7 +77,7 @@ Containers are created from Docker Images and can be started, stopped, paused, a
 
 - `docker run`, `docker stop`, `docker exec`, `docker ps`
 - `docker-compose` for multi-container setup
-- [[Docker Image]], [[ROS2]], [[Gazebo]], [[CI-CD Pipelines]]
+- [[Docker Image]], [[ROS2]], [[Gazebo]], [[CI-CD]]
 - [[VSCode Dev Containers]], [[Jetson Family]]
 - [[Podman]] (alternative runtime)
 
@@ -90,7 +90,7 @@ Containers are created from Docker Images and can be started, stopped, paused, a
 - [[Kubernetes Pod]] (Orchestrated unit of containers)
 - [[VSCode Dev Containers]] (Containers for local development)
 - [[ROS2]] (Often deployed in containers)
-- [[CI-CD Pipelines]] (Containers run test jobs or builds)
+- [[CI-CD]] (Containers run test jobs or builds)
 
 ---
 

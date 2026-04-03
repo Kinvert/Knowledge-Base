@@ -90,7 +90,7 @@ While a container (e.g., Docker container) represents a single process, a **Pod*
 - [[Kubernetes Deployment]] (Manages Pod lifecycles)
 - [[Microservices Architecture]] (Pods encapsulate microservices)
 - [[ROS2]] (ROS2 nodes can run inside pods)
-- [[CI-CD Pipelines]] (Pods can be dynamically deployed for testing)
+- [[CI-CD]] (Pods can be dynamically deployed for testing)
 
 ---
 

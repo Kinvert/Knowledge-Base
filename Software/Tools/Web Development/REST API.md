@@ -87,7 +87,7 @@ REST APIs use stateless HTTP methods (GET, POST, PUT, DELETE, etc.) to access an
 - [[Kubernetes Service]] (Expose APIs externally)
 - [[Microservices Architecture]] (REST between services)
 - [[ROS2 Web Bridge]] (Convert ROS2 messages to REST endpoints)
-- [[CI-CD Pipelines]] (Trigger deployments or data collection via REST)
+- [[CI-CD]] (Trigger deployments or data collection via REST)
 
 ---
 

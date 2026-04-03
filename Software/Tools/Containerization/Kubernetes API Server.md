@@ -77,7 +77,7 @@ As the front end of the Kubernetes control plane, the API server handles authent
 
 - [[kubelet]], [[etcd]], [[kube-scheduler]]
 - [[Helm Chart]], [[Docker Container]]
-- [[CI-CD Pipelines]], [[Kubernetes Control Plane]]
+- [[CI-CD]], [[Kubernetes Control Plane]]
 - [[Microservices Architecture]]
 
 ---
@@ -88,7 +88,7 @@ As the front end of the Kubernetes control plane, the API server handles authent
 - [[Kubernetes Control Plane]] (Includes the API server)
 - [[Helm Chart]] (Applies manifests to API server)
 - [[kubelet]] (Reports to and receives from API server)
-- [[CI-CD Pipelines]] (Often interact with the API)
+- [[CI-CD]] (Often interact with the API)
 - [[Microservices Architecture]] (Communicates via APIs, can use Kubernetes APIs too)
 
 ---

@@ -96,13 +96,13 @@ It supports a vast library of plugins for integrating with GitHub, Docker, Kuber
 - [[Kubernetes Deployment]] – Target for CI/CD pipelines
 - [[GitHub Actions]] – Simpler alternative for GitHub-hosted projects
 - [[ROS2 Package]] – Jenkins can build and test colcon workspaces
-- [[CI-CD Pipelines]] – Jenkins is a core tool in this ecosystem
+- [[CI-CD]] – Jenkins is a core tool in this ecosystem
 
 ---
 
 ## 🔗 Related Concepts
 
-- [[CI-CD Pipelines]] (Jenkins is one of the most powerful implementations)
+- [[CI-CD]] (Jenkins is one of the most powerful implementations)
 - [[Microservices Architecture]] (Automate builds for each service)
 - [[Helm Chart]] (Used in deploy stages)
 - [[kubectl]] (Run commands in Jenkins to deploy)

@@ -86,6 +86,7 @@ Developers can run training on CPUs, GPUs, or TPUs depending on the selected Nx 
 
 ## 🔗 Related Concepts / Notes
 
+- [[OpenXLA]] (XLA compiler powering EXLA backend)
 - [[Nx]] (Numerical Elixir)
 - [[EXLA]] (Accelerated Linear Algebra backend for Nx)
 - [[Torchx]] (LibTorch backend for Nx)
@@ -101,7 +102,8 @@ Developers can run training on CPUs, GPUs, or TPUs depending on the selected Nx 
 
 - Official Repo: https://github.com/elixir-nx/axon  
 - Nx Project Overview: https://github.com/elixir-nx/nx  
-- Documentation: https://hexdocs.pm/axon  
+- Documentation: https://hexdocs.pm/axon
+- Training & Evaluation Guide: https://hexdocs.pm/axon/guides.html#training-and-evaluation
 - José Valim’s introduction to Nx and Axon: https://dashbit.co/blog  
 
 ---

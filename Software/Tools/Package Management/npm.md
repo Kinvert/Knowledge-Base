@@ -92,7 +92,7 @@ npm installs and manages packages from the npm registry, which hosts over a mill
 - [[gRPC]] – Use `@grpc/grpc-js` and similar via npm  
 - [[REST API]] – Backend frameworks like Express installed via npm  
 - [[Dockerfile]] – npm used to build and run web servers in containers  
-- [[CI-CD Pipelines]] – Commonly used in GitHub Actions or Jenkins builds  
+- [[CI-CD]] – Commonly used in GitHub Actions or Jenkins builds  
 
 ---
 
@@ -103,7 +103,7 @@ npm installs and manages packages from the npm registry, which hosts over a mill
 - [[REST API]] (Often built using Express or Koa)  
 - [[gRPC]] (npm provides web-friendly gRPC clients)  
 - [[ROS2 Web Bridge]] (npm-powered GUIs interact with ROS2)  
-- [[CI-CD Pipelines]] (Automate install/test/deploy of npm apps)  
+- [[CI-CD]] (Automate install/test/deploy of npm apps)  
 
 ---
 

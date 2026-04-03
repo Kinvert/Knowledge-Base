@@ -86,7 +86,7 @@ This style of communication mirrors what happens in real-world microservice ecos
 - [[gRPC]], [[Docker Container]], [[Kubernetes]]
 - Protocol Buffers (`.proto` files)
 - [[ROS2 Services]], [[ROS2 Actions]]
-- [[CI-CD Pipelines]] (for deploying microservices)
+- [[CI-CD]] (for deploying microservices)
 - [[Dev Containers]], [[Edge Computing]], [[MQTT]]
 
 ---
@@ -98,7 +98,7 @@ This style of communication mirrors what happens in real-world microservice ecos
 - [[ROS2 Actions]] (For longer-running RPC-like tasks)
 - [[Docker Compose]] (Defines services and their relationships)
 - [[Kubernetes]] (Runs and manages services at scale)
-- [[CI-CD Pipelines]] (Builds and tests microservices)
+- [[CI-CD]] (Builds and tests microservices)
 - [[Kubernetes Service]] (Exposes a microservice in a cluster)
 
 ---

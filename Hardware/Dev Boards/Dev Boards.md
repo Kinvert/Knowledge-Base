@@ -1,3 +1,3 @@
 - [[Parallax Spinneret]]
-- [[Raspbery Pi Pico W]]
+- [[Raspberry Pi Pico W]]
 - 

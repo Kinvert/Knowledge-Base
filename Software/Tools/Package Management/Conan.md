@@ -89,7 +89,7 @@ Conan handles external libraries like Boost, OpenCV, Eigen, and many robotics-re
 - [[C++]] – Primary language Conan supports  
 - [[CMake]] – Tight integration via `conan.cmake` helper  
 - [[Dockerfile]] – Conan used to manage dependencies inside build images  
-- [[CI-CD Pipelines]] – Cache and share built C++ packages  
+- [[CI-CD]] – Cache and share built C++ packages  
 - [[ROS2 Package]] – For C++-based packages with external dependencies  
 - [[vcpkg]] – Alternative C++ package manager worth comparing  
 
@@ -100,7 +100,7 @@ Conan handles external libraries like Boost, OpenCV, Eigen, and many robotics-re
 - [[CMake]] (Conan integrates directly)  
 - [[ROS2 Package]] (Conan manages dependencies for C++ nodes)  
 - [[Docker]] (Conan used in containerized builds)  
-- [[CI-CD Pipelines]] (Automated Conan install/build/test)  
+- [[CI-CD]] (Automated Conan install/build/test)  
 - [[vcpkg]] (Alternative with Microsoft support)  
 - [[pkg-config]] (Lower-level tool often superseded by Conan in modern builds)  
 

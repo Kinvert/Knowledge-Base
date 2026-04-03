@@ -90,7 +90,7 @@ Anaconda provides a comprehensive environment with Python/R interpreters, essent
 - [[Python]] – Primary language supported by Anaconda  
 - [[Jupyter]] – Native integration for notebooks  
 - [[Docker]] – Anaconda environments can be containerized  
-- [[CI-CD Pipelines]] – Conda environments provisioned in builds  
+- [[CI-CD]] – Conda environments provisioned in builds  
 
 ---
 

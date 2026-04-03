@@ -111,7 +111,7 @@ Heroku supports many programming languages via [[Heroku Buildpacks]] including P
 ## 🔗 Related Concepts
 
 - [[Docker Container]] (You can deploy Dockerized apps on Heroku)  
-- [[CI-CD Pipelines]] (Integrate Heroku deployment into pipelines)  
+- [[CI-CD]] (Integrate Heroku deployment into pipelines)  
 - [[Microservices Architecture]] (Deploy microservices as Heroku apps)  
 - [[Python]] (Django, Flask apps run well on Heroku)  
 - [[Node.js]] (Express and other web servers on Heroku)  

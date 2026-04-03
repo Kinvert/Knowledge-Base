@@ -144,7 +144,7 @@ Package managers simplify the process of handling third-party libraries, system 
 
 ## 🔧 Compatible Items
 
-- [[Helm Chart]], [[Docker Container]], [[CI-CD Pipelines]]
+- [[Helm Chart]], [[Docker Container]], [[CI-CD]]
 - [[Microservices Architecture]], [[Kubernetes]], [[colcon]]
 - [[vcpkg]], [[rosdep]], [[nix]], [[pip]]
 
@@ -152,7 +152,7 @@ Package managers simplify the process of handling third-party libraries, system 
 
 ## 🔗 Related Concepts
 
-- [[CI-CD Pipelines]] (Often install packages from here)
+- [[CI-CD]] (Often install packages from here)
 - [[Dockerfile]] (Uses package managers inside containers)
 - [[colcon]] (ROS2 build tool + dependency handling)
 - [[Helm Chart]] (Kubernetes package manager)

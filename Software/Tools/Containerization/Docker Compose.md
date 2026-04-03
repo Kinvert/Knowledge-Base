@@ -79,7 +79,7 @@ Compose uses a file called `docker-compose.yml` to define services, networks, an
 - `docker compose up`, `down`, `logs`, `exec`, `build`
 - [[Docker Container]], [[Docker Image]], [[Dockerfile]]
 - [[ROS2]], [[Gazebo]], [[RViz]]
-- [[CI-CD Pipelines]], [[VSCode Dev Containers]]
+- [[CI-CD]], [[VSCode Dev Containers]]
 
 ---
 
@@ -90,7 +90,7 @@ Compose uses a file called `docker-compose.yml` to define services, networks, an
 - [[Docker Container]] (Runtime of defined services)
 - [[Kubernetes]] (Alternative orchestration for production)
 - [[ROS2]] (Often orchestrated via Compose)
-- [[CI-CD Pipelines]] (Compose-based test environments)
+- [[CI-CD]] (Compose-based test environments)
 
 ---
 
