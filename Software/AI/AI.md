@@ -4,6 +4,7 @@
 [[LLM]]
 [[Local AI]]
 [[Search LLM]]
+[[Agentic Coding Loops]]
 
 ## Links
 

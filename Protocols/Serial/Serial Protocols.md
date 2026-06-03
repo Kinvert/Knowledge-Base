@@ -147,6 +147,19 @@ Serial protocols operate at the physical and data link layers of the OSI model a
 
 ---
 
+### [[Pelco D]]
+- **Purpose**: Binary PTZ camera-control protocol for surveillance cameras.
+- **Key Features**:
+  - Uses compact 7-byte command frames.
+  - Commonly transported over RS-232 or RS-485.
+  - Controls pan, tilt, zoom, focus, iris, and presets.
+- **Use Cases**:
+  - Security camera PTZ control.
+  - DVR and joystick controller integration.
+  - Serial debugging of legacy camera systems.
+
+---
+
 ## ✅ Pros and ❌ Cons of Serial Protocols
 
 ### ✅ Advantages
@@ -174,6 +187,7 @@ Serial protocols operate at the physical and data link layers of the OSI model a
 | **LIN**        | UART-based       | 1         | 20 kbps               | ✅ Yes           | ❌ No           | ~40m             | Automotive subsystems                   |
 | **1-Wire**     | Half-duplex      | 1         | 16 kbps               | ✅ Yes           | ❌ No           | ~30m             | Low-power sensors, embedded systems     |
 | **Modbus**     | Application Layer| Varies    | 9600–115200 bps       | ✅ Yes           | ❌ No           | Varies           | Industrial devices, SCADA               |
+| **Pelco D**    | Application Layer| Varies    | Commonly 2400-9600 bps | ✅ Yes          | ❌ No           | Varies           | PTZ security camera control             |
 
 ---
 

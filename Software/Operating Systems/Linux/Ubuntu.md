@@ -83,6 +83,7 @@ Ubuntu provides a stable and accessible Linux environment that appeals to beginn
 - `lsb_release -a` – Show Ubuntu version details  
 - `uname -r` – Show kernel version  
 - `sudo systemctl status ssh` – Check SSH service status  
+- `gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'focus-or-previews'` – Change Ubuntu Dock multi-window click behavior; see [[GNOME Settings Commands]]
 
 ---
 
