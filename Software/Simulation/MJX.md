@@ -80,7 +80,9 @@
 ## 🔗 Related Notes
 
 - [[MuJoCo]]
+- [[MuJoCo Warp]]
 - [[JAX]]
+- [[APIC Graph]]
 - [[Flax]]
 - [[Reinforcement Learning]]
 - [[Differentiable Physics]]

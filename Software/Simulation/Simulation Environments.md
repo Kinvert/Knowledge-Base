@@ -112,6 +112,7 @@ Many simulation environments support plugins, sensors, cameras, depth data, and 
 - [[Gazebo]] (Classic robotics simulation environment)  
 - [[Ignition]] (Modern Gazebo successor with ROS2 integration)  
 - [[Isaac Gym]] (High-performance RL simulation)  
+- [[MuJoCo Warp]] (GPU-oriented MuJoCo implementation)
 - [[PettingZoo]] (Multi-agent environments)  
 - [[Gymnasium]] (Standardized RL API)  
 - [[Unity ML-Agents]] (Game engine simulation for RL)  

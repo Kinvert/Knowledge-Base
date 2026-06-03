@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+cryptography==46.0.3
+lancedb==0.29.2
+lance-namespace==0.3.2
+lance-namespace-urllib3-client==0.3.2
+numpy==2.4.2
+pyarrow==23.0.1
+pypdf==6.12.2
+sentence-transformers==5.2.3
+torch==2.10.0+cu128
+transformers==5.3.0

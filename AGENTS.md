@@ -6,6 +6,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an Obsidian knowledge base vault containing 842+ interconnected markdown notes on technical topics. The primary purpose is discovering connections between concepts via Obsidian's graph view - notes are LLM-generated summaries with comparisons and basic code snippets, not in-depth learning material.
 
+## Local Semantic Search Workflow
+
+- A separate LanceDB semantic-search tool venv lives at `.lance`; it is for searching this vault only.
+- Use the GPU-backed path for indexing/searching:
+  - `source .lance/bin/activate && lance-doctor --device cuda`
+  - `source .lance/bin/activate && search --device cuda "vector database embeddings"`
+- The `search` command queries the local LanceDB table at `.lancedb`, covering Markdown notes and local text files present at the last index build.
+- If notes changed significantly or search results are stale, rebuild the index:
+  - `source .lance/bin/activate && lance-reindex --root /home/claude/Documents/Knowledge-Base --device cuda`
+- The `.lance` stack mirrors the known-good `/home/claude/sim2real` setup: Python 3.12.3, `torch 2.10.0+cu128`, `sentence-transformers 5.2.3`, `transformers 5.3.0`, `lancedb 0.29.2`, `numpy 2.4.2`, and `pyarrow 23.0.1`.
+- The embedding model is `all-MiniLM-L6-v2`, vector dimension 384. The model cache lives in `.lance-cache/sentence-transformers`; the index lives in `.lancedb`. Both are ignored local artifacts.
+- In the Codex command sandbox, GPU access may be hidden. Use an approved unsandboxed command or a normal shell for CUDA-backed indexing/search.
+
 ## Directory Structure
 
 ```

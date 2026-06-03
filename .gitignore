@@ -1,3 +1,9 @@
 .qodo
 .claude/
 CLAUDE.md
+__pycache__/
+*.py[cod]
+.lance/
+.lance-cache/
+.lancedb/
+.uv-cache/

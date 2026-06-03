@@ -95,6 +95,8 @@ It is particularly useful for comparing RL algorithms, creating custom environme
 - [[PyTorch]] (Main backend for many policies)  
 - [[JAX]] (Alternative backend with XLA compilation)  
 - [[Vectorized Environments]] (Key feature supported by PufferLib)  
+- [[APIC Graph]] (GPU-native rollout capture path)
+- [[MuJoCo Warp]] (GPU MuJoCo rollout backend)
 
 ---
 
