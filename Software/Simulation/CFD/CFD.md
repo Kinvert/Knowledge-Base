@@ -66,10 +66,11 @@ CFD is widely used in engineering disciplines such as aerospace, automotive, ene
 
 - [[OpenFOAM]] – Open-source CFD toolkit using finite volume method  
 - [[ANSYS Fluent]] – Commercial CFD suite with GUI and scripting  
-- [[SU2]] – Open-source CFD for aerodynamic optimization  
+- [[SU2]] – Open-source CFD for aerodynamic optimization and adjoint-based design  
 - [[COMSOL Multiphysics]] – GUI-based multiphysics simulation, includes CFD  
 - [[FEniCSx]] – FEM tool, sometimes used for fluid simulations  
 - [[ParaView]] – Visualization and post-processing  
+- [[XFOIL]] – Fast 2D viscous/inviscid airfoil analysis for lift/drag polar generation  
 - [[Gmsh]] – Pre-processing and meshing
 
 ---

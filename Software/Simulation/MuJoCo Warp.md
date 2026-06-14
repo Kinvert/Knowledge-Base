@@ -24,7 +24,7 @@ title: MuJoCo Warp
 - It can be used directly as `mujoco_warp` or through [[MJX]] as the Warp implementation.
 - It is optimized for throughput, not low-latency single-world stepping.
 - It is useful when CPU MuJoCo becomes bottlenecked by host/device transfer and Python launch overhead.
-- It currently does not provide the automatic differentiation path that MJX-JAX provides.
+- It does not currently provide the automatic differentiation path that [[MJX]]-JAX provides.
 - It pairs naturally with [[APIC Graph]] capture for fixed, replayable rollout kernels.
 
 ---
@@ -42,6 +42,26 @@ MJWarp changes the data placement:
 5. Optionally capture the fixed stepping block into a Warp graph or [[APIC Graph]].
 
 The practical pitch is "MuJoCo physics, CUDA-resident rollout buffers."
+
+## ⚡ Native Replay Path (Python Capture + C++ Launch)
+
+The graph-capture path in MuJoCo Warp is documented as:
+
+- Wrap batched simulation in `wp.ScopedCapture`.
+- Capture a `capture.graph`.
+- Launch with `wp.capture_launch(capture.graph)`.
+
+NVIDIA Warp’s runtime guide says captured graphs can be serialized and loaded back from Python or a standalone C++ runtime, and C++ examples show APIC replay using C API calls (including `wp_apic_load_graph`, `wp_apic_set_param`, and `wp_apic_cpu_replay_graph`) with CUDA/OpenGL workflows.
+
+For robotics rollout loops, this is the intended path for moving fixed physics+reward code paths out of Python orchestration and into native replay.
+
+## 🎨 Renderers + Fluid Simulation in NVIDIA Warp
+
+NVIDIA Warp is a Python framework with a large open-source examples set in `warp/examples`:
+
+- Core examples include simulation-focused items like `example_fluid.py`, `example_fft_poisson_navier_stokes_2d.py`, `example_sph.py`, and `example_wave.py`.
+- The same area also includes rendering/geometry demos such as `example_marching_cubes.py`, `example_render_opengl.py`, `example_nvdb.py`, `example_raycast.py`, and `example_raymarch.py`.
+- The C++ examples include APIC visualization examples (`02_apic_visualization`, `03_apic_visualization_cpu`) that use GLFW and capture/replay workflows, showing that the ecosystem covers both C++ integration and visualization alongside GPU simulation.
 
 ---
 
@@ -226,6 +246,7 @@ The adapter should be explicit about what is captured and what stays outside the
 ## 🔗 Related Notes
 
 - [[APIC Graph]]
+- [[NVIDIA Warp vs MuJoCo Warp]]
 - [[MuJoCo]]
 - [[MJX]]
 - [[PufferLib]]
@@ -238,6 +259,19 @@ The adapter should be explicit about what is captured and what stays outside the
 - [[Genesis]]
 - [[Sim2Real]]
 
+## 🧪 Hello-world / starter tutorials
+
+- **Official getting started docs**
+  - https://mujoco.readthedocs.io/en/3.7.0/mjwarp/
+- **Starter notebook + Colab**
+  - https://github.com/google-deepmind/mujoco_warp/blob/main/notebooks/tutorial.ipynb
+  - https://colab.research.google.com/github/google-deepmind/mujoco_warp/blob/main/notebooks/tutorial.ipynb
+- **Quick start and validation loop**
+  - https://github.com/google-deepmind/mujoco_warp/blob/main/README.md
+  - https://github.com/google-deepmind/mujoco_warp/blob/main/benchmarks/run.py
+- **Example scripts for first experiments**
+  - https://github.com/google-deepmind/mujoco_warp/tree/main/benchmarks
+
 ---
 
 ## 🌐 External Resources
@@ -245,8 +279,10 @@ The adapter should be explicit about what is captured and what stays outside the
 - MuJoCo Warp docs: https://mujoco.readthedocs.io/en/latest/mjwarp/index.html
 - MuJoCo MJX docs: https://mujoco.readthedocs.io/en/latest/mjx.html
 - MuJoCo Warp repository: https://github.com/google-deepmind/mujoco_warp
-- NVIDIA Warp APIC issue #1349: https://github.com/NVIDIA/warp/issues/1349
-- Distillative-AI APIC commit: https://github.com/Distillative-AI/warp/commit/d11116fcaad6927f50dc8c26a9cae6d1806944d7
+- NVIDIA Warp runtime / API Capture docs: https://nvidia.github.io/warp/user_guide/runtime.html
+- NVIDIA Warp API reference (graph ops): https://nvidia.github.io/warp/api_reference/warp.html
+- NVIDIA Warp example set (core + fluids/rendering): https://github.com/NVIDIA/warp/tree/main/warp/examples/core
+- NVIDIA Warp C++ examples and APIC visualization demos: https://github.com/NVIDIA/warp/tree/main/warp/examples/cpp
 
 ---
 

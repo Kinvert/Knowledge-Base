@@ -23,7 +23,7 @@ An **APIC Graph** is NVIDIA Warp's serialized API Capture graph format: Python r
 - It records Warp API operations such as kernel launches, selected copies, and zero-initialization.
 - Captured graphs can be serialized with `wp.capture_save()` and loaded with `wp.capture_load()`.
 - The serialized artifact is a `.wrp` file plus compiled module artifacts for kernels.
-- It is experimental in Warp 1.13 and the file/API format may change.
+- It is available from Warp C++ integration flow (see runtime docs): captured graphs can be loaded into a C++ process that links against the Warp native runtime.
 - The key performance goal is fewer Python calls and fewer repeated graph-capture costs in tight GPU simulation loops.
 
 ---
@@ -86,7 +86,15 @@ This creates a path toward "Python as graph authoring, native CUDA as rollout en
 | JAX/XLA Graph | ML compiler graph | JAX operations and XLA-compatible calls | JIT-compiled executable | Strong ML integration, pointer/layout issues can matter |
 | Puffer rollout loop | RL systems layer | Environment stepping and buffer filling | Trainer-specific loop | APIC can move this lower in the stack |
 
-APIC is not a replacement for CUDA graphs. It is a Warp-level serialization and replay mechanism that can sit above native CUDA graph execution and make captured Warp workloads easier to ship, reload, and call from a non-Python host.
+APIC is not a replacement for CUDA graphs. It is a Warp-level serialization and replay mechanism that can sit above native CUDA graph execution and make captured Warp workloads easier to ship, reload, and call from a non-Python host. Runtime docs include an example of loading `wp_apic_load_graph` and replaying with CUDA launch control.
+
+## 🧪 C++ Replay Details
+
+- The Warp runtime docs show standalone graph usage patterns that load a captured `.wrp` using C APIs, bind graph parameters, and launch using C/C++ entry points.
+- The same docs include two C++ APIC visualization examples:
+  - `warp/examples/cpp/02_apic_visualization`
+  - `warp/examples/cpp/03_apic_visualization_cpu`
+- In the CUDA example path, the workflow is: capture in Python (`capture_wave.py`) → build C++ example → replay with `cudaGraphLaunch()`; CPU variant uses `wp_apic_cpu_replay_graph()` and can run without CUDA runtime.
 
 ---
 
@@ -217,9 +225,9 @@ The real implementation needs model/data setup, parameter binding, reset handlin
 ## 🌐 External Resources
 
 - NVIDIA Warp runtime docs: https://nvidia.github.io/warp/user_guide/runtime.html
-- NVIDIA Warp 1.13 changelog: https://nvidia.github.io/warp/user_guide/changelog.html
-- NVIDIA Warp APIC issue #1349: https://github.com/NVIDIA/warp/issues/1349
-- Distillative-AI Warp APIC commit: https://github.com/Distillative-AI/warp/commit/d11116fcaad6927f50dc8c26a9cae6d1806944d7
+- NVIDIA Warp API reference (graph APIs): https://nvidia.github.io/warp/api_reference/warp.html
+- NVIDIA Warp C++ examples: https://github.com/NVIDIA/warp/tree/main/warp/examples/cpp
+- NVIDIA Warp core examples (renderers, fluids, geometry): https://github.com/NVIDIA/warp/tree/main/warp/examples/core
 - MuJoCo MJX / MJX-Warp docs: https://mujoco.readthedocs.io/en/latest/mjx.html
 - MuJoCo Warp repository: https://github.com/google-deepmind/mujoco_warp
 
