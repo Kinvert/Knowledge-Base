@@ -1,3 +1,4 @@
 - [[Parallax Spinneret]]
 - [[Raspberry Pi Pico W]]
+- [[Zynq-7000 SoC]]
 - 

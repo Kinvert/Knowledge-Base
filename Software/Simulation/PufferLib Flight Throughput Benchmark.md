@@ -23,7 +23,8 @@ Its goal is to remove speculation and replace it with comparable measured values
 - step latency distribution
 - memory/cost overhead from interface layers
 
-This is specifically tuned for flight RL workflows where sim fidelity is important and throughput can become the training bottleneck.
+This is specifically tuned for flight RL workflows where sim fidelity is important and throughput can become the training bottleneck.  
+It is intended to be driven by [[PufferLib]] vectorized environments via a compatible C/FFI adapter surface, then paired with [[PufferLib C99 Environment Authoring]] for stable low-overhead stepping.
 
 ---
 

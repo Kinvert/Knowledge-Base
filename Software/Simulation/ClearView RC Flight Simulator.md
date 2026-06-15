@@ -202,6 +202,8 @@ The best route is probably:
 4. Use [[JSBSim]] or another open FDM as the higher-fidelity comparison target.
 5. Keep ClearView for human practice and qualitative behavior comparison.
 
+For an apples-to-apples performance decision, benchmark any ClearView-derived prototype against [[PufferLib Flight Throughput Benchmark]] before committing to a production RL route.
+
 ---
 
 ## Harness Options

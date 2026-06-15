@@ -20,6 +20,11 @@ It is particularly useful for comparing RL algorithms, creating custom environme
 - **Vectorized Rollouts**: For efficient parallel data collection  
 - **JAX and PyTorch Support**: Choose between backends depending on your needs  
 
+For flight-sim work, the key hook is that environments are expected to expose stable vectorized step/reset semantics, so you need a dedicated adapter plus measurement layer before benchmarking:
+- [[PufferLib Flight Throughput Benchmark]]
+- [[Flight-Sim RL Contract]]
+- [[PufferLib C99 Environment Authoring]]
+
 ---
 
 ## 🧰 Use Cases
