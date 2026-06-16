@@ -65,3 +65,4 @@ Simcenter STAR-CCM+ is a Siemens industrial CFD platform with broad rotating-mac
 
 - https://www.siemens.com/en-us/products/simcenter/fluids-thermal-simulation/star-ccm/
 - https://training.plm.automation.siemens.com/
+- Siemens commercial solution; core source code is not publicly available.

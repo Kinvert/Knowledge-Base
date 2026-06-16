@@ -65,3 +65,4 @@ PIPE-FLO is a hydraulic simulation platform for piping and pump network modeling
 
 - https://pipe-flo.com/
 - https://pipe-flo.com/analysis-software/
+- Proprietary engineering platform; source code is not publicly available.

@@ -64,3 +64,4 @@ PUMP-FLO is an online pump-selection environment connected to manufacturer and d
 ## External resources
 
 - https://pump-flo.com/
+- Proprietary pump-data platform; no public source-code repository.

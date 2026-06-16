@@ -65,3 +65,4 @@ CAESES is a parametric geometry and variation platform often used for pump desig
 
 - https://www.caeses.com/products/caeses/geometry-modeling-for-variation/pumps/
 - https://www.caeses.com/products/caeses/
+- Commercial platform; source code is proprietary and not publicly hosted.

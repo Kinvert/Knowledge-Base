@@ -64,3 +64,4 @@ TURBOdesign Suite is an inverse-design pump platform for centrifugal, mixed-flow
 ## External resources
 
 - https://www.adtechnology.com/applications/pump-design
+- Commercial software; no public source-code repository.

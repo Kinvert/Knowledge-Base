@@ -137,7 +137,8 @@ Velocity vectors are often stored as small lookup arrays for speed.
 ## 📚 External Resources
 
 - “The Lattice Boltzmann Equation for Fluid Dynamics and Beyond” – Succi  
-- Palabos (open-source LBM framework)  
+- [Palabos (open-source LBM framework)](https://www.palabos.org/)  
+- [OpenLB library](https://www.openlb.net/)  
 - Sailfish (GPU-accelerated Python LBM)  
 - Taichi LBM demos  
 - NVIDIA FLAME GPU extensions  
@@ -158,11 +159,12 @@ Velocity vectors are often stored as small lookup arrays for speed.
 
 ## 📝 Documentation & Support
 
-- OpenLB documentation  
-- Sailfish docs (Python based)  
+- [OpenLB documentation](https://www.openlb.net/) 
+- Sailfish docs (legacy Python project)  
 - Taichi community examples  
 - CFD Online forums  
 - Research papers via arXiv
+- No public GitHub repository is available from a single canonical source for every LBM stack listed here; official distribution for these projects is via their project websites and documentation/release channels above.
 
 ---
 

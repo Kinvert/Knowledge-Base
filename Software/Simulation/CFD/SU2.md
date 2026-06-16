@@ -158,6 +158,8 @@ In production style workflows, step 7 is typically driven by Python or shell orc
 
 ## External resources
 
+- https://github.com/su2code/SU2
+- https://github.com/su2code/TestCases
 - https://su2code.github.io/docs_v7/
 - https://su2code.github.io/docs_v7/How-to-Contribute/
 - https://su2code.github.io/tutorials/

@@ -118,7 +118,7 @@ HAL acts as an intermediary between the operating system or applications and the
 
 - Vendor HAL datasheets and user manuals.
 - Community forums (STM32, Arduino, ESP32, Raspberry Pi).
-- Open-source HAL projects on GitHub.
+- Open-source HAL projects: https://github.com/zephyrproject-rtos/zephyr
 - ROS HAL integration guides.
 
 ---

@@ -66,3 +66,4 @@ Ansys CFX is a commercial CFD package focused on high-fidelity thermal-fluid sim
 ## External resources
 
 - https://www.ansys.com/products/fluids/ansys-cfx
+- Commercial simulation software; source code is proprietary and not publicly available.

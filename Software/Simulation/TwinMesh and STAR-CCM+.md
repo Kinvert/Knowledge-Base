@@ -64,3 +64,4 @@ TwinMesh is a Siemens-focused approach for rotary positive-displacement (PD) mac
 ## External resources
 
 - https://xcelerator.siemens.com/global/en/all-offerings/products/twinmesh----reliable--cfd-simulation-for-rotary-pd-machines.html
+- Siemens commercial solution; source code is proprietary.

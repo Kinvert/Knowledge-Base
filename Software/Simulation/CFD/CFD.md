@@ -92,6 +92,9 @@ CFD is widely used in engineering disciplines such as aerospace, automotive, ene
 - “Computational Fluid Dynamics” by John D. Anderson  
 - NASA CFD Vision 2030 Study  
 - CFD Online forums and tutorials  
-- MIT OpenCourseWare lectures on CFD
+- MIT OpenCourseWare lectures on CFD  
+- https://www.openfoam.com/  
+- https://su2code.github.io/  
+- https://openfoam.org/  
 
 ---

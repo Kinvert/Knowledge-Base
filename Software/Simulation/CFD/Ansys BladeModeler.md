@@ -65,3 +65,4 @@ Ansys BladeModeler is a parametric blade-generation environment for turbomachine
 ## External resources
 
 - https://www.ansys.com/products/fluids/ansys-blademodeler
+- Commercial simulation software; source code is proprietary and not publicly available.

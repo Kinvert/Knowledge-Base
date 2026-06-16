@@ -161,6 +161,7 @@ Use whichever build syntax your package exposes (many downstream bundles keep co
 - https://www.mh-aerotools.de/airfoils/ (legacy tooling context and examples)
 - XFOIL community discussion forums and script examples
 - XFOIL paper and user notes from Drela’s original documentation
+- No canonical public GitHub repository is maintained in the official MIT release; source distribution is primarily legacy/packaged with mirrors and downstream repos.
 
 ## Hello-world / starter tutorials
 

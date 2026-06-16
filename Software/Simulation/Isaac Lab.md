@@ -74,8 +74,8 @@ Isaac Lab is NVIDIA’s open-source, GPU-accelerated framework for robot learnin
 
 ##  External Resources
 
-- NVIDIA Isaac Lab GitHub – source, examples, migration guides  
-- Isaac Lab Documentation – tutorials, API reference, quickstart guides
+- NVIDIA Isaac Lab GitHub – source, examples, migration guides: https://github.com/NVIDIA-Omniverse/IsaacLab  
+- Isaac Lab documentation – tutorials, API reference, quickstart guides: https://isaac-sim.github.io/IsaacLab/
 - NVIDIA NGC Container – Isaac Lab 2.2.0 release info (latest as of August 6, 2025)
 - Reference Architecture Guide – detailed training and deployment workflow
 

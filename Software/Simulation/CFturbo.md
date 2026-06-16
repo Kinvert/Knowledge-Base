@@ -257,3 +257,4 @@ For CFturbo, this pattern is usually the only practical route:
 - [[Ansys Workbench extension]](https://cfturbo.com/software/interfaces-workflows/extension-for-ansys-workbench)
 - [[CFturbo2ICEM]](https://cfturbo.com/software/interfaces-workflows/script-solution-for-ansys-icem-cfd)
 - [[Manual PDF snapshot]](https://manual.cfturbo.com/CFturbo_en.pdf)
+- CFturbo is a commercial application; no public GitHub/source repository is published. Use official product/manual pages above as the canonical source for releases and APIs.

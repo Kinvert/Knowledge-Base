@@ -95,8 +95,11 @@ The **Finite Element Method (FEM)** is a powerful numerical technique for solvin
 
 ## 📚 Further Reading
 
-- FEM textbooks like "The Finite Element Method" by Zienkiewicz  
-- Online FEM tutorials and open courseware  
+- FEM textbooks like "The Finite Element Method" by Zienkiewicz
+- Online FEM tutorials and open courseware
 - Research papers on FEM applications in robotics and engineering
+- https://fenicsproject.org/
+- https://www.freefem.org/
+- https://www.firedrakeproject.org/
 
 ---

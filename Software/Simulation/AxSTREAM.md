@@ -65,3 +65,4 @@ AxSTREAM is a multi-module SoftInWay platform for turbomachinery design, analysi
 
 - https://www.softinway.com/
 - https://www.dhioresearch.com/products/axstream/
+- Commercial software; source code is proprietary and not publicly hosted.

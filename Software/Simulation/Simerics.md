@@ -310,3 +310,4 @@ This gives you real-value research speed without waiting for a nonexistent hard 
 - [[Simerics + GT-SUITE]](https://simerics.de/anwendungen/process-sumaliton/?lang=en)
 - [[PumpLinx]](https://www.simerics.com/pumplinx/)
 - [[AMD performance release]](https://www.simerics.com/wp-content/uploads/2026/04/Simerics-and-AMD-Announcement.pdf)
+- No public GitHub/source-code repository is available from official Simerics pages at this time; use the product site + manuals as the source-of-truth links.

@@ -79,8 +79,10 @@ Designed for performance and flexibility, FEniCSx supports complex geometries, M
 
 ## 📚 Further Reading
 
-- FEniCSx documentation and tutorials  
-- Papers and case studies using FEniCSx for scientific computing  
+- https://docs.fenicsproject.org/dolfinx/main/
+- https://github.com/FEniCS/dolfinx
+- https://github.com/FEniCS/ufl
+- https://github.com/FEniCS/basix
 - Example notebooks and simulation demos
 
 ---

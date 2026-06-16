@@ -63,3 +63,5 @@ SimScale is a cloud platform for CFD/FEA workflows with dedicated templates incl
 ## External resources
 
 - https://www.simscale.com/simulations/turbomachinery/
+- https://www.simscale.com/docs/
+- Commercial cloud platform; no public source-code repository.

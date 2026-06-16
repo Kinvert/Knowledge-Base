@@ -1,125 +1,140 @@
-# SO-ARM100 (LeRobot Robotic Arm)
+---
+title: SO-ARM100
+aliases:
+  - SO-100
+  - TheRobotStudio SO-100
+  - SO-ARM101
+tags:
+  - robotics
+  - robot-arm
+  - open-source
+  - lerobot
+  - ros2
+  - pufferlib
+---
 
-The **SO-ARM100** is an open-source, low-cost 6-DOF robotic arm designed for research, education, and DIY robotics projects. It integrates with the LeRobot framework, making it suitable for AI-driven robotics applications, imitation learning, and rapid prototyping.
+# SO-ARM100
+
+**SO-ARM100** is a low-cost open hardware arm family from TheRobotStudio that is heavily used in educational and embodied-AI prototypes.  
+In practice it is one of the cheapest paths into LeRobot-style imitation and robotics-control projects.
 
 ---
 
-## ⚙️ Overview
+## Overview
 
-The SO-ARM100 can be purchased as a DIY kit or fully assembled. Its modular design allows for easy customization and integration with various sensors and computing platforms. It is widely used for robotics education and experimental AI robotics.
-
----
-
-## 🧠 Core Concepts
-
-- **Open-Source Design**: Hardware and software are publicly available for modification and study.
-- **LeRobot Integration**: Seamless support for AI-driven robotics through the LeRobot framework.
-- **6 Degrees of Freedom (DOF)**: Provides versatile movement capabilities for multiple tasks.
-- **High-Torque Servos**: Ensures precise and reliable motion.
-- **Modular Components**: Components can be replaced or upgraded easily.
+The public repository describes `SO-100` and `SO-101`, with SO-101 positioned as the newer branch while SO-100 remains referenced for compatibility.  
+For projects that care more about speed and budget than absolute stiffness, this family is still one of the best value entry points.
 
 ---
 
-## 📊 Comparison Chart
+## Why this is a top candidate
 
-| Feature                 | SO-ARM100          | uArm Swift Pro     | Dobot Magician     | OWI Robotic Arm    |
-|-------------------------|------------------|------------------|------------------|------------------|
-| Open-Source             | ✅ Yes            | ❌ No             | ❌ No             | ❌ No             |
-| LeRobot Integration     | ✅ Yes            | ❌ No             | ❌ No             | ❌ No             |
-| Degrees of Freedom      | 6                 | 5                | 4                | 4                |
-| Servo Motors            | High-Torque       | Standard         | Standard         | Standard         |
-| Price Range             | $100–$200         | $999             | $1,599           | $59.99           |
+- Open repository with published CAD/BOM and step-by-step assembly guidance.
+- Designed around mainstream LeRobot patterns for data collection, calibration, and policy iteration.
+- Very active community context from Seeed docs and Hugging Face tooling.
+- Cheapest route among these options if you need physical robotics experience fast.
 
 ---
 
-## 🔧 Use Cases
+## Hardware and openness
 
-- **Imitation Learning**: Train AI models by demonstrating tasks to the arm.
-- **Robotics Education**: Hands-on platform for learning robotics and AI.
-- **AI Research**: Supports reinforcement learning and computer vision experiments.
-- **Prototyping**: Rapid development of robotic applications.
-- **Sensor Integration**: Can integrate cameras or other sensors for perception tasks.
-
----
-
-## ✅ Strengths
-
-- Affordable compared to commercial robotic arms.
-- Customizable and modular for upgrades and experimentation.
-- Active community support and available documentation.
-- AI-friendly via the LeRobot framework.
+- Fully open-source orientation:
+  - STL and STEP assets in the repo,
+  - BOM and part references,
+  - assembly and calibration documentation.
+- The documented motor option is standard STS3215 with explicit voltage/torque variants, with 7.4 V as common and stronger 12 V option for heavier loads.
+- The repo has explicit sourcing options and vendors for kits/parts across regions.
+- It is best treated as a **research-first** rather than heavy-duty manufacturing arm.
 
 ---
 
-## ❌ Weaknesses
+## Software stack and integration pathways
 
-- Assembly may be challenging for beginners.
-- Limited payload capacity for heavy tasks.
-- Requires compatible computing platforms and software setup.
-
----
-
-## 🔗 Related Concepts
-
-- [[LeRobot Framework]]
-- [[Imitation Learning]]
-- [[Reinforcement Learning]]
-- [[Robotics Education]]
-- [[Robot Kits]]
-- [[Robot Arms]]
+- The repository and docs are organized around LeRobot compatibility.
+- There are separate setup flows for:
+  - cloning/assembling,
+  - calibration,
+  - teleoperation,
+  - and policy training.
+- The project supports the common learning pattern:
+  - collect demonstration data,
+  - train with ACT-style workflows,
+  - replay and validate policies.
 
 ---
 
-## 🧩 Compatible Items
+## Community and language support
 
-- High-torque servo motors (STS3215 or equivalent)
-- Microcontrollers or SBCs such as Raspberry Pi or NVIDIA Jetson
-- Cameras or other sensors for data collection
-- Optional 3D-printed components for replacement or customization
-
----
-
-## 🧪 Variants
-
-- **SO-ARM100**: Standard 6-DOF version.
-- **SO-ARM101**: Improved version with upgraded motor gears and wiring.
+- The docs route points to active examples and multiple support channels (Discord, GitHub discussions in related ecosystems).
+- The practical language profile is strong for Python-first stacks, with command patterns that are easy for RL research teams to wrap.
+- Because it is positioned as an educational/entry platform, third-party examples are relatively easy to find.
 
 ---
 
-## 📚 External Resources
+## PufferLib integration strategy
 
-- [SO-ARM100 GitHub Repository](https://github.com/TheRobotStudio/SO-ARM100)
-- [LeRobot Framework Documentation](https://huggingface.co/lerobot)
-- [Assembly Guide and Tutorials](https://wiki.seeedstudio.com/lerobot_so100m/)
-- https://github.com/TheRobotStudio/SO-ARM100
+1. Keep the environment contract host-side:
+   - deterministic action scale,
+   - bounded position/velocity commands,
+   - explicit homing.
+2. Pull state channels from joint data and status bits at fixed tick intervals.
+3. Handle resets and episode state in wrapper code, not inside robot firmware behavior.
+4. Use a surrogate environment first for dense training; validate final checkpoints on hardware.
 
----
-
-## 🧰 Developer Tools
-
-- LeRobot Python library for controlling the arm
-- 3D printing files for custom components
-- Calibration scripts for accurate motion
+This keeps throughput practical while still giving genuine hardware grounding for sim2real.
 
 ---
 
-## 📘 Documentation and Support
+## Cost and setup considerations
 
-- Official manuals and assembly guides on GitHub and Seeed Studio
-- Community forums and discussion on GitHub and Reddit
-- Tutorials for assembly, calibration, and programming
-
----
-
-## 🗂️ Suggested Folder Location
-
-`Hardware/Robotics/Arms/SO-ARM100.md`
+- The repo documentation includes concrete unit examples for core servos (for example STS3215 price points), indicating a budget-focused profile.
+- Mechanical and calibration complexity is not zero:
+  - cable/power routing,
+  - calibration passes,
+  - and host setup are part of the baseline work.
+- Still one of the cheapest viable options for 6-DOF + gripper RL testing.
 
 ---
 
-## 🌟 Key Highlights
+## Related concepts
 
-- Affordable, open-source robotic arm for AI and education
-- Modular design allows for customization and upgrades
-- Supports AI integration through the LeRobot framework
-- Community-supported with extensive resources
+- [[LeRobot]]
+- [[ROS2]]
+- [[PufferLib]]
+- [[PufferLib C99 Environment Authoring]]
+
+---
+
+## Pros and Cons
+
+Pros:
+- Lowest total-entry cost for 6-DOF data-collection workflows.
+- Open files reduce custom-fab friction.
+- Large base of example-based onboarding.
+
+Cons:
+- Lower stiffness/precision than mid-tier industrial stacks.
+- SO-100/SO-101 overlap can confuse buyers; prefer recent docs.
+- Native throughput is usually bound by transport and command latency.
+
+---
+
+## Comparison with 5+ peers
+
+| Platform | Open files quality | LeRobot alignment | Cost | Setup burden | PufferLib compatibility |
+|---|---|---|---:|---|---|
+| SO-ARM100 / SO-ARM101 | High | High | Very Low | Medium | Medium |
+| reBot Arm B601 | High | Medium-High | Medium | Medium | Medium |
+| Interbotix WidowX-250 6DOF | Medium | Medium | Medium | Medium-High | Medium |
+| OpenMANIPULATOR-X | Medium | Medium-High | Low-Medium | Medium | Medium |
+| Poppy Ergo Jr | Medium | Medium | Very Low | Medium | Low |
+| xArm 6 (budget line) | Medium | Medium | Medium-High | Low-Medium | Medium |
+
+---
+
+## External resources
+
+- SO-ARM100 repository: https://github.com/TheRobotStudio/SO-ARM100
+- Seeed SO-10x setup tutorial: https://wiki.seeedstudio.com/lerobot_so100m_new/
+- SO-ARM docs (legacy): https://wiki.seeedstudio.com/lerobot_so100m/
+- SO-100 / SO-101 hardware and parts details: https://github.com/TheRobotStudio/SO-ARM100
