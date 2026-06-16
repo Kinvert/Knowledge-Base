@@ -39,11 +39,11 @@ tags:
 ### 1) Ascento: A Two-Wheeled Jumping Robot (ICRA 2019)
 - Mechanical design uses **four actuators**: two wheel drives and two leg actuators; 2-wheel inverted-pendulum-style simplified control model is used for baseline balancing.[^ascento-arxiv]
 - The leg mechanism is a **three-bar linkage**, with each leg height adjusted by hip actuation (~31–66 cm).
-- Control stack is written in **C++** and uses ROS for communication; IMU + encoder measurements feed a **Kalman filter**.
+- Control stack is written in **C++** and uses ROS for communication; IMU + encoder measurements feed a **Kalman filter** / [[Extended Kalman Filter]].
 - LQR stabilizes the robot; jump and fall recovery include heuristic phase sequencing + feed-forward/feedback layers.[^ascento-arxiv]
 
 ### 2) LQR-Assisted Whole-Body Control with Kinematic Loops (IEEE RA-L 2020)
-- Confirms Ascento only needs four actuators; adds full dynamics with leg kinematic loops and a WBC hierarchy around **LQR-assisted balancing**.[^ascento-wbc-pdf]
+- Confirms Ascento only needs four actuators; adds full dynamics with leg kinematic loops and a WBC hierarchy around **[[Linear Quadratic Regulator]]-assisted balancing**.[^ascento-wbc-pdf]
 - Onboard compute note: controller run at **400 Hz** with average control period **1.56 ms** (about 1.20 ms WBC optimization, 0.11 ms DARE); a strong indicator of the control stack’s real-time orientation.[^ascento-wbc-pdf]
 - This is still an academic control stack, not a direct off-the-shelf RL API; it is valuable as a model and behavior source.
 
@@ -182,11 +182,12 @@ Interpretation:
 - [[PufferLib]]
 - [[PufferLib C99 Environment Authoring]]
 - [[PufferLib Robotics Fit and Limits]]
+- [[Lidar]]
 - [[ROS2]]
 - [[Gazebo]]
 - [[Sim2Real]]
 - [[Unitree]]
-- [[UMV]]
+- [[RAI Ultra Mobility Vehicle]]
 
 ---
 

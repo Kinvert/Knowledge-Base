@@ -96,7 +96,7 @@ The paper gives unusually explicit details here, which is good for RL adaptation
 - One IMU on the Head and one on the Bike link (plus a broader estimation strategy); angular rates are directly measured.
 - Motion capture was used for lab work and fused with IMUs for high-quality base estimation.
 - The estimator is designed around 6-DoF base state plus joint states; only one serial state is not directly measured, the rest are directly observed.
-- Estimation architecture references **GTSAM** with bipartite factor graph style updates, with high-rate IMU propagation and lower-rate visual/optical correction.
+- Estimation architecture references **GTSAM** with bipartite factor graph style updates, with high-rate IMU propagation and lower-rate visual/optical correction. If you recreate this stack for RL, [[Extended Kalman Filter]] is the usual lightweight estimator baseline used for fast prototyping and fault diagnostics.
 
 Takeaway: state estimation is first-class and can be surfaced in an RL pipeline, but much of the published fidelity depends on the two-stack estimator setup used by the team.
 
@@ -299,7 +299,10 @@ Until those are clear, treat UMV as a priority physical design target + benchmar
 ## Related Notes
 
 - [[PufferLib]]
+- [[Extended Kalman Filter]]
+- [[Linear Quadratic Regulator]]
 - [[PufferLib Robotics Fit and Limits]]
+- [[Lidar]]
 - [[PufferLib C99 Environment Authoring]]
 - [[PufferLib Flight Throughput Benchmark]]
 - [[Isaac Lab]]

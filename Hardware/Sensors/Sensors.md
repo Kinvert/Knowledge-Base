@@ -1,4 +1,5 @@
 - Distance
+- [[Lidar]]
 - [[IMU]]
 	- [[BNO055]]
 - [[GPS Sensors]]
