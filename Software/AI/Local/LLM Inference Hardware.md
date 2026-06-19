@@ -467,6 +467,7 @@ The trend: memory bandwidth increasing faster than compute. FP4/FP8 quantization
 - [[CUDA]] - NVIDIA compute platform
 - [[ROCm]] - AMD compute platform
 - [[RTX 4090]] - Consumer GPU king
+- [[RTX 3090]] - Budget 24GB inference option
 - [[RTX 5090]] - New consumer champion
 - [[H100]] - Datacenter standard
 - [[H200]] - More memory variant
@@ -494,4 +495,3 @@ The trend: memory bandwidth increasing faster than compute. FP4/FP8 quantization
 - [RunPod RTX 5090 Benchmarks](https://www.runpod.io/blog/rtx-5090-llm-benchmarks)
 - [Modal - VRAM for Fine-Tuning Guide](https://modal.com/blog/how-much-vram-need-fine-tuning)
 - [Oracle - LLM Inference on MI300X](https://blogs.oracle.com/cloud-infrastructure/llm-performance-results-amd-instinct-mi300x-gpus)
-

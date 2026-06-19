@@ -135,7 +135,10 @@ So BO can be a strong outer loop (e.g., simulator parameter tuning), while RL is
 - [[CARBS]]
 - [[tpot]]
 - [[System Identification for Sim2Real|System Identification in Sim2Real]]
-- [[Hyperparameter Tuning|Hyperparameter Optimization]]
+- [[Exploration vs Exploitation]]
+- [[Domain Randomization]]
+- [[PPO]]
+- [[SAC]]
 
 ---
 
@@ -150,4 +153,3 @@ So BO can be a strong outer loop (e.g., simulator parameter tuning), while RL is
 
 ## 🎯 Key Takeaway
 Bayesian Optimization is most valuable when each experiment is costly and you only have a strict compute budget. The model then decides where to try next, which is usually much better than blind search under those constraints.
-

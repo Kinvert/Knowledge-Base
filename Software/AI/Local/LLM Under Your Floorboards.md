@@ -467,6 +467,7 @@ If you're serious about "under your floorboards":
 - [[Mixtral]] - Mistral's MoE models
 - [[Dolphin]] - Uncensored fine-tunes
 - [[RTX 4090]] - Consumer GPU king
+- [[RTX 3090]] - Budget consumer VRAM option
 - [[H100]] - Datacenter GPU
 - [[A100]] - Previous gen datacenter GPU
 - [[tinygrad]] - ML framework / tinybox creator
