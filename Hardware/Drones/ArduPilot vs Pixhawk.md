@@ -1,21 +1,3 @@
----
-title: "ArduPilot vs Pixhawk"
-aliases:
-  - ArduPilot
-  - Pixhawk
-  - ArduPilot vs Pixhawk
-  - ArduPilot and Pixhawk
-  - Pixhawk Standards
-tags:
-  - drones
-  - autopilot
-  - rock
-  - mavlink
-  - mission-planning
-  - simulation
-  - robotics
----
-
 # ArduPilot vs Pixhawk
 
 This note is a direct comparison for one purpose: `ArduPilot` and `Pixhawk` are often treated like competitors, but they are not the same abstraction layer.
@@ -240,15 +222,15 @@ Sources:
 
 This is a practical shortlist when you need an ArduPilot/PX4 stack on Pixhawk-family hardware.
 
-| Rank | Board | Approx. price (USD) | ArduPilot support | PX4 support | Why this sits here |
-|---|---|---|---|---|
-| 1 | CUAV V5+ | $289.00 – $458.00 | Fully compatible with PX4 and ArduPilot (docs explicitly state both) | Fully compatible with PX4 and ArduPilot (same docs) | Strongest all-around for serious field platforms: FMUv5 class, higher-spec FMU/IO split, redundant power inputs and extra sensors. |
-| 2 | Cube Orange+ | $215.00 | ArduPilot install docs are explicit; users load ArduPilot firmware on Cube Orange+ as a standard workflow | Not a Pixhawk standard board; PX4 docs classify it as a footprint replacement for Cube Black and require manufacturer support | Best choice when you need carrier-board ecosystem scale and redundancy (triple IMU + 14 PWM) with a manufacturer ecosystem around it |
-| 3 | Holybro Pixhawk 6X | $166.99 | Supported in Ardupilot 4.5.2 stable and later (rev notes by board target); listed in ArduPilot-supported board list | Supported in PX4 from 1.13.1+, listed in PX4 standard set | Best value modern board: FMUv6X processor class, high IO count, and broad stack support |
-| 4 | Holybro Pixhawk 6X Pro | $644.00 | Supported in Ardupilot 4.5.0+ (same target family as 6X) | Supported in PX4 1.14.3+ | Same FMUv6X family as 6X but with 6X Pro enclosure/features and very high price; better for mission-critical industrial budgets than for hobby | 
-| 5 | Holybro Pixhawk 6C / 6C Mini | $130.99 – $165.99 | Supported in ArduPilot 4.2.3+ (supported-firmware page, ArduPilot target path available) | Supported in PX4 1.13.1+ | Slightly lower spec than FMUv6X class, but compact and still capable for 10+ acre movers with fewer integration edge cases |
-| 6 | Holybro Pixhawk 5X | $104.99 | Listed in ArduPilot “Choosing an Autopilot” Open Hardware choices | PX4 standard autopilot list (FMUv5X entry) | Good budget fallback when you already have a compatible baseboard stack or legacy wiring |
-| 7 | Holybro Pixhawk 4 | $124.99 | Listed in ArduPilot choosing page as an Open Hardware option | PX4 supported as discontinued-but-supported FMUv5 entry | Older generation, highest risk/compatibility friction for new projects despite low price |
+| Rank | Board | Approx. price (USD) | Processor (main) | ArduPilot support | PX4 support | Why this sits here |
+|---|---|---|---|---|---|---|
+| 1 | CUAV V5+ | $289.00 – $458.00 | STM32F765 (main FMU); STM32F100 coprocessor | Fully compatible with PX4 and ArduPilot (docs explicitly state both) | Fully compatible with PX4 and ArduPilot (same docs) | Strongest all-around for serious field platforms: FMUv5 class, higher-spec FMU/IO split, redundant power inputs and extra sensors. |
+| 2 | Cube Orange+ | $215.00 | STM32H757 dual-core (M7 + M4) | ArduPilot install docs are explicit; users load ArduPilot firmware on Cube Orange+ as a standard workflow | Not a Pixhawk standard board; PX4 docs classify it as a footprint replacement for Cube Black and require manufacturer support | Best choice when you need carrier-board ecosystem scale and redundancy (triple IMU + 14 PWM) with a manufacturer ecosystem around it |
+| 3 | Holybro Pixhawk 6X | $166.99 | STM32H753 (main FMU) | Supported in Ardupilot 4.5.2 stable and later (rev notes by board target); listed in ArduPilot-supported board list | Supported in PX4 from 1.13.1+, listed in PX4 standard set | Best value modern board: FMUv6X processor class, high IO count, and broad stack support |
+| 4 | Holybro Pixhawk 6X Pro | $644.00 | STM32H753 (main FMU, variant-specific package) | Supported in Ardupilot 4.5.0+ (same target family as 6X) | Supported in PX4 1.14.3+ | Same FMUv6X family as 6X but with 6X Pro enclosure/features and very high price; better for mission-critical industrial budgets than for hobby | 
+| 5 | Holybro Pixhawk 6C / 6C Mini | $130.99 – $165.99 | STM32H743 (main FMU) | Supported in ArduPilot 4.2.3+ (supported-firmware page, ArduPilot target path available) | Supported in PX4 1.13.1+ | Slightly lower spec than FMUv6X class, but compact and still capable for 10+ acre movers with fewer integration edge cases |
+| 6 | Holybro Pixhawk 5X | $104.99 | STM32F7-class (main FMU; exact SKU often omitted in short product summaries) | Listed in ArduPilot “Choosing an Autopilot” Open Hardware choices | PX4 standard autopilot list (FMUv5X entry) | Good budget fallback when you already have a compatible baseboard stack or legacy wiring |
+| 7 | Holybro Pixhawk 4 | $124.99 | STM32F765 (main FMU) | Listed in ArduPilot choosing page as an Open Hardware option | PX4 supported as discontinued-but-supported FMUv5 entry | Older generation, highest risk/compatibility friction for new projects despite low price |
 
 ### Price snapshot caveats
 
@@ -463,15 +445,15 @@ Use this checklist before you buy a board or flash a stack.
 
 This section is for direct **board-to-board** comparison across Pixhawk-family controllers that commonly appear in ArduPilot/PX4 workflows.
 
-| Rank | Board | Approx. price (USD) | ArduPilot compatibility | PX4 compatibility | Board strengths | Likely pain points |
-|---|---|---|---|---|---|
-| 1 | CUAV V5+ | $289 – $458 | Officially supported in CUAV + ArduPilot flows | Officially listed on CUAV docs as dual-support target in practice | Highest all-around reliability class for mixed mission stacks, redundant power path designs, mature field-proven stack | Highest entry cost among comparable units; check revision compatibility before order |
-| 2 | Cube Orange+ | $215 – $380 | Well-known ArduPilot target with broad community and vendor procedures | Supported via `Cube Orange` / `Cube Orange+` pathways in vendor + PX4 ecosystem docs (non-canonical Pixhawk header caution) | Very strong ecosystem: redundancy, proven companion integrations, good fail-safe behavior tooling | Board naming/compatibility confusion with non-standard connector/stack variants can lead to flash-step mistakes |
-| 3 | Holybro Pixhawk 6X | $165 – $250 | Supported as FMUv6X lineage target in ArduPilot documentation and release support matrices | Officially maintained in PX4 standard autopilot family at current branch levels | Best value for full modern feature set; balanced compute and I/O density for most projects | Requires exact hardware revision checks for some sensor and USB/serial combinations |
-| 4 | Holybro Pixhawk 6C / 6C Mini | $130 – $170 | Supported through ArduPilot target matrix and vendor compatibility notes | Supported in PX4 target tables for FMUv6C class | Good middle ground for cost-sensitive builds with modern processing class and enough UART/PWM for most rover/copter plans | Slightly fewer expansion margins than 6X; some builds need power-correct wiring and filtered supply care |
-| 5 | Holybro Pixhawk 6X Pro | $450 – $650 | Same FMUv6 lineage target family with extended accessory and enclosure value | Supported in PX4 as 6X variant where variant pages list compatible bundles | Useful if you need the Pro variant’s hardware packaging / ecosystem accessories | Price is very high for baseline firmware work; avoid for pure hobby unless budget is fixed |
-| 6 | Holybro Pixhawk 5X | $105 – $130 | Supported in ArduPilot vendor compatibility guidance | Older but still valid in PX4 reference matrix (`FMUv5`/legacy-class entry) | Solid budget board for legacy-style builds | Older IMU/power architecture relative to v6 boards; fewer headroom features |
-| 7 | Holybro Pixhawk 4 | $95 – $135 | ArduPilot compatibility exists via board support lists and legacy guidance | PX4 lists as historical/deprecated-standard family with reduced long-tail support clarity | Lowest price entry to Pixhawk-style workflows | Aging hardware generation; newer tooling and firmware branches can be noisier |
+| Rank | Board | Processor (main) | Approx. price (USD) | ArduPilot compatibility | PX4 compatibility | Board strengths | Likely pain points |
+|---|---|---|---|---|---|---|---|
+| 1 | CUAV V5+ | STM32F765 + STM32F100 co-processor | $289 – $458 | Officially supported in CUAV + ArduPilot flows | Officially listed on CUAV docs as dual-support target in practice | Highest all-around reliability class for mixed mission stacks, redundant power path designs, mature field-proven stack | Highest entry cost among comparable units; check revision compatibility before order |
+| 2 | Cube Orange+ | STM32H757 dual-core (M7 + M4) | $215 – $380 | Well-known ArduPilot target with broad community and vendor procedures | Supported via `Cube Orange` / `Cube Orange+` pathways in vendor + PX4 ecosystem docs (non-canonical Pixhawk header caution) | Very strong ecosystem: redundancy, proven companion integrations, good fail-safe behavior tooling | Board naming/compatibility confusion with non-standard connector/stack variants can lead to flash-step mistakes |
+| 3 | Holybro Pixhawk 6X | STM32H753 | $165 – $250 | Supported as FMUv6X lineage target in ArduPilot documentation and release support matrices | Officially maintained in PX4 standard autopilot family at current branch levels | Best value for full modern feature set; balanced compute and I/O density for most projects | Requires exact hardware revision checks for some sensor and USB/serial combinations |
+| 4 | Holybro Pixhawk 6C / 6C Mini | STM32H743 | $130 – $170 | Supported through ArduPilot target matrix and vendor compatibility notes | Supported in PX4 target tables for FMUv6C class | Good middle ground for cost-sensitive builds with modern processing class and enough UART/PWM for most rover/copter plans | Slightly fewer expansion margins than 6X; some builds need power-correct wiring and filtered supply care |
+| 5 | Holybro Pixhawk 6X Pro | STM32H753 | $450 – $650 | Same FMUv6 lineage target family with extended accessory and enclosure value | Supported in PX4 as 6X variant where variant pages list compatible bundles | Useful if you need the Pro variant’s hardware packaging / ecosystem accessories | Price is very high for baseline firmware work; avoid for pure hobby unless budget is fixed |
+| 6 | Holybro Pixhawk 5X | STM32F7-class | $105 – $130 | Supported in ArduPilot vendor compatibility guidance | Older but still valid in PX4 reference matrix (`FMUv5`/legacy-class entry) | Solid budget board for legacy-style builds | Older IMU/power architecture relative to v6 boards; fewer headroom features |
+| 7 | Holybro Pixhawk 4 | STM32F765 | $95 – $135 | ArduPilot compatibility exists via board support lists and legacy guidance | PX4 lists as historical/deprecated-standard family with reduced long-tail support clarity | Lowest price entry to Pixhawk-style workflows | Aging hardware generation; newer tooling and firmware branches can be noisier |
 
 ### What changed by rank (practical guidance)
 
@@ -513,3 +495,93 @@ Sources for this section:
 - CUAV V5+ docs/product: `https://doc.cuav.net/controller/v5-autopilot/en/v5%2B.html`, `https://store.cuav.net/shop/v5-controller/`
 - Cube Orange setup and compatibility: `https://docs.cubepilot.org/user-guides/autopilot/the-cube/setup/firmware/installing-ardupilot`, `https://docs.px4.io/v1.13/en/flight_controller/cubepilot_cube_orange`
 - Holybro Pixhawk 6X / 6C / 5X / Pixhawk 4 pages: `https://docs.holybro.com/autopilot/pixhawk-6x/technical-specification`, `https://docs.holybro.com/autopilot/pixhawk-6x/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6x-pro/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6c/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6c/technical-specification`, `https://holybro.com/collections/flight-controllers`
+
+---
+
+## 🧱 Board comparison atlas (best→worst, rank-expanded)
+
+This is an additive atlas for board-level selection. It keeps best→worst order where there is a clear score, while also showing secondary scores for different real-world intents.
+
+### A) Explicit support and compatibility matrix
+
+| Rank | Board | Main processor | ArduPilot target / compatibility anchor | PX4 target / compatibility anchor | Source confidence | Typical flashing path | Most important caveat |
+|---|---|---|---|---|---|---|
+| 1 | CUAV V5+ | STM32F765 + STM32F100 | ArduPilot + PX4-capable flow in CUAV/CUAV docs | CUAV docs and PX4 ecosystem map to PX4-compatible mode | ✅ high | Mission Planner for ArduPilot, QGroundControl for PX4 (vendor firmware packages where available) | Price and revision choice are the biggest procurement risks |
+| 2 | Cube Orange+ | STM32H757 dual-core | CubePilot installation docs explicitly cover ArduPilot (`Install ArduPilot`) | PX4 ecosystem page covers Cube Orange with connector/footprint compatibility notes | ✅ high | Vendor-specific Cube tooling + ArduPilot installer + QGC flows | Connector compatibility and stack-specific cabling can vary by board generation |
+| 3 | Holybro Pixhawk 6X | STM32H753 | Listed in standard PX4-supported autopilot pages | Listed in standard PX4-supported PX4 autopilot pages | ✅ high | ArduPilot firmware installer + QGroundControl paths | Revision-specific compatibility checks (USB, sensor, and base board variant) |
+| 4 | Holybro Pixhawk 6C / 6C Mini | STM32H743 | Supported on PX4 target-class pages for FMUv6C family | Supported on PX4 target-class pages for FMUv6C family | ✅ medium-high | Standard FC flashing tools tied to target-specific firmware packages | Some builds can be sensitive to wiring noise and power filtering |
+| 5 | Holybro Pixhawk 6X Pro | STM32H753 | Same FMUv6 lineage target family as 6X | PX4-compatible class reference for 6X-line variants | ✅ medium-high | Same as 6X class, plus bundled-case/variant-specific accessories | Higher BOM cost than 6C/6X for equivalent baseline capabilities |
+| 6 | Holybro Pixhawk 5X | STM32F7-family | ArduPilot legacy references | PX4 FMUv5 lineage notes | ⚠️ medium | Standard flash tooling; often faster due to legacy docs + simpler variants | Lower headroom on newer sensor+IO-heavy feature stacks |
+| 7 | Holybro Pixhawk 4 | STM32F765 | Historical legacy references in ArduPilot docs and vendor pages | Historical/discontinued-support FMUv5-line notes | ⚠️ medium-low | Standard flash path, often requires explicit revision verification | Potential support friction on newer tooling and firmware expectations |
+
+### B) Hardware-level comparables (best→worst by practical stack balance)
+
+| Rank | Board | Processor / SoC | Build generation class | Sensor / redundancy profile | I/O breadth | Power design complexity | Why this compares well in practice |
+|---|---|---|---|---|---|---|---|
+| 1 | CUAV V5+ | STM32F765 + STM32F100 co-processor | Higher-generation FMU/IO family for field robots | Multi-sensor design and strong field orientation | Good UART/CAN/IO balance for mixed vehicles | Redundant power options and mature wiring patterns | Best fallback margin for integration complexity and fault recovery |
+| 2 | Cube Orange+ | STM32H757 dual-core (M7+M4) | Modern industrialized Pixhawk lineage build | Triple-IMU style family behavior in many deployments | Strong serial/PWM availability for companion and fail-safe wiring | Non-standardized header lineage in some variants | Mature ecosystem and mission-focused field adoption |
+| 3 | Holybro Pixhawk 6X | STM32H753 | FMUv6X generation | Modern IMU + barometric options | High I/O density for most commercial-class stacks | Moderate complexity, strong standard footprint | Strong mid-to-high feature-to-effort ratio |
+| 4 | Holybro Pixhawk 6X Pro | STM32H753 | 6X generation with Pro packaging variants | Similar IMU class as 6X with package-specific options | Comparable core I/O class to 6X | Added complexity due to accessory-specific choices | Better for ruggedized builds than value builds |
+| 5 | Holybro Pixhawk 6C / 6C Mini | STM32H743 | FMUv6C-class compact profile | Compact profile and reduced board margin than 6X family | Good but slightly tighter for large sensor stacks | Fewer margin points in aggressive low-power builds | Excellent cost-performance for constrained payload and size |
+| 6 | Holybro Pixhawk 5X | STM32F7-class main | FMUv5 class | Legacy sensor strategy and reduced modern headroom | Adequate but older I/O envelope | Simplified power/IO wiring, fewer modern niceties | Reliable low-cost baseline if your stack is conservative |
+| 7 | Holybro Pixhawk 4 | STM32F765 | FMUv5 era legacy | Older redundancy profile than newer boards | Lowest modern I/O density in this shortlist | Lowest wiring overhead but highest mismatch risk | Cheapest entry point with legacy assumptions |
+
+### C) Board mission-fit matrix (0–10, best→worst per use-case)
+
+Legend: `10` strongest, `7–9` strong, `4–6` workable with setup cost, `<4` weak/partial.
+
+| Board | Fixed-wing mission | Multicopter mission | Rover/ground autonomy | ROS2 + offboard workflows | Field durability & safety margin | Rapid prototyping + tuning | Value under budget pressure |
+|---|---|---|---|---|---|---|---|
+| CUAV V5+ | 9 | 9 | 8 | 8 | 9 | 7 | 5 |
+| Cube Orange+ | 9 | 9 | 8 | 8 | 9 | 6 | 6 |
+| Holybro Pixhawk 6X | 8 | 9 | 8 | 8 | 8 | 8 | 8 |
+| Holybro Pixhawk 6X Pro | 8 | 8 | 7 | 8 | 9 | 5 | 4 |
+| Holybro Pixhawk 6C / 6C Mini | 7 | 8 | 8 | 7 | 7 | 9 | 8 |
+| Holybro Pixhawk 5X | 6 | 7 | 6 | 6 | 6 | 7 | 9 |
+| Holybro Pixhawk 4 | 5 | 6 | 5 | 5 | 5 | 6 | 9 |
+
+### D) Board archetype buckets
+
+| Archetype | Boards (rank order) | Why this archetype exists |
+|---|---|---|
+| Flagship / mission-critical | CUAV V5+ → Cube Orange+ | Highest practical stability and ecosystem trust for mixed ArduPilot + PX4 workflows |
+| Best bang-for-buck | Holybro Pixhawk 6X → 6C/Mini → 6X Pro | Keep modern compute/features while avoiding the Pro premium when mission needs are moderate |
+| Cheapest starter | Holybro Pixhawk 5X → 6C/Mini → 4 | Useful for budget labs, especially when sensor burden is low |
+| Most common in field builds | Cube Orange+, Holybro 6X, 6C/Mini | Broadly documented, commonly discussed in community build guides and vendor communities |
+
+### E) Practical board ranking add-ons (decision-oriented)
+
+For each board type, use these quick confidence checks before you buy:
+
+- Flagship profile (CUAV V5+, Cube Orange+) focuses on long tuning cycles, multi-mission systems, and harsh fields.
+- Practical expectation for flagship boards: longer procurement windows and greater cost sensitivity, especially with shipping and add-ons.
+- Value profile (6X, 6C/Mini) focuses on modern stack compatibility with controlled budget and faster build speed.
+- Practical expectation for value boards: verify revision-specific firmware notes for USB/serial behavior before purchase.
+- Entry profile (5X, 4) fits constrained workloads with known legacy compatibility.
+- Practical expectation for entry boards: include extra validation time for modern companion integrations.
+
+### F) Sources for added matrixes
+
+- ArduPilot hardware selection context: `https://ardupilot.org/dev/docs/choosing-an-autopilot.html`
+- ArduPilot common-supported autopilots: `https://ardupilot.org/plane/docs/common-autopilots.html`
+- ArduPilot firmware install path: `https://ardupilot.org/planner/docs/common-loading-firmware-onto-pixhawk.html`
+- ArduPilot docs index and target concepts: `https://ardupilot.org/dev/docs/` (latest branch context)
+- PX4 Pixhawk family pages: `https://docs.px4.io/main/en/flight_controller/pixhawk_series`, `https://docs.px4.io/v1.14/en/flight_controller/autopilot_pixhawk_standard`
+- CubePilot install flow: `https://docs.cubepilot.org/user-guides/autopilot/the-cube/setup/firmware/installing-ardupilot`
+- Cube Orange in PX4 docs: `https://docs.px4.io/v1.13/en/flight_controller/cubepilot_cube_orange`
+- CUAV V5+ compatibility and specs: `https://doc.cuav.net/controller/v5-autopilot/en/v5%2B.html`, `https://store.cuav.net/shop/v5-controller/`
+- Holybro Pixhawk 6X/6C/6X Pro pages: `https://docs.holybro.com/autopilot/pixhawk-6x/technical-specification`, `https://docs.holybro.com/autopilot/pixhawk-6x/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6x-pro/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6c/supported-firmware`, `https://docs.holybro.com/autopilot/pixhawk-6c/technical-specification`, `https://holybro.com/collections/flight-controllers`
+- Additional processor-detail references:
+  - Holybro Pixhawk 6X store card: `https://holybro.com/products/pixhawk-6x`
+  - Holybro Pixhawk 6C store card: `https://holybro.com/products/pixhawk-6c`
+  - Holybro Pixhawk 5X store card: `https://holybro.com/products/pixhawk-5x`
+  - Holybro Pixhawk 4 store card: `https://holybro.com/products/pixhawk-4`
+  - Cube Orange+ processor details in PX4 guide: `https://docs.px4.io/v1.15/en/flight_controller/cubepilot_cube_orangeplus.html`
+
+### G) What to add next (optional, non-breaking)
+
+- Add board entries one-by-one as you request them (`FMUv6 mini`, `Durandal`, `Raspberry Pi HAT-compatible stacks`) with the same 3-table pattern.
+- Add a hardware comparables row for each new board.
+- Add a support + version row for each new board.
+- Add a mission-fit row for each new board.
+- Keep the same rank orientation (best on top for each new table).
