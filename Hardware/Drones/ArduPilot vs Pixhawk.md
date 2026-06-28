@@ -23,7 +23,7 @@ For board-level selection, use: [[ArduPilot Boards]] and [[PX4 Boards]].
 | Protocol | Cross-stack message transport | `[[MAVLink]]` |
 | Hardware | Flight-controller design, power, pin mapping, connectors | `[[Pixhawk]]` (or non-Pixhawk FC) |
 | Autopilot software | Vehicle control, mission behaviors, fail-safes, modes | `[[ArduPilot]]`, `[[PX4]]`, other stacks |
-| Tooling | Ground stations, logs, flashing, tuning | Mission Planner, `[[QGroundControl]]`, MAVProxy |
+| Tooling | Ground stations, logs, flashing, tuning | `[[ArduPilot Mission Planner]]`, `[[QGroundControl]]`, MAVProxy |
 | Task logic | Companion autonomy, perception stack, higher control | ROS, custom python/C++ services |
 
 ### 2) Canonical confusion
@@ -67,7 +67,7 @@ Sources for vehicle framing:
 
 - Mission planning is treated as a primary workflow in vehicle docs, especially for `AUTO` and mission item operations.
 - The mission planning docs apply across copter/plane/rover workflows and include auto mode flow + mission items/rally concepts.
-- Ground tooling commonly used: `[[Mission Planner]]`, `MAVProxy`, and `[[QGroundControl]]` as shared MAVLink tools.
+- Ground tooling commonly used: `[[ArduPilot Mission Planner]]`, `MAVProxy`, and `[[QGroundControl]]` as shared MAVLink tools.
 - Vehicle command coverage for missions is tied to `MAV_CMD` message support in ArduPilot MAVLink command tables.
 
 ### PX4 approach
@@ -82,7 +82,7 @@ Sources for vehicle framing:
 | Dimension | ArduPilot | PX4 |
 |---|---|---|
 | Mission creation workflow | GCS + mission item commands, mission planning sections in docs | QGC mission builder + mission command tables |
-| Ground tool preference | Mission Planner and MAVProxy are common; QGC also supported | QGC first-class; ROS2 and MAVSDK often used for advanced autonomy |
+| Ground tool preference | [[ArduPilot Mission Planner]] and MAVProxy are common; QGC also supported | QGC first-class; ROS2 and MAVSDK often used for advanced autonomy |
 | Mission execution mode names | Auto modes within vehicle-specific stack | AUTO/mission modes with explicit command acceptance tables |
 | External control path | MAVLink + companion stack, MAVProxy/MAVROS ecosystems | MAVLink, `MAVSDK`, ROS2 offboard, DDS |
 | API ergonomics for offboard | Strong MAVLink ecosystem, less “single official SDK surface” in docs compared with PX4 | Official first-class stack docs around MAVSDK and ROS2 pipelines |
@@ -172,7 +172,7 @@ Sources:
 
 | Stack | Core language | Extensions / scripting | API style | Companion workflow |
 |---|---|---|---|---|
-| ArduPilot | C++ (core), Python tooling | Lua scripting, MAVLink-based scripts | MAVLink commands/messages | MAVProxy/Mission Planner/QGC |
+| ArduPilot | C++ (core), Python tooling | Lua scripting, MAVLink-based scripts | MAVLink commands/messages | MAVProxy/[[ArduPilot Mission Planner]]/[[QGroundControl]] |
 | PX4 | C++ core | uORB module extension, C++ plugins | MAVSDK, MAVLink, ROS2, DDS | ROS2 bridge + MAVSDK + QGC |
 
 ### API code anchor points
@@ -210,7 +210,7 @@ ArduPilot docs position the project around supported controller boards and empha
 |---|---|---|
 | Philosophy | Vendor-flexible stack, board-porting process, HAL-driven porting | Reference hardware lineage with binary-compatibility aims |
 | Hardware openness | Supports many vendor boards, includes board-specific support pages | Open-hardware project with defined schematics and reference designs |
-| Board onboarding | Flash to supported boards, upload paths documented via Mission Planner and bootloader tooling | QGroundControl can flash PX4 firmware to Pixhawk-family boards |
+| Board onboarding | Flash to supported boards, upload paths documented via [[ArduPilot Mission Planner]] and bootloader tooling | QGroundControl can flash PX4 firmware to Pixhawk-family boards |
 
 Sources:
 - `https://ardupilot.org/dev/docs/porting.html`
@@ -368,7 +368,7 @@ References:
 - [[MAVLink]]
 - [[MAVProxy]]
 - [[QGroundControl]]
-- [[Mission Planner]]
+- [[ArduPilot Mission Planner]]
 - [[Rover]]
 - [[SITL]]
 
@@ -508,7 +508,7 @@ This is an additive atlas for board-level selection. It keeps best→worst order
 
 | Rank | Board | Main processor | ArduPilot target / compatibility anchor | PX4 target / compatibility anchor | Source confidence | Typical flashing path | Most important caveat |
 |---|---|---|---|---|---|---|
-| 1 | [[CUAV V5+]] | STM32F765 + STM32F100 | ArduPilot + PX4-capable flow in CUAV/CUAV docs | CUAV docs and PX4 ecosystem map to PX4-compatible mode | ✅ high | Mission Planner for ArduPilot, QGroundControl for PX4 (vendor firmware packages where available) | Price and revision choice are the biggest procurement risks |
+| 1 | [[CUAV V5+]] | STM32F765 + STM32F100 | ArduPilot + PX4-capable flow in CUAV/CUAV docs | CUAV docs and PX4 ecosystem map to PX4-compatible mode | ✅ high | [[ArduPilot Mission Planner]] for ArduPilot, QGroundControl for PX4 (vendor firmware packages where available) | Price and revision choice are the biggest procurement risks |
 | 2 | [[Cube Orange+]] | STM32H757 dual-core | CubePilot installation docs explicitly cover ArduPilot (`Install ArduPilot`) | PX4 ecosystem page covers Cube Orange with connector/footprint compatibility notes | ✅ high | Vendor-specific Cube tooling + ArduPilot installer + QGC flows | Connector compatibility and stack-specific cabling can vary by board generation |
 | 3 | [[Holybro Pixhawk 6X]] | STM32H753 | Listed in standard PX4-supported autopilot pages | Listed in standard PX4-supported PX4 autopilot pages | ✅ high | ArduPilot firmware installer + QGroundControl paths | Revision-specific compatibility checks (USB, sensor, and base board variant) |
 | 4 | [[Holybro Pixhawk 6C]] / [[Holybro Pixhawk 6C Mini]] | STM32H743 | Supported on PX4 target-class pages for FMUv6C family | Supported on PX4 target-class pages for FMUv6C family | ✅ medium-high | Standard FC flashing tools tied to target-specific firmware packages | Some builds can be sensitive to wiring noise and power filtering |

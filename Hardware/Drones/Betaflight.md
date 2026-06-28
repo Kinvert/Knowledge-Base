@@ -152,7 +152,7 @@ Not ideal when:
 - [[ArduPilot Boards]]
 - [[PX4 Boards]]
 - [[Flight Controller]]
-- [[Mission Planner]]
+- [[ArduPilot Mission Planner]]
 - [[QGroundControl]]
 
 ## External resources
