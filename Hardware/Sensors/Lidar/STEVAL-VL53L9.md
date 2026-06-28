@@ -67,6 +67,22 @@ If you want options closer to `STEVAL-VL53L9`, use this quick ladder:
 - [[RPLIDAR C1]] — low-cost 2D rotating ToF alternative when you need sweep-style obstacle mapping.
 - [[Hobbyist Lidar Units]] for quick replacement candidates if your robot can tolerate a different scan model.
 
+### Sensor comparison snapshot
+
+| Candidate | Resolution / map detail | Range | FoV / geometry | Interface |
+|---|---|---|---|---|
+| [VL53L9CX](https://www.st.com/en/imaging-and-photonics-solutions/vl53l9cx.html) | 54 × 42 = 2,268 points (2.3k zones), depth/IR/confidence outputs | **0.05 to 8.8 m** (up to **9 m** max class) | 55° × 42° (**71° diagonal**), 100 Hz | I3C / MIPI CSI |
+| [VL53L8CX](https://www.st.com/resource/en/datasheet/vl53l8cx.pdf) | 8 × 8 = 64 points, optional 4 × 4 mode | up to **4.0 m** | 65° diagonal, 60 Hz | SPI up to 3 MHz, I²C up to 1 MHz |
+| [VL53L7CX](https://www.st.com/resource/en/datasheet/vl53l7cx.pdf) | 8 × 8 = 64 points, optional 4 × 4 mode | up to **3.5 m** | 60° × 60° square (**90° diagonal**) | I²C |
+| [VL53L5CX](https://www.st.com/resource/en/data_brief/vl53l5cx.pdf) | 8 × 8 or 4 × 4 zones | up to **4.0 m** | 65° diagonal | I²C |
+| [VL53L4CD](https://www.st.com/search?query=VL53L4CD) | Single-zone, no depth grid | **1 mm to 1200 mm** | 18° diagonal, low-FOV proximity class | I²C |
+| [VL53L3CX](https://www.st.com/search?query=VL53L3CX) | Single-zone, multitarget depth | up to **3.0 m** (some catalog entries show up to **5 m**) | no fixed FoV map | I²C |
+| [VL6180X](https://www.st.com/search?query=VL6180X) | Single-point + ambient-light sensor (no zone map) | **0 to ~100 mm** typical (longer possible under good targets) | narrow, single-point cone | I²C |
+| [VL53L1X](https://www.st.com/search?query=VL53L1X) | Single-point with ROI/multizone host control options | up to **4.0 m** | 27° typical FoV | I²C |
+| [VL53L0X](https://www.st.com/search?query=VL53L0X) | Single-point | up to **2.0 m** | narrow FoV class | I²C |
+| [[YDLIDAR T-mini Plus]] | 2D rotating scan, ~0.54° angular step | 0.05 to 12 m | 360° sweep | UART, 4000 Hz ranging / 6-12 Hz scan |
+| [[RPLIDAR C1]] | 2D rotating scan | around **12 m** class | 360° sweep | UART |
+
 Choose order:
 1. stay closest in behavior: `VL53L9CX`.
 2. keep multi-zone but simplify integration: `VL53L8CX`/`VL53L7CX`/`VL53L5CX`.
