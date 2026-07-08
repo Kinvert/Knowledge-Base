@@ -1,89 +1,114 @@
-# 🌫️ Diffusion Policy
+# Diffusion Policy
 
-**Diffusion Policy** is an imitation learning approach that uses diffusion models to generate robot action sequences. It has become important in robot manipulation because it handles multimodal demonstrations and produces smooth visuomotor behavior.
-
----
-
-## 📚 Overview
-
-Instead of predicting a single next action with mean squared error, Diffusion Policy learns to denoise action trajectories conditioned on observations. This is useful when a task has multiple valid ways to act, such as grasping an object from different angles or choosing different contact strategies.
+`Diffusion Policy` is an imitation-learning style policy family that generates action trajectories by denoising, instead of directly regressing one-step actions or doing one-step next-token prediction.
 
 ---
 
-## 🧠 Core Concepts
+## Overview
 
-- **Action Sequence Prediction**: Predicts a short horizon of future actions.
-- **Denoising Process**: Learns to convert noise into plausible actions.
-- **Receding Horizon Execution**: Executes only the first part of the generated action chunk.
-- **Multimodal Behavior**: Can represent multiple valid action choices.
-- **Visuomotor Policy**: Conditions on images and robot proprioception.
-- **Demonstration Dataset**: Usually trained from teleoperation or scripted expert data.
+- Paper: `Diffusion Policy` (`arXiv:2303.04137`, 2023).
+- Core idea: model action trajectories as a denoising process conditioned on observations (vision/proprioception), usually in chunks.
+- Why it became popular: strong performance in manipulation where there are many valid action trajectories for the same task.
+- Important fit note: it is not a pure next-token policy by default; it is a generative diffusion decoder wrapped into a policy.
 
 ---
 
-## 📊 Comparison Chart
+## Core mechanism
 
-| Policy Type | Strength | Weakness | Best For | Common Tooling |
-|---|---|---|---|---|
-| Behavior Cloning MLP | Simple and fast | Averages modes | State-based demos | [[robomimic]] |
-| RNN/LSTM policy | Temporal memory | Training complexity | Sequential tasks | PyTorch |
-| [[ACT Action Chunking Transformer]] | Smooth chunks | Dataset dependent | Teleop imitation | [[LeRobot]] |
-| **Diffusion Policy** | Multimodal actions | More compute | Manipulation demos | PyTorch, real robot datasets |
-| Offline RL policy | Can improve rewards | Value errors | Logged RL data | CQL, IQL, AWAC |
-| Online RL policy | Can discover behavior | Exploration cost | Sim tasks | [[SAC]], [[PPO]] |
+1. Collect demonstration trajectories and align observation-action windows.
+2. Add noise progressively to action chunks (forward diffusion).
+3. Train a network to reverse the process conditioned on current observation context.
+4. At inference, sample a denoised action chunk from random noise and execute its first part (receding horizon).
+
+The key difference from tokenized transformers is sampling cost and generation loop structure.
 
 ---
 
-## ✅ Pros
+## Why this sits as a partial-fit for tokenized-next-token planning
 
-- Handles multimodal action distributions better than simple BC.
-- Produces smooth action sequences.
-- Strong fit for manipulation demonstrations.
-- Works with image and proprioceptive observations.
-- Good conceptual bridge between generative models and robot control.
+Use this when:
+- your tasks are multi-modal (many valid grasps, approach strategies),
+- smoothness is more important than ultra-fast one-step token decoding.
 
----
-
-## ❌ Cons
-
-- More expensive than simple behavior cloning.
-- Needs high-quality aligned demonstrations.
-- Deployment latency must be managed.
-- Does not automatically solve safety or recovery.
-- Can overfit to camera setup and dataset conditions.
+Avoid as default if:
+- your stack is strictly next-token and you want a minimal architectural swap,
+- low-latency one-token/short-latency response is non-negotiable.
 
 ---
 
-## 🧰 Robotics Workflow
+## Comparison chart
 
-1. Collect consistent teleoperation demonstrations.
-2. Align camera frames, proprioception, and actions.
-3. Train a behavior cloning baseline.
-4. Train Diffusion Policy on action chunks.
-5. Evaluate with held-out tasks and real rollouts.
-6. Deploy with action smoothing, workspace limits, and watchdogs.
-
----
-
-## 🔗 Related Notes
-
-- [[Imitation Learning]]
-- [[Manipulation RL]]
-- [[LeRobot]]
-- [[robomimic]]
-- [[Robot Data Collection and Teleoperation]]
-- [[Robot Dataset Formats]]
-- [[Offline RL for Robotics]]
+| Method | Objective | Action output style | Inference style | Best scenario | Main cost |
+|---|---|---|---|---|---|
+| **Diffusion Policy** | denoising trajectory generation | action chunks or trajectories | iterative reverse diffusion | contact-rich manipulation with multi-modality | high compute/inference latency |
+| **Decision Transformer** | next-token action prediction | token/action next-step | autoregressive | low-latency token stack baseline | simpler training/inference than diffusion |
+| **Trajectory Transformer** | sequence token rollout | `s,a,r` token trajectories | autoregressive + beam/rollout | planning-style offline sequence control | decode latency from search |
+| **Behavior Transformer / VQ-BeT** | action token generation | quantized action tokens | autoregressive | behavior cloning and mode coverage in demos | codebook + quantization tuning |
+| **ACT / ALOHA** | chunk prediction with overlap replanning | chunk tokens/actions | chunk decode + execute prefix | continuous real-robot manipulation where jitter is problematic | runtime scheduling + chunk tuning |
+| **FAST** | action-tokenizer improvement | tokenized frequency coefficients | token prediction with transformed code space | high-frequency smooth control tasks | tokenizer/codec overhead |
+| **TD-MPC / Dreamer** | model-based planning or world-model imagination | latent action plans | online planning with value/world model | hard long-horizon tasks | much larger system complexity |
 
 ---
 
-## 🌐 External Resources
+## Pros
 
-- Diffusion Policy Paper: https://arxiv.org/abs/2303.04137
-- Project Page: https://diffusion-policy.cs.columbia.edu/
+- Handles multi-modal action distributions naturally.
+- Produces smooth action sequences in vision-conditioned tasks.
+- Often strong transfer in household/manipulation settings with rich demos.
+- Can express richer futures than single-step BC.
+
+## Cons
+
+- Slow inference due to multiple denoise steps.
+- Higher implementation complexity than one-step token methods.
+- Harder to fit into strict “predict one token” latency budgets.
+- Needs careful rollout scheduling and safety filtering for real robots.
 
 ---
 
-## 📝 Summary
+## Practical implementation notes
 
-Diffusion Policy is a modern robot imitation method for generating smooth, multimodal action sequences. It is especially relevant for manipulation tasks where demonstrations contain many valid strategies.
+- Start with a chunk size that your control loop can tolerate (`H` too long increases jitter sensitivity).
+- Tune denoising steps aggressively for hardware deployment; early-stop sampling is often necessary.
+- Keep observation normalization locked (especially image preprocessing and action scales).
+- Combine with hard filters:
+  - action clipping and collision checks,
+  - rate limits and watchdog stop,
+  - recovery policy for failed denoise/sample events.
+
+Minimal workflow:
+
+```text
+collect demos D = {(obs_t, act_t:t+H)}
+train denoiser with conditional observation embeddings
+at rollout:
+  sample latent/noisy token or action chunk
+  run reverse denoising steps
+  execute first action(s) of decoded chunk
+  reobserve and repeat
+```
+
+---
+
+## External references
+
+- Paper: https://arxiv.org/abs/2303.04137
+- Project page: https://diffusion-policy.cs.columbia.edu/
+
+---
+
+## Related notes
+
+- [[ACT Action Chunking Transformer]]
+- [[Behavior Transformer]]
+- [[Trajectory Transformer]]
+- [[Decision Transformer]]
+- [[FAST]]
+- [[TD-MPC]]
+- [[Dreamer]]
+
+---
+
+## Summary
+
+`Diffusion Policy` is a strong option when multimodality and smooth visuomotor behavior matter more than minimal-token architecture. It is usually a partial-fit for the “next-token-only” roadmap because inference is iterative and compute-heavy compared with transformer token decoders.

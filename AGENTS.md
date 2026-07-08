@@ -193,6 +193,12 @@ Notes use Obsidian-flavored markdown with:
 - `[[WikiLinks]]` for internal connections to related concepts
 - Typical sections: Overview, Core Concepts, Use Cases, Code Snippets (Python/C++/etc), Pros/Cons, Comparison Tables, Related Concepts, External Resources
 
+### Working instruction for this repo
+
+- **Default is NO YAML frontmatter in notes.**
+- Add `title`, `aliases`, or `tags` blocks only when the user explicitly asks for metadata/frontmatter.
+- Keep the note body as plain headings and content unless a user request says otherwise.
+
 ## Writing Notes
 
 **Purpose:** Notes show how topics inter-relate via Obsidian Graph View. Not in-depth teaching - concise summaries that reveal connections.
@@ -239,6 +245,11 @@ Aim for 5+ comparable items when possible.
 - No trailing whitespace after bullet points
 - Inline code for commands: `roslaunch pkg node.launch`
 - Code blocks are fine when helpful
+
+### Planned Write Queue
+
+- New notes to add soon are tracked in [Notes to Write Soon.md](/home/claude/Documents/Knowledge-Base/Notes%20to%20Write%20Soon.md).
+- Check this file first before planning new topic coverage.
 
 ### Tool Note Thoroughness
 When writing about a command-line tool, cover more than the obvious happy path. Check official docs, release notes, `--help` output when available, and common upstream issues/discussions for important flags, lifecycle behavior, and gotchas.
