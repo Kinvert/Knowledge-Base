@@ -111,6 +111,8 @@ This is an Obsidian knowledge base vault containing 842+ interconnected markdown
 │   │   ├── Architectures/
 │   │   ├── Datasets/
 │   │   ├── Local/
+│   │   ├── Models/
+│   │   │   └── Vision-Language/
 │   │   └── Reinforcement Learning/
 │   ├── Compilers/
 │   ├── Compute APIs/
