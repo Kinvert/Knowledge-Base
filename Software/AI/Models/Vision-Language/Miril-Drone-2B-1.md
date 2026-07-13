@@ -1,9 +1,3 @@
----
-title: "Miril-Drone-2B-1"
-aliases: [Miril Drone 2B1, Miril-Drone]
-tags: [computer-vision, vision-language-model, aerial, drones, edge-ai, miril]
----
-
 # Miril-Drone-2B-1
 
 `Miril-Drone-2B-1` is an open-weight aerial vision-language model (VLM) published by Miril.ai on Hugging Face.
