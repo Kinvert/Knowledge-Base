@@ -52,17 +52,17 @@ This document summarizes the full Jetson lineup, including the **Nano**, **TX**,
 
 ## 🧩 Jetson Family Comparison
 
-| Module | RAM | GPU | CPU | AI Perf (TOPS) | JetPack Support | Form Factor |
-|--------|-----|-----|-----|----------------|------------------|-------------|
-| Jetson Nano 4GB | 4GB LPDDR4 | 128-core Maxwell | 4x Cortex-A57 | 0.5 | 4.x | Dev Kit / Module |
-| Jetson Nano 2GB | 2GB LPDDR4 | 128-core Maxwell | 4x Cortex-A57 | 0.5 | 4.x | Dev Kit |
-| Jetson Orin Nano 4GB | 4GB LPDDR5 | 512-core Ampere + 16 TC | 4x A78AE | 20 | 5.x / 6.x | Module / Dev Kit |
-| Jetson Orin Nano 8GB | 8GB LPDDR5 | 1024-core Ampere + 32 TC | 6x A78AE | 40 | 5.x / 6.x | Module / Dev Kit |
-| Jetson TX2 | 8GB LPDDR4 | 256-core Pascal | Dual Denver2 + 4x A57 | 1.3 | 4.x | SO-DIMM |
-| Jetson Xavier NX | 8GB / 16GB | 384-core Volta + 48 TC | 6x Carmel | 21 | 4.x / 5.x | SODIMM |
-| Jetson AGX Xavier | 16GB / 32GB | 512-core Volta + 64 TC | 8x Carmel | 32 | 4.x / 5.x | BGA |
-| Jetson Orin NX | 8GB / 16GB LPDDR5 | 1024-core Ampere + 32 TC | 6x A78AE | 70 | 5.x / 6.x | SODIMM |
-| Jetson AGX Orin | 32–64GB | 2048-core Ampere + 64 TC | 12x A78AE | 200–275 | 5.x / 6.x | BGA |
+| Module               | RAM               | GPU                      | CPU                   | AI Perf (TOPS) | JetPack Support | Form Factor      |
+| -------------------- | ----------------- | ------------------------ | --------------------- | -------------- | --------------- | ---------------- |
+| Jetson Nano 4GB      | 4GB LPDDR4        | 128-core Maxwell         | 4x Cortex-A57         | 0.5            | 4.x             | Dev Kit / Module |
+| Jetson Nano 2GB      | 2GB LPDDR4        | 128-core Maxwell         | 4x Cortex-A57         | 0.5            | 4.x             | Dev Kit |
+| Jetson Orin Nano 4GB | 4GB LPDDR5        | 512-core Ampere + 16 TC  | 4x A78AE              | 20             | 5.x / 6.x       | Module / Dev Kit |
+| Jetson Orin Nano 8GB | 8GB LPDDR5        | 1024-core Ampere + 32 TC | 6x A78AE              | 40             | 5.x / 6.x       | Module / Dev Kit |
+| Jetson TX2           | 8GB LPDDR4        | 256-core Pascal          | Dual Denver2 + 4x A57 | 1.3            | 4.x             | SO-DIMM |
+| Jetson Xavier NX     | 8GB / 16GB        | 384-core Volta + 48 TC   | 6x Carmel             | 21             | 4.x / 5.x       | SODIMM           |
+| Jetson AGX Xavier    | 16GB / 32GB       | 512-core Volta + 64 TC   | 8x Carmel             | 32             | 4.x / 5.x       | BGA              |
+| Jetson Orin NX       | 8GB / 16GB LPDDR5 | 1024-core Ampere + 32 TC | 6x A78AE              | 70             | 5.x / 6.x       | SODIMM           |
+| Jetson AGX Orin      | 32–64GB           | 2048-core Ampere + 64 TC | 12x A78AE             | 200–275        | 5.x / 6.x       | BGA              |
 
 ---
 

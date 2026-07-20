@@ -6,9 +6,13 @@ This note focuses on GTA V as a high-fidelity simulation base for research/exper
 - FPV drone simulation pipelines with image/action traces
 - physics data collection pipelines that can feed [[OpenAI Gym]]-style ML/RL workflows
 
+If you are building plugins, this also relies heavily on [[ASI Files]] and the ScriptHook/dinput8 stack.
+
 All claims below are linked to external sources.
 
 If you are running the same patterns in other simulators first, these notes are typically paired with this one: [[AirSim]], [[CARLA]], [[Isaac Sim]], [[CoppeliaSim]], [[Gazebo Garden]], and [[OpenAI Gym]]/[[Gymnasium]].
+
+For a curated list of candidate mods, RC/aerial/UGV/farming projects, and experiment ideas, see [[GTA V Simulation Mod Index]].
 
 ## 1) What to use for GTA V simulation stacks
 
