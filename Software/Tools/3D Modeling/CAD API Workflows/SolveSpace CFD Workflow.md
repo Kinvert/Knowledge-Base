@@ -1,4 +1,4 @@
-# SolveSpace + Agentic Sweep Workflow
+# SolveSpace CFD Workflow
 
 Use SolveSpace when model complexity is moderate and you want CLI-driven regeneration/export.
 

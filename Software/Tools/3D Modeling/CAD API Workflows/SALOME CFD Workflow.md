@@ -1,4 +1,4 @@
-# SALOME + Agentic Geometry-to-Mesh Workflow
+# SALOME CFD Workflow
 
 Use SALOME when you want CAD generation and meshing in the same scripted toolset.
 

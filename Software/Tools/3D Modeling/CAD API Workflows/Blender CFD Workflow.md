@@ -1,4 +1,4 @@
-# Blender (mesh-first) + CFD Parameter Loop
+# Blender CFD Workflow
 
 Use Blender when shape generation has a procedural mesh need and not strict mechanical feature-history requirements.
 

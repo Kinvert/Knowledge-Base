@@ -1,4 +1,4 @@
-# CadQuery + cq-cli CFD Sweep Workflow
+# CadQuery CFD Workflow
 
 This is the most automation-friendly path when geometry definition can be fully expressed in Python code.
 

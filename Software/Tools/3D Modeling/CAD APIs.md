@@ -384,16 +384,16 @@ Then add **FreeCAD** as a visual QA stage:
 
 ## Per-tool workflow notes in this vault
 
-- [[CAD API Workflows/FreeCAD]]
-- [[CAD API Workflows/CadQuery]]
-- [[CAD API Workflows/OpenSCAD]]
-- [[CAD API Workflows/SALOME]]
-- [[CAD API Workflows/OpenVSP]]
-- [[CAD API Workflows/SolveSpace]]
-- [[CAD API Workflows/BRL-CAD]]
-- [[CAD API Workflows/Gmsh]]
-- [[CAD API Workflows/Blender]]
-- [[CAD API Workflows/Onshape]]
+- [[FreeCAD CFD Workflow]]
+- [[CadQuery CFD Workflow]]
+- [[OpenSCAD CFD Workflow]]
+- [[SALOME CFD Workflow]]
+- [[OpenVSP CFD Workflow]]
+- [[SolveSpace CFD Workflow]]
+- [[BRL-CAD CFD Workflow]]
+- [[Gmsh CFD Workflow]]
+- [[Blender CFD Workflow]]
+- [[Onshape CFD Workflow]]
 
 ---
 
@@ -421,8 +421,8 @@ The numbers and names below are intended for quick triage, not legal procurement
 - [[snappyHexMesh]]
 - [[OpenFOAM]]
 - [[Mesh Generation]]
-- [[CAD API Workflows/FreeCAD]]
-- [[CAD API Workflows/CadQuery]]
-- [[CAD API Workflows/OpenSCAD]]
-- [[CAD API Workflows/SALOME]]
-- [[CAD API Workflows/Gmsh]]
+- [[FreeCAD CFD Workflow]]
+- [[CadQuery CFD Workflow]]
+- [[OpenSCAD CFD Workflow]]
+- [[SALOME CFD Workflow]]
+- [[Gmsh CFD Workflow]]

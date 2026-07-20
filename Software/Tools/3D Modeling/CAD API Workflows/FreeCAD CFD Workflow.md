@@ -1,4 +1,4 @@
-# FreeCAD + Agentic CFD Sweep Workflow
+# FreeCAD CFD Workflow
 
 This workflow assumes a human creates a reusable FreeCAD template and parameter names are stable (`diffuser_angle_deg`, `outlet_radius_m`, etc.).
 

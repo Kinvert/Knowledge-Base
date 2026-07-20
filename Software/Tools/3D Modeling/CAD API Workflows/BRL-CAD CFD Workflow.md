@@ -1,4 +1,4 @@
-# BRL-CAD + Batch CSG Loop Workflow
+# BRL-CAD CFD Workflow
 
 BRL-CAD can be useful in strict batch contexts when geometry is maintained as CSG and command transcripts.
 

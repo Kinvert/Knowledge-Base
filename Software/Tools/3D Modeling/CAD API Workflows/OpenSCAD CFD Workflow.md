@@ -1,4 +1,4 @@
-# OpenSCAD CFD Sweep Workflow
+# OpenSCAD CFD Workflow
 
 OpenSCAD is useful when the geometry can be expressed as a compact parametric script.
 

@@ -1,4 +1,4 @@
-# OpenVSP + Agentic Aero Shape Sweep Workflow
+# OpenVSP CFD Workflow
 
 OpenVSP is niche, but strong for aerospace-like parametric families.
 

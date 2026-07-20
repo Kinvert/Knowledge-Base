@@ -1,4 +1,4 @@
-# Gmsh + JSON-Driven Geometry/Mesh Loop
+# Gmsh CFD Workflow
 
 Gmsh is ideal as a scripted geometry+meshing stage after CAD generation, and in some cases can be the only geometry generator for sweeps.
 
