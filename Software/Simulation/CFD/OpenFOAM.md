@@ -35,7 +35,95 @@ The OpenFOAM command-line docs also describe the toolchain as primarily CLI-driv
 
 ---
 
-## What OpenFOAM can do well
+## What it can and cannot do in practice
+
+OpenFOAM is strongest when you treat it as a pipeline you own end-to-end. A realistic decision rule is:
+
+- If you can define geometry/method assumptions as data and checkpoints, OpenFOAM is excellent.
+- If you need a GUI wizard that prevents bad setup decisions up-front, you often spend more time with OpenFOAM.
+
+### OpenFOAM engine profile
+
+- Numerical method: finite-volume discretization across control volumes.
+- Primary design pattern: dictionary-based configuration (`fvSchemes`, `fvSolution`, `controlDict`, dictionaries in `system/` and `constant/`).
+- Primary pressure-velocity couplers:
+  - `SIMPLE` for steady-state classes,
+  - `PISO` for transient pressure-based classes,
+  - `PIMPLE` as hybrid for larger implicit transient loops.
+- Standard scalar/vector discretization controls, runtime settings, and linear solver choices are controlled from dictionaries; this is where reproducibility and automation depth come from.
+- Dynamic mesh and mesh-motion support exists through dedicated utilities/solvers, but setup quality is heavily model- and case-specific and much less "black-box-safe".
+
+### What physical models are represented in the solver catalog
+
+Use the official solver index pages as the truth source for exact solver names, then map each to your physics assumptions:
+
+1. Incompressible flows:
+   - steady/transient incompressible RANS and laminar options (for example `simpleFoam`, `pimpleFoam`, `pisoFoam`).
+2. Compressible flows:
+   - compressible solvers with explicit thermophysical controls (`rhoPimpleFoam`, `rhoSimpleFoam`, `sonicFoam` families).
+3. Turbulence models:
+   - RANS and selected LES classes exposed through solver/model dictionaries in turbulence model lists and solver examples.
+4. Multiphase / VOF / free-surface:
+   - dedicated solvers such as `interFoam` and related variants.
+5. Combustion / reacting flow:
+   - dedicated combustion workflows like `fireFoam`, `reactingFoam` with chemistry and temperature-coupled source terms.
+6. Heat transfer:
+   - conduction-convection-energy transfer families, conjugate setups with region-based case structures in specialized solvers.
+7. Particles / multiphase coupling:
+   - Lagrangian and particle-tracking features available in the modular solver/tool ecosystem.
+8. Mesh-to-solution utilities:
+   - `checkMesh`, `renumberMesh`, conversion utilities, and field tools that are essential for closed-loop automation.
+
+### What that means for mesh types
+
+If you keep this practical:
+
+- `blockMesh` is best for structured, block-structured regions where you can control grading and grading transitions explicitly.
+- `snappyHexMesh` is strongest on clean triangulated surface geometry, with staged `castellated` → `snapping` → `addLayers` behavior.
+- External mesh conversion is necessary for CAD-first flows that prefer meshed STL/other formats before fluid preprocessing.
+
+### Mesh format/geometry acceptance vs failure modes
+
+OpenFOAM accepts triangulated surface inputs widely, but topology hygiene is the bottleneck:
+
+- Tolerates high-volume automation, but not garbage-in geometry.
+- Fragile corners are usually:
+  - non-manifold edges,
+  - zero-area triangles,
+  - inconsistent patch naming,
+  - disconnected shells/very thin sliver geometry.
+- For robust sweeps, add geometry validation gates before `snappyHexMesh`.
+
+### What it can do in a campaign loop that many teams miss
+
+- Deterministic reruns from git-committed template cases.
+- Parameterized meshing + solve + post chains with scriptable checkpoints.
+- Easy comparison of pre/post states because case directories are plain assets:
+  - same geometry generator but different dict versions.
+- Fine-grain KPI extraction with `postProcess -func` and functionObject output.
+
+### What it cannot do as easily as people expect
+
+- Turnkey CAD feature-tree editing in one step (OpenFOAM is not a CAD system).
+- Guaranteed mesh quality from complex trim surfaces without iterative cleanup.
+- Out-of-the-box vendor-level workflow support for every special physics branch.
+- GUI-level safeguards around physics model compatibility; you must enforce validation yourself.
+
+### Solver depth by user intent
+
+If your loop is mostly:
+- optimization over a few geometric variables (diffuser angle, inlet profile),
+- repeatable templates,
+- and scripted KPI gates,
+
+OpenFOAM is in its comfort zone.
+
+If your loop is:
+- design review where you expect GUI guidance for every boundary/model combination,
+- strict one-click audit trails across multidisciplinary teams without pipeline ownership,
+- or heavily managed enterprise support requirements,
+
+a commercial suite may move you faster initially, though with higher cost and fewer direct automation freedoms.
 
 ### Meshing
 
