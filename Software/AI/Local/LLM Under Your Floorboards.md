@@ -8,6 +8,55 @@ For detailed hardware benchmarks with tokens/second performance data across all 
 
 ---
 
+## 🆕 September 2026 Model Update
+
+**Checked 2026-09-15.** Hardware targets below assume RTX 5090 **32GB** and RTX PRO 6000 **Blackwell 96GB**, not the older 48GB A6000/6000 Ada. Memory fit is estimated from published weights; these configurations were not benchmarked locally.
+
+### Current Open-Weight Shortlist
+
+| Model | Total / active parameters | Local hardware target | Why consider it |
+|-------|---------------------------|-----------------------|-----------------|
+| **Qwen3.8-27B** | ~27B dense | 5090, Q4–Q6 | Updated coding/vision candidate; ggml-org Q4_K_M weights are ~19GB |
+| **Qwen3.6-35B-A3B** | 35B / 3B | 5090, Q4 | Sparse alternative to compare with the existing [[Qwen3.6-27B Local]] baseline |
+| **Qwen3-Coder-Next** | 80B / 3B | 1× PRO 6000, Q4–Q6 | Text-only coding specialist |
+| **gpt-oss-120b** | ~117B / 5.1B | 1× PRO 6000, native MXFP4 | Reasoning/tool baseline; publisher targets one 80GB GPU |
+| **Qwen3.8-Flash-Next** | 125B / 6B, plus 51B n-gram embeddings and 4B MTP | 2× PRO 6000, 4-bit | Larger agent/vision candidate; Unsloth Q4_K_XL is ~111GB |
+| **GLM-5.3-Flash** | **320B / 18B** | **2–4× PRO 6000**, depending on quantization | MIT-licensed multimodal coding/agent model; up to 1M context |
+| **MiniMax-M3** | ~428B / 23B | 3–4× PRO 6000, suitable Q4 | Multimodal alternative; validate sparse-attention runtime support |
+
+Sources: [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B), [27B GGUF files](https://huggingface.co/ggml-org/Qwen3.8-27B-GGUF/tree/main), [Qwen3.6-35B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B), [Coder-Next](https://huggingface.co/Qwen/Qwen3-Coder-Next), [gpt-oss](https://huggingface.co/openai/gpt-oss-120b), [Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next), [Flash-Next quants](https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF), [GLM](https://huggingface.co/zai-org/GLM-5.3-Flash), [MiniMax](https://huggingface.co/MiniMaxAI/MiniMax-M3).
+
+### GLM-5.3-Flash: What Fits?
+
+| Hardware | GLM target | Practical assessment |
+|----------|------------|----------------------|
+| 5090, 32GB | RAM offload required | Does not fit fully on the GPU |
+| 1× PRO, 96GB | Smallest IQ1 weights ~93GB | Borderline experiment with little runtime headroom; higher precision needs offload |
+| 2× PRO, 192GB | **IQ4_XS ~156.8GB** | Useful capacity target; Q4_K_XL is much tighter |
+| 3× PRO, 288GB | **Q4_K_XL ~199.7GB / Q5 ~240.3GB** | More precision and headroom; engine must support the three-card split |
+| 4× PRO, 384GB | **Q6 ~291.8GB**; potentially FP8 | Higher precision or more context; exact runtime allocation still matters |
+
+Sizes are decimal GB of **weights**, excluding context cache and runtime buffers. MoE active parameters reduce computation, not storage of the full model. Start with one sequence and 8K–32K context rather than assuming the advertised 1M window fits. [Published quant sizes and deployment guide](https://unsloth.ai/docs/models/glm-5.3-flash).
+
+**Runtime caveat:** [vLLM issue #53963](https://github.com/vllm-project/vllm/issues/53963) was open when checked, reporting GLM attention-kernel failures on four PRO 6000 Blackwell cards after weights loaded successfully. Unsloth documents a separate llama.cpp/GGUF route. NVIDIA's NVFP4 evaluation used GB200, which does not establish workstation SM120 compatibility. [NVIDIA checkpoint](https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4).
+
+### GLM vs Sol and Astra
+
+Independent Artificial Analysis snapshot; higher is better. These are hosted-model results, **not local quantized-model measurements**.
+
+| Evaluation | GLM-5.3-Flash | GPT-5.6 Sol max | GPT-6 Astra max |
+|------------|--------------|----------------|-----------------|
+| Intelligence Index v4.3, rounded | 42 | 47 | 53 |
+| Terminal-Bench 4.0 | 33% | 40% | 59% |
+| SciCode | 52% | 57% | 56% |
+| AutomationBench-AA | 60% | 60% | 68% |
+
+GLM is competitive on some agent workflows; Sol and Astra lead the broader index. The comparison uses **Astra max**, so it does not establish the exact gap to the usual **Astra high** setting or equivalence with **Sol ultra**. [GLM/Sol measurements](https://artificialanalysis.ai/models/comparisons/glm-5-3-flash-vs-gpt-5-6-sol), [GLM/Astra measurements](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-glm-5-3-flash).
+
+**Future outlook:** four 96GB cards plausibly could run a future open-weight model comparable to today's Astra high on recurring coding tasks, but that is a forecast with no dependable timeline. Judge replacements by completed tasks, corrections needed, and elapsed time. OpenAI reports better token efficiency for Astra in several evaluations, consistent with the observation that it can use fewer tokens; no matched Astra-high/Sol-ultra result was established here. [Official Astra guidance](https://developers.openai.com/api/docs/guides/latest-model).
+
+---
+
 ## 🎯 Why Run Local?
 
 **Privacy:** Cloud APIs log everything. Your queries, your data, your patterns. Local inference leaves no trace.

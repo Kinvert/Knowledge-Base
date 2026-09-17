@@ -179,8 +179,8 @@ except ValidationError as err:
 
 ## Related notes
 
-- [[Qwen3.6-35B-A3B]]
-- [[Qwen3.6-27B]] *(this note)*
+- [[Qwen3.6-35B-A3B Vision]]
+- [[Qwen3.6-27B Vision]] *(this note)*
 - [[vLLM]]
 - [[SGLang]]
 - [[Local LLMs]]

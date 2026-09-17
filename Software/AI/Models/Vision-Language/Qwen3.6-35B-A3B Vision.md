@@ -157,7 +157,7 @@ Use 27B if:
 
 ## Related notes
 
-- [[Qwen3.6-27B]]
+- [[Qwen3.6-27B Vision]]
 - [[Qwen-Agent]]
 - [[Qwen Code]]
 - [[vLLM]]

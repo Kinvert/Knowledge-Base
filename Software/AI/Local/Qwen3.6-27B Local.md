@@ -158,7 +158,7 @@ Then wire your harness to `Qwen/Qwen3.6-27B`.
 
 ## Related notes
 
-- [[Qwen3.6-35B-A3B]]
+- [[Qwen3.6-35B-A3B Local]]
 - [[LLM Inference Engines]]
 
 ## External references

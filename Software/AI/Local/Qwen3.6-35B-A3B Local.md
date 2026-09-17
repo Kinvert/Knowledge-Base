@@ -154,7 +154,7 @@ Use strict JSON action contracts; if your wrapper does not validate, MoE outputs
 
 ## Related notes
 
-- [[Qwen3.6-27B]]
+- [[Qwen3.6-27B Local]]
 - [[LLM Inference Engines]]
 
 ## External references
