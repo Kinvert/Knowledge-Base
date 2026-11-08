@@ -76,6 +76,7 @@ IMUs typically combine multiple sensor types—accelerometers, gyroscopes, and s
 - [[Gyroscopes]]
 - [[Accelerometers]]
 - [[Magnetometers]]
+- [[Vector IMU Telemetry]] — head/body frames, internal history and timestamp limitations
 
 ---
 

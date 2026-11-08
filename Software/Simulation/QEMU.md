@@ -44,7 +44,7 @@ This makes it an invaluable tool for **cross-platform testing**, **firmware debu
   - `qemu-user` for user-mode emulation.  
 - **Integration Tools**:
   - Works with [[GDB]] for remote debugging (`-s -S` options).  
-  - Integrates with [[Buildroot]], [[Yocto]], and [[Zephyr RTOS]] for virtual embedded testing.  
+  - Integrates with [[Buildroot]], [[Yocto Project]], and [[Zephyr RTOS]] for virtual embedded testing.
   - Used in CI environments for cross-architecture validation.  
 - **Peripheral Extensions**:
   - Add or simulate UART, SPI, I²C, SD cards, and GPIO via device tree or QEMU command line.  

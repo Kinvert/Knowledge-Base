@@ -150,3 +150,4 @@ This table is not a hardware benchmark, it is a **deployment expectation model**
 - [[Drive-Train Modeling for Balancing Robots]]
 - [[Robot Policy Deployment]]
 - [[PufferLib]]
+- [[Vector IMU Telemetry]] — processing timestamps, missing samples and bounded diagnostic export

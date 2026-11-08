@@ -119,7 +119,7 @@ File transfer protocols operate at various layers of the OSI model, typically re
 
 ---
 
-### [[RSYNC]]
+### [[rsync]]
 - **Purpose**: File synchronization and transfer protocol.
 - **Key Features**:
   - Efficiently transfers only the differences between files.

@@ -76,6 +76,7 @@ A policy that works in simulation is not deployed until it runs at the correct f
 - [[ONNX]]
 - [[TensorRT]]
 - [[Actuator Modeling for Sim2Real]]
+- [[Vector Firmware Development]] — application deployment, runtime-only trials and rollback boundaries
 
 ---
 

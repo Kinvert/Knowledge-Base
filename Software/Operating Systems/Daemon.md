@@ -84,7 +84,7 @@ Examples: Ray workers, Airflow workers, Kafka consumers
 
 Use these to create, supervise, and manage daemons:
 
-### **systemd**
+### **[[systemd]]**
 Modern Linux standard. Units, timers, sockets, logging, cgroups.
 
 ### **Upstart / SysVinit**

@@ -9,3 +9,4 @@
 - [[Power Supplies]]
 - [[SBCs]] Single Board Computers
 - [[Sensors]]
+- [[Anki Vector]] — tracked robot, SDK, local backend and firmware ecosystem

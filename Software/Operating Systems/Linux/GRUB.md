@@ -89,7 +89,7 @@ These can be temporarily added by pressing `e` on the GRUB menu or permanently a
 - [[Linux Kernel]]  
 - [[UEFI]]  
 - [[BIOS]]  
-- [[Systemd]]  
+- [[systemd]]
 
 ---
 

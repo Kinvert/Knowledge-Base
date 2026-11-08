@@ -111,7 +111,7 @@ Operating Systems (OS) are the core software that manage hardware resources and 
 
 - [[Software]]
 - [[Kernel]] (Linux, Windows, macOS)
-- [[Systemd]] (Init system for Linux)
+- [[systemd]] (Init system for Linux)
 - [[Containers]] (Docker, LXD, Podman)
 - [[GPU Computing]] (CUDA, OpenCL, Metal)
 - [[File Systems]] (ext4, XFS, Btrfs, NTFS, APFS)
