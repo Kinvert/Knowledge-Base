@@ -16,7 +16,8 @@
 
 | Algorithm        | Type                  | Shape of Clusters | Strengths                             | Weaknesses                          |
 |------------------|-----------------------|------------------|---------------------------------------|--------------------------------------|
-| [[K-Means]]       | Centroid-based         | Spherical         | Simple, scalable                     | Struggles with non-spherical clusters |
+| [[KMeans]]        | Centroid-based         | Spherical         | Simple, scalable                     | Struggles with non-spherical clusters |
+| [[e-means]]       | EMA mini-batch centroid optimization | Same nearest-centroid geometry as k-means | Faster convergence reported on large embedding sets | Still requires k; empirical defaults need workload validation |
 | DBSCAN           | Density-based          | Arbitrary         | Finds arbitrarily shaped clusters     | Sensitive to parameters, struggles with varying densities |
 | Hierarchical     | Tree-based (agglomerative or divisive) | Arbitrary         | Dendrogram provides hierarchy insight | Can be slow on large datasets       |
 | Mean Shift       | Density-based          | Arbitrary         | No need to specify # clusters         | Computationally intensive           |

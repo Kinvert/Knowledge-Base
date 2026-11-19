@@ -46,6 +46,7 @@ CPUs come in various architectures and core configurations, with modern multi-co
 | Intel Core           | 4–24 / 8–32      | Desktop & gaming                     | Core i9-14900K             |
 | Intel Xeon           | 8–64+ / 16–128+  | Servers, enterprise compute          | Xeon Scalable 8460Y        |
 | ARM Cortex-A/R/M     | 1–8              | Embedded systems, SBCs               | Cortex-A72 (Raspberry Pi)  |
+| NVIDIA Olympus      | 88 / 176         | Data-center agents, RL and GPU hosts | [[NVIDIA Vera]]           |
 
 ---
 

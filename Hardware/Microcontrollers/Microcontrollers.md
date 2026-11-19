@@ -3,3 +3,4 @@
 [[ESP32]]
 [[Arduino]]
 [[ESP8266]]
+[[Luckfox]]

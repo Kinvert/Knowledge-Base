@@ -7,23 +7,15 @@ Markdown repository itself.
 
 ## Setup
 
-The environment mirrors the known-good `/home/claude/sim2real` Lance setup. To
-avoid re-downloading most of the large CUDA stack on this machine, build from
-that local uv cache when it is present:
+Run these commands from the vault root. By default they keep the `uv` cache in
+the vault. To reuse packages from another environment, set `UV_CACHE_DIR` to
+its cache directory first.
 
 ```bash
-UV_CACHE_DIR=/home/claude/sim2real/.uv-cache uv venv .lance --python 3.12
-UV_CACHE_DIR=/home/claude/sim2real/.uv-cache uv pip install --python .lance/bin/python -r tools/lance-search/requirements-gpu-cu128.txt
-UV_CACHE_DIR=/home/claude/sim2real/.uv-cache uv pip install --python .lance/bin/python --no-deps -e tools/lance-search
-```
-
-For a fully independent rebuild, use this vault's `.uv-cache` instead and drop
-`--offline`; the first install will download the same packages:
-
-```bash
-UV_CACHE_DIR=/home/claude/Documents/Knowledge-Base/.uv-cache uv venv .lance --python 3.12
-UV_CACHE_DIR=/home/claude/Documents/Knowledge-Base/.uv-cache uv pip install --python .lance/bin/python -r tools/lance-search/requirements-gpu-cu128.txt
-UV_CACHE_DIR=/home/claude/Documents/Knowledge-Base/.uv-cache uv pip install --python .lance/bin/python --no-deps -e tools/lance-search
+export UV_CACHE_DIR="${UV_CACHE_DIR:-$PWD/.uv-cache}"
+uv venv .lance --python 3.12
+uv pip install --python .lance/bin/python -r tools/lance-search/requirements-gpu-cu128.txt
+uv pip install --python .lance/bin/python --no-deps -e tools/lance-search
 ```
 
 Pinned stack:
@@ -50,7 +42,7 @@ when the GPU is visible.
 
 ```bash
 source .lance/bin/activate
-lance-reindex --root /home/claude/Documents/Knowledge-Base
+lance-reindex --root .
 ```
 
 The default index lives in `.lancedb/`. SentenceTransformer model files live in

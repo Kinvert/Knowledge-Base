@@ -14,8 +14,8 @@ This is an Obsidian knowledge base vault containing 842+ interconnected markdown
   - `source .lance/bin/activate && search --device cuda "vector database embeddings"`
 - The `search` command queries the local LanceDB table at `.lancedb`, covering Markdown notes and local text files present at the last index build.
 - If notes changed significantly or search results are stale, rebuild the index:
-  - `source .lance/bin/activate && lance-reindex --root /home/claude/Documents/Knowledge-Base --device cuda`
-- The `.lance` stack mirrors the known-good `/home/claude/sim2real` setup: Python 3.12.3, `torch 2.10.0+cu128`, `sentence-transformers 5.2.3`, `transformers 5.3.0`, `lancedb 0.29.2`, `numpy 2.4.2`, and `pyarrow 23.0.1`.
+  - From the vault root: `source .lance/bin/activate && lance-reindex --root . --device cuda`
+- The `.lance` stack uses Python 3.12.3, `torch 2.10.0+cu128`, `sentence-transformers 5.2.3`, `transformers 5.3.0`, `lancedb 0.29.2`, `numpy 2.4.2`, and `pyarrow 23.0.1`.
 - The embedding model is `all-MiniLM-L6-v2`, vector dimension 384. The model cache lives in `.lance-cache/sentence-transformers`; the index lives in `.lancedb`. Both are ignored local artifacts.
 - In the Codex command sandbox, GPU access may be hidden. Use an approved unsandboxed command or a normal shell for CUDA-backed indexing/search.
 
@@ -250,7 +250,7 @@ Aim for 5+ comparable items when possible.
 
 ### Planned Write Queue
 
-- New notes to add soon are tracked in [Notes to Write Soon.md](/home/claude/Documents/Knowledge-Base/Notes%20to%20Write%20Soon.md).
+- New notes to add soon are tracked in [Notes to Write Soon.md](Notes%20to%20Write%20Soon.md).
 - Check this file first before planning new topic coverage.
 
 ### Tool Note Thoroughness

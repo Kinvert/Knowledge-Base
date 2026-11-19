@@ -41,6 +41,7 @@
 |------------------|-------------|
 | **k-means++**    | Smarter centroid initialization to improve convergence |
 | **MiniBatchKMeans** | Processes data in small batches for scalability |
+| **[[e-means]]** | EMA mini-batches, scheduled steps, cluster revival and automatic batch/step scaling laws |
 | **Fuzzy c-means** | Allows soft clustering (points can belong to multiple clusters) |
 
 ---

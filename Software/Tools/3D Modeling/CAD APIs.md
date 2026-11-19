@@ -207,6 +207,8 @@ Why this is strong:
 - Works with scripting for shape families and trade studies.
 - Headless script workflows fit design-of-experiments loops when domain matches.
 
+When you need in-loop aerodynamic trend filtering, [[VSPAERO]] is the integrated OpenVSP choice before high-fidelity CFD.
+
 Watch out:
 
 - It is narrower in geometric domains versus general-purpose part design.
@@ -389,6 +391,7 @@ Then add **FreeCAD** as a visual QA stage:
 - [[OpenSCAD CFD Workflow]]
 - [[SALOME CFD Workflow]]
 - [[OpenVSP CFD Workflow]]
+- [[OpenVSP Facade API]]
 - [[SolveSpace CFD Workflow]]
 - [[BRL-CAD CFD Workflow]]
 - [[Gmsh CFD Workflow]]

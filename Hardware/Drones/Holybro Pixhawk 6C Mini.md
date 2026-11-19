@@ -29,6 +29,7 @@
 
 ## Related notes
 
+- [[6C Mini]]
 - [[Holybro Boards]]
 - [[ArduPilot Boards]]
 - [[PX4 Boards]]

@@ -65,6 +65,7 @@
 - [[OpenCV]] – Uses FFmpeg under the hood for video I/O.
 - [[cv_bridge]] – Can interact with FFmpeg via OpenCV.
 - [[sensor_msgs/Image]] – Image streams can be encoded using FFmpeg.
+- [[ffprobe]] – Query container and stream metadata.
 - [[Image Compression]]
 - [[Video Streaming]]
 - [[GStreamer]] – Another multimedia processing framework often compared to FFmpeg.

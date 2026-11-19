@@ -18,7 +18,7 @@ Blender is known for its versatility, active community, and extensive library of
 
 1. **3D Modeling**:
    - Tools for sculpting, retopology, and procedural modeling.
-   - Supports polygonal, NURBS, and curve-based modeling.
+   - Supports polygonal, [[NURBS]], and curve-based modeling.
 
 2. **Animation and Rigging**:
    - Advanced rigging tools for character animation.

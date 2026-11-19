@@ -6,6 +6,8 @@ The premise is simple: if you want true AI sovereignty—the ability to ask any 
 
 For detailed hardware benchmarks with tokens/second performance data across all GPU tiers, see [[LLM Inference Hardware]]. For model comparisons, benchmarks, and what each model excels at, see [[LLM Model Guide]].
 
+For AMD's high-memory option, see [[MI300X]], including the **$60,000 tinybox red with four refurbished GPUs and 768GB HBM**. As checked November 5, 2026, this is a **Q1 2027 preorder target**, not a delivered/benchmarked system; its GPUs communicate over PCIe without XGMI.
+
 ---
 
 ## 🆕 September 2026 Model Update
@@ -156,7 +158,7 @@ The **[[RTX A6000]]** at 48GB lets you run 70B models quantized without splittin
 | [[H100]] PCIe | 80GB | 204 | 1513 | 350W | ~$20-30K | PCIe version, less bandwidth |
 | **[[H200]]** | 141GB | 267 | 1979 | 700W | ~$30-40K | [[HBM3e]], massive memory |
 | **[[B200]]** | 192GB | 500+ | 4500+ | 1000W | ~$40K+ | Blackwell, next-gen |
-| [[MI300X]] | 192GB | 163 | 2610 | 750W | ~$15-25K | [[AMD]]'s answer to [[H100]] |
+| [[MI300X]] | 192GB | 1307.4 (dense matrix) | 2614.9 (dense matrix) | 750W standard; 500W in tinybox | $60K four-GPU tinybox system | AMD CDNA 3; see dedicated note for custom-platform caveats |
 
 The **[[H100]]** is the current gold standard for serious LLM work. **[[H200]]** adds more memory. **[[B200]]** (Blackwell) is the next generation with ~2x performance.
 
@@ -216,22 +218,23 @@ Consumer NVLink bridges (RTX 3090, 4090) only support 2 GPUs and have limited ba
 
 **Power draw:** ~1200-1400W peak. **Requires 20A circuit or 240V.**
 
-### Tier 3: [[tinybox]] v2 pro (~$25,000)
+### Tier 3: Four-MI300X tinybox (~$60,000)
 
-**[[tinygrad]]'s flagship machine:**
+**tiny corp's tinybox red 4xMI300X**, announced configuration checked November 5, 2026. Full research, specifications, sources, and model-memory estimates: [[MI300X]].
 
 | Spec | Details |
 |------|---------|
-| GPUs | 6x [[RTX 4090]] with custom [[NVLink]] topology |
-| Total VRAM | 144GB |
-| CPU | [[AMD]] [[EPYC]] or [[Threadripper Pro]] |
-| RAM | 256GB+ [[DDR5]] |
-| Power | ~3500-4000W system |
-| Cooling | Custom liquid or industrial air |
+| GPUs | 4 refurbished MI300X accelerators on custom carrier boards |
+| Total GPU memory | 768GB HBM3 across four separate 192GB devices |
+| Interconnect | PCIe 5.0 x16 per GPU; **no GPU-to-GPU XGMI links** |
+| CPU / host RAM | Water-cooled 32-core AMD EPYC Genoa / 192GB DDR5 |
+| Storage | 1TB boot SSD plus 4TB RAID 0; no drive redundancy |
+| Power | 500W GPU caps, 2× 1700W PSUs; full-system wall draw not established |
+| Availability | Listing showed out of stock; first 25-unit batch targets Q1 2027 |
 
-**Can run:** 70B models at good quality, 405B with aggressive [[Quantization]]
+**Capacity, not a speed guarantee:** Ideal 405B 8-bit weights are ~405GB before overhead; 405B BF16 weights are ~810GB and exceed nominal GPU capacity. Runtime compatibility, per-GPU sharding, KV cache, and PCIe communication still determine usability.
 
-**Note:** The [[tinybox]] requires **240V power** (30A circuit) and serious cooling infrastructure.
+**Installation/support:** Seller specifies one 220V circuit or two separate 110V circuits, not two outlets on the same circuit. GPUs have no AMD warranty/support; the custom configuration is explicitly described as software-rough. [Product listing](https://tinycorp.myshopify.com/products/tinybox-red-4xmi300x).
 
 ### Tier 4: Multi-[[A100]]/[[H100]] Build (~$50,000-150,000+)
 
@@ -262,7 +265,7 @@ Consumer NVLink bridges (RTX 3090, 4090) only support 2 GPUs and have limited ba
 | Single 4090 | 600-700W | Standard 15A/120V | Normal outlet works |
 | Dual 4090 | 1200-1400W | 20A/120V or 15A/240V | Dedicated circuit recommended |
 | 4x 4090 | 2400-2800W | 30A/240V | Must be 240V |
-| tinybox v2 pro | 3500-4000W | 40A/240V | Electrician required |
+| Four-MI300X tinybox | Up to 2000W GPU budget plus host/losses; wall draw unverified | Seller: one 220V circuit or two separate 110V circuits | Verify circuit ratings and continuous-load headroom |
 | 8x H100 | 7000-8000W | Multiple 30A/240V | Industrial power |
 
 **Practical notes:**
